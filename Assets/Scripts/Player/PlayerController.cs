@@ -7,16 +7,19 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     float speed = 15;
-    GameObject closest;
+
+    [SerializeField]
+    float max_speed = 5;
+
     Vector2 direccion;
     Animator[] anim;
     Rigidbody2D rb;
-    Transform tr;
+    GameObject closest;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        tr = GetComponent<Transform>();
+        closest = null;
         //anim[0] player //anim[1] sword
         anim = GetComponentsInChildren<Animator>();
         Cursor.visible = false;
@@ -30,11 +33,6 @@ public class PlayerController : MonoBehaviour
         {
             direccion = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             direccion.Normalize();
-
-            if (Input.GetButtonUp("Fire1") && closest)
-            {
-                
-            }
         }
         else // TECLADO Y RATÓN
         {
@@ -51,11 +49,19 @@ public class PlayerController : MonoBehaviour
         }
         //anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
         //anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
+        if(direccion.magnitude > 0){
+            rb.drag = 0.01f;
+        }else{
+            rb.drag = 2.0f;
+        }
     }
+//uwu
 
     private void FixedUpdate()
     {
-        rb.velocity = direccion * speed;
+        if(rb.velocity.magnitude < max_speed){
+            rb.AddForce(direccion * speed);
+        }
     }
 
     //Metodos usados en los PowerUps Verde y Azul para manejar la velocidad del jugador
@@ -67,8 +73,8 @@ public class PlayerController : MonoBehaviour
     {
         speed /= x;
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
+	
+	private void OnTriggerEnter2D(Collider2D other)
     {
         // Comprueba si el nuevo objeto está más cerca
         if (!closest || (Vector2.Distance(other.transform.position, rb.transform.position) < Vector2.Distance(closest.transform.position, rb.transform.position)))
