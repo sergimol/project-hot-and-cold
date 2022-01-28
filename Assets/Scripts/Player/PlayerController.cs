@@ -7,6 +7,10 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     float speed = 15;
+
+    [SerializeField]
+    float max_speed = 5;
+
     Vector2 direccion;
     Animator[] anim;
     Rigidbody2D rb;
@@ -43,12 +47,19 @@ public class PlayerController : MonoBehaviour
         }
         //anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
         //anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
+        if(direccion.magnitude > 0){
+            rb.drag = 0.01f;
+        }else{
+            rb.drag = 2.0f;
+        }
     }
 //uwu
 
     private void FixedUpdate()
     {
-        rb.velocity = direccion * speed;
+        if(rb.velocity.magnitude < max_speed){
+            rb.AddForce(direccion * speed);
+        }
     }
 
     //Metodos usados en los PowerUps Verde y Azul para manejar la velocidad del jugador
