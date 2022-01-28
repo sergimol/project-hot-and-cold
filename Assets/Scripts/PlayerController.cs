@@ -1,4 +1,4 @@
-﻿sing System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //Maneja el movimiento en las 4 direcciones
