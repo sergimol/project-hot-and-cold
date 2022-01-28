@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
         //anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
         //anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
     }
+//uwu
 
     private void FixedUpdate()
     {
