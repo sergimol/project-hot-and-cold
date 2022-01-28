@@ -7,13 +7,16 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     float speed = 15;
+    GameObject closest;
     Vector2 direccion;
     Animator[] anim;
     Rigidbody2D rb;
+    Transform tr;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        tr = GetComponent<Transform>();
         //anim[0] player //anim[1] sword
         anim = GetComponentsInChildren<Animator>();
         Cursor.visible = false;
@@ -27,6 +30,11 @@ public class PlayerController : MonoBehaviour
         {
             direccion = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             direccion.Normalize();
+
+            if (Input.GetButtonUp("Fire1") && closest)
+            {
+                
+            }
         }
         else // TECLADO Y RATÓN
         {
@@ -60,4 +68,34 @@ public class PlayerController : MonoBehaviour
         speed /= x;
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // Comprueba si el nuevo objeto está más cerca
+        if (!closest || (Vector2.Distance(other.transform.position, rb.transform.position) < Vector2.Distance(closest.transform.position, rb.transform.position)))
+        {
+            closest = other.gameObject;
+            closest.GetComponent<Glow>().enabled = true;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        GameObject g = other.gameObject;
+        // Comprueba si el nuevo objeto está más cerca
+        if (closest != g || (Vector2.Distance(other.transform.position, rb.transform.position) < Vector2.Distance(closest.transform.position, rb.transform.position)))
+        {
+            closest = g;
+            closest.GetComponent<Glow>().enabled = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (closest == other.gameObject)
+        {
+            closest.GetComponent<Glow>().enabled = false;
+            Debug.Log("danlles ya no brillo");
+            closest = null;
+        }
+    }
 }
