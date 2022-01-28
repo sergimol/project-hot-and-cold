@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 direccionx;
         Vector2 direcciony;
-        if (GameManager.instance.mando) // MANDO
+        if (Input.GetJoystickNames().Length > 0) // MANDO
         {
             direccion = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             direccion.Normalize();
@@ -41,8 +41,8 @@ public class PlayerController : MonoBehaviour
             direccion = direccionx + direcciony;
             direccion.Normalize();
         }
-        anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
-        anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
+        //anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
+        //anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
     }
 
     private void FixedUpdate()
