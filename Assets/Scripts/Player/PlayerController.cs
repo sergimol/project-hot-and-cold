@@ -85,12 +85,14 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.instance.addPoints();
             gameObject.GetComponent<CameraZoom>().enabled = true;
+            AudioManager.instance.Play(AudioManager.ESounds.acierto);
         }
         else
         {
             timer.reduceTime();
             antiSpam = true;
             startTime = 0.5f;
+            AudioManager.instance.Play(AudioManager.ESounds.fallo);
         }
     }
     private void FixedUpdate()

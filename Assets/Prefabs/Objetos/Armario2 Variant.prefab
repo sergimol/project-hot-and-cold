@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7555386639024311, guid: e6b341b437c33432b9d090d9d364e423, type: 3}
       propertyPath: m_Name
-      value: Armario2
+      value: Armario2 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6b341b437c33432b9d090d9d364e423, type: 3}

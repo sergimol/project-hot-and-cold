@@ -42,23 +42,22 @@ public class Timer : MonoBehaviour
                     activated = true;
                 }
             }
+
             if (startTime > 1)
             {
-
                 //Si ha perdido
                 startTime -= Time.deltaTime;
 
                 string seconds = Math.Truncate((startTime % 60)).ToString();
 
                 timerText.text = seconds;
-
             }
-
             else if (telon.ini)
             {
                 telon.ini = false;
                 telon.reposition();
             }
+
         }
     }
 

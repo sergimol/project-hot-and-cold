@@ -41,7 +41,7 @@ PrefabInstance:
     - target: {fileID: 8890232562725483192, guid: f1c6b3d902e054ba4a4dafb2574d0548,
         type: 3}
       propertyPath: m_Name
-      value: Armario3
+      value: Armario3 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8890232562725483195, guid: f1c6b3d902e054ba4a4dafb2574d0548,
         type: 3}
