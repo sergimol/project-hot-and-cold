@@ -39,12 +39,23 @@ public class Baraja : MonoBehaviour
     //baraja tood el cotarro
     private void Barajar()
     {
-        Shuffle(faciles);
-        Shuffle(dificiles);
+        BarajarFaciles();
+        BarajarDificiles();
         //copiar las cartas a las que van a aparecerr durante el juego
+        //chimpóm
+        Debug.Log("se barajaron todas las cartas");
+    }
+
+    private void BarajarFaciles(){
+
+        Shuffle(faciles);
         cartasFaciles = new Stack<infocarta>(faciles);
+        Debug.Log("se barajaron las faciles");
+    }
+    private void BarajarDificiles(){
+        Shuffle(dificiles);
         cartasDificiles = new Stack<infocarta>(dificiles);
-        //chimpón
+        Debug.Log("SE ABRAJARON ALS DIFICILES");
     }
 
     private void Shuffle(List<infocarta> cards)
@@ -60,6 +71,26 @@ public class Baraja : MonoBehaviour
         }
     }
 
+
+    private void nextCard(){
+        //saca las dos cartas y muestra las dos siguientes, si las pials estan vacias las rellena
+        cartasFaciles.Pop();
+        cartasDificiles.Pop();
+
+        if (cartasDificiles.Count == 0){
+            //esta vacio
+            BarajarDificiles();
+        }
+        if (cartasFaciles.Count == 0){
+            BarajarFaciles();
+        }
+
+
+        Debug.Log("la primera carta de las faciles es" + cartasFaciles.Peek().descripcion);
+
+        Debug.Log("la primera carta de las faciles es" + cartasDificiles.Peek().descripcion);//se e dice cuales son las dos siguientes
+
+    }
 
 
     //This method returns the game object that was clicked using Raycast 2D
@@ -194,6 +225,18 @@ public class Baraja : MonoBehaviour
 
 
         //devolverr la eleccion
+
+
+
+        //debug
+        if (Input.GetKeyUp("k"))
+        {
+
+
+            Debug.Log("siguientes cartas");
+            nextCard();
+        }
+
 
     }
 }
