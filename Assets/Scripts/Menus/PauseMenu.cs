@@ -37,6 +37,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = false;
         Time.timeScale = timeScale;
         GameManager.instance.gameIsPaused = false;
+        AudioManager.instance.Play(AudioManager.ESounds.botonClick);
     }
 
     public void Pause() // Para el juego y abre el menú
@@ -55,6 +56,7 @@ public class PauseMenu : MonoBehaviour
         optionsMenuUI.SetActive(true);
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(optionsFirstButton);
+        AudioManager.instance.Play(AudioManager.ESounds.botonClick);
     }
 
     public void Exit() // Sale al menú principal
@@ -63,5 +65,6 @@ public class PauseMenu : MonoBehaviour
         GameManager.instance.gameIsPaused = false;
         Cursor.visible = true;
         SceneManager.LoadScene(0);
+        AudioManager.instance.Play(AudioManager.ESounds.botonClick);
     }
 }
