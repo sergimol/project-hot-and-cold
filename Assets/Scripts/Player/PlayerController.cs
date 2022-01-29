@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
         if(direccion.magnitude > 0){
             rb.drag = 0.01f;
         }else{
-            rb.drag = 2.0f;
+            rb.drag = 4.0f;
         }
     }
 //uwu
@@ -69,7 +69,11 @@ public class PlayerController : MonoBehaviour
     {
         if(rb.velocity.magnitude < max_speed){
             rb.AddForce(direccion * speed);
+        }else{
+            rb.drag = 4.0f;
         }
+
+        //rb.velocity = direccion*speed;
     }
 
     //Metodos usados en los PowerUps Verde y Azul para manejar la velocidad del jugador
