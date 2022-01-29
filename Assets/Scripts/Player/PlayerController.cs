@@ -33,6 +33,12 @@ public class PlayerController : MonoBehaviour
         {
             direccion = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             direccion.Normalize();
+
+            if (Input.GetButtonUp("Fire1") && closest)
+            {
+                closest.SetActive(false);
+                closest = null;
+            }
         }
         else // TECLADO Y RATÓN
         {
