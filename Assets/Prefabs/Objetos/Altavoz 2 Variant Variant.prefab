@@ -7,10 +7,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1096665465799399753, guid: db69efcdb62614d93a55ce13004e9d37,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3732770490906419692, guid: db69efcdb62614d93a55ce13004e9d37,
         type: 3}
       propertyPath: m_Name
-      value: Altavoz 2 Variant
+      value: Altavoz 2 Variant Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3732770490906419695, guid: db69efcdb62614d93a55ce13004e9d37,
         type: 3}

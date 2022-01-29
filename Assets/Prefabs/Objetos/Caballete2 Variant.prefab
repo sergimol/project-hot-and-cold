@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2553077628015865972, guid: 212b1bc257cbc45a1b77420c7b644615,
+        type: 3}
+      propertyPath: m_Name
+      value: Caballete2 Variant
+      objectReference: {fileID: 0}
     - target: {fileID: 2938082441771184564, guid: 212b1bc257cbc45a1b77420c7b644615,
         type: 3}
       propertyPath: m_Sprite
@@ -73,5 +78,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caballete2
       objectReference: {fileID: 0}
+    - target: {fileID: 3561418056552224321, guid: 212b1bc257cbc45a1b77420c7b644615,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4e31a239130f7475cb25cca5d78d666b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 212b1bc257cbc45a1b77420c7b644615, type: 3}
