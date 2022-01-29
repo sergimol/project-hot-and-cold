@@ -1557,6 +1557,8 @@ GameObject:
   - component: {fileID: 1209248968}
   - component: {fileID: 1209248970}
   - component: {fileID: 1209248969}
+  - component: {fileID: 1209248972}
+  - component: {fileID: 1209248971}
   m_Layer: 5
   m_Name: TimerText
   m_TagString: Untagged
@@ -1580,8 +1582,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 803, y: 469.9}
-  m_SizeDelta: {x: 258.8, y: 108.2}
+  m_AnchoredPosition: {x: 625, y: 295}
+  m_SizeDelta: {x: 599.2, y: 402.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1209248969
 MonoBehaviour:
@@ -1623,6 +1625,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209248967}
   m_CullTransparentMesh: 0
+--- !u!111 &1209248971
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209248967}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: d3aa97e9bc9958f4d97cd54ae9ce61b9, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &1209248972
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209248967}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7b61e9df3803278449826cbfc0e95e5a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1283287265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1775,6 +1811,11 @@ PrefabInstance:
       propertyPath: zoomSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4847103362552881835, guid: 68f8db3f33e4e8d429123d36da5da264,
+        type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 627061897}
     - target: {fileID: 6844194102107100754, guid: 68f8db3f33e4e8d429123d36da5da264,
         type: 3}
       propertyPath: m_LocalPosition.x

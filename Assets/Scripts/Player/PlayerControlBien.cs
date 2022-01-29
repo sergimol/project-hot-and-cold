@@ -29,12 +29,16 @@ public class PlayerControlBien : MonoBehaviour
 
     [SerializeField]
     float rotationMax = 10.0f;
-    
-    
+
+    [SerializeField]
+    Timer timer;
+
     float rotationKey = 0.5f;
 
-    bool stunned;
-
+    bool antiSpam = false;
+    float startTime;
+    Vector3 originalPos;
+    float shakeAmount = 0.1f;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -53,13 +57,9 @@ public class PlayerControlBien : MonoBehaviour
             direccion = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             direccion.Normalize();
 
-            if (Input.GetButtonUp("Fire1") && closest)
+            if (!antiSpam && Input.GetButtonUp("Fire1") && closest)
             {
-                if (closest.GetComponent<ObjectProperties>().searchingThis)
-                {
-                    GameManager.instance.addPoints();
-                    gameObject.GetComponent<CameraZoom>().enabled = true;
-                }
+                inputManagement();
             }
         }
         else // TECLADO Y RATÓN
@@ -72,6 +72,11 @@ public class PlayerControlBien : MonoBehaviour
             else if (Input.GetKey("a")) direccionx = new Vector2(-1, 0);
             else direccionx = new Vector2(0, 0);
 
+            if (!antiSpam && Input.GetKeyDown("space") && closest)
+            {
+                inputManagement();
+            }
+
             direccion = direccionx + direcciony;
             direccion.Normalize();
         }
@@ -83,11 +88,34 @@ public class PlayerControlBien : MonoBehaviour
             rb.drag = maxDrag;
         }
 
-        
-        
-    }
-//uwu
+        if (antiSpam)
+        {
+            startTime -= Time.deltaTime;
+            originalPos = Camera.main.transform.position;
+            Camera.main.transform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
+            if (startTime < 0)
+            {
+                antiSpam = false;
+            }
+        }
 
+    }
+    private void inputManagement()
+    {
+        if (closest.GetComponent<ObjectProperties>().searchingThis)
+        {
+            GameManager.instance.addPoints();
+            gameObject.GetComponent<CameraZoom>().enabled = true;
+            AudioManager.instance.Play(AudioManager.ESounds.acierto);
+        }
+        else
+        {
+            timer.reduceTime();
+            antiSpam = true;
+            startTime = 0.5f;
+            AudioManager.instance.Play(AudioManager.ESounds.fallo);
+        }
+    }
     private void FixedUpdate()
     {
         if(renderer != null){
@@ -115,17 +143,6 @@ public class PlayerControlBien : MonoBehaviour
 
         //rb.velocity = direccion*speed;
     }
-
-    //Metodos usados en los PowerUps Verde y Azul para manejar la velocidad del jugador
-    public void MulSpeed(int x)
-    {
-        speed *= x;
-    }
-    public void DivSpeedReset(int x)
-    {
-        speed /= x;
-    }
-	
 	private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.GetComponent<ObjectProperties>())

@@ -1699,15 +1699,20 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 639959415}
+    - target: {fileID: 4847103362552881835, guid: 68f8db3f33e4e8d429123d36da5da264,
+        type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 639959415}
     - target: {fileID: 6844194102107100754, guid: 68f8db3f33e4e8d429123d36da5da264,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12
+      value: -13.49
       objectReference: {fileID: 0}
     - target: {fileID: 6844194102107100754, guid: 68f8db3f33e4e8d429123d36da5da264,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -41
+      value: -42.34
       objectReference: {fileID: 0}
     - target: {fileID: 6844194102107100754, guid: 68f8db3f33e4e8d429123d36da5da264,
         type: 3}
@@ -1758,7 +1763,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6200000, guid: 6886d915380c6456b8ee4937826eacc1, type: 2}
     - target: {fileID: 6844194102107100758, guid: 68f8db3f33e4e8d429123d36da5da264,
         type: 3}
       propertyPath: m_Name
