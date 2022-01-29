@@ -1160,7 +1160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1209248969}
-  startTime: 30
+  startTime: 300
   telon: {fileID: 2034028034}
 --- !u!4 &639959416
 Transform:
@@ -1654,6 +1654,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6844194102107100757, guid: 68f8db3f33e4e8d429123d36da5da264,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6844194102107100758, guid: 68f8db3f33e4e8d429123d36da5da264,
         type: 3}
       propertyPath: m_Name
@@ -1664,6 +1669,16 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 639959415}
+    - target: {fileID: 6844194102107100759, guid: 68f8db3f33e4e8d429123d36da5da264,
+        type: 3}
+      propertyPath: speed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844194102107100759, guid: 68f8db3f33e4e8d429123d36da5da264,
+        type: 3}
+      propertyPath: reducedSpeed
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68f8db3f33e4e8d429123d36da5da264, type: 3}
 --- !u!1001 &1630416047
