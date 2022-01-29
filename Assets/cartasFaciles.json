@@ -39,6 +39,66 @@
       "active": true,
       "puntos": 6,
       "descripcion": "A las seis en punto! da la direccion como las manillas de un reloj!"
+    },
+    {
+      "active": true,
+      "puntos": 5,
+      "descripcion": "Di la receta de unas lentejas de super puta madre"
+    },
+    {
+      "active": true,
+      "puntos": 5,
+      "descripcion": "solo puedes decir la letra \"A\" "
+    },
+    {
+      "active": true,
+      "puntos": 5,
+      "descripcion": "Habla en Brasileño!"
+    },
+    {
+      "active": true,
+      "puntos": 5,
+      "descripcion": "Encara Messi! Encara Messi! Se un comentarista de futbol!"
+    },
+    {
+      "active": true,
+      "puntos": 5,
+      "descripcion": "Canta let it go! (Copyright disclaimer)"
+    },
+    {
+      "active": true,
+      "puntos": 5,
+      "descripcion": "El vecino con el taladro"
+    },
+    {
+      "active": true,
+      "puntos": 5,
+      "descripcion": "Grita!"
+    },
+    {
+      "active": true,
+      "puntos": 5,
+      "descripcion": "Riete segun se aleje"
+    },
+    {
+      "active": true,
+      "puntos": 3,
+      "descripcion": "Di frutas al alejarse, di postres al acercarse"
+    },
+    {
+      "active": true,
+      "puntos": 5,
+      "descripcion": "habla como Mickey al acercarse, como goofy al alejarse "
+    },
+    {
+      "active": true,
+      "puntos": 3,
+      "descripcion": "Habla lento"
+    }, 
+    {
+      "active": true,
+      "puntos": 5,
+      "descripcion": "Beep Boop! convierte en robot habla con 0 y 1"
     }
   ]
 }
