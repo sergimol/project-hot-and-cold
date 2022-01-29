@@ -895,7 +895,7 @@ MonoBehaviour:
   card1: {fileID: 1127392504}
   text1: {fileID: 0}
   puntos1: {fileID: 0}
-  lerpTime: 0
+  lerpTime: 0.1
 --- !u!1 &1904120914
 GameObject:
   m_ObjectHideFlags: 0

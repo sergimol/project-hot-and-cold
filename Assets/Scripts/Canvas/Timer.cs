@@ -44,20 +44,20 @@ public class Timer : MonoBehaviour
             }
             if (startTime > 1)
             {
-                if (startTime > 1)
-                {
-                    //Si ha perdido
-                    startTime -= Time.deltaTime;
 
-                    string seconds = Math.Truncate((startTime % 60)).ToString();
+                //Si ha perdido
+                startTime -= Time.deltaTime;
 
-                    timerText.text = seconds;
-                }
-                else if (telon.ini)
-                {
-                    telon.ini = false;
-                    telon.reposition();
-                }
+                string seconds = Math.Truncate((startTime % 60)).ToString();
+
+                timerText.text = seconds;
+
+            }
+
+            else if (telon.ini)
+            {
+                telon.ini = false;
+                telon.reposition();
             }
         }
     }
