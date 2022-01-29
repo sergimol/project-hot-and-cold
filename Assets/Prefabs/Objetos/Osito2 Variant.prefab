@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 7865852910221015917, guid: 9dbbb7d5b9ff04d9b8dce5629cc5a270,
         type: 3}
       propertyPath: m_Name
-      value: Osito2
+      value: Osito2 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dbbb7d5b9ff04d9b8dce5629cc5a270, type: 3}

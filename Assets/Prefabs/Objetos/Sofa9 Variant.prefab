@@ -16,7 +16,7 @@ PrefabInstance:
     - target: {fileID: 3111990697328895314, guid: 2a719612e513b472cbcbf01cfb2e4e38,
         type: 3}
       propertyPath: m_Name
-      value: Sofa9
+      value: Sofa9 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3111990697328895317, guid: 2a719612e513b472cbcbf01cfb2e4e38,
         type: 3}

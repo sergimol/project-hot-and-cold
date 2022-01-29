@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 8119882138454506101, guid: 9a2f59ed858b145729d421217f6ef1ca,
         type: 3}
       propertyPath: m_Name
-      value: Planta3
+      value: Planta3 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a2f59ed858b145729d421217f6ef1ca, type: 3}

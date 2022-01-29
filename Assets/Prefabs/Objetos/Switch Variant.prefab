@@ -91,7 +91,7 @@ PrefabInstance:
     - target: {fileID: 6561115634377304429, guid: 868a1b4e527eb44969007fe70ea8886f,
         type: 3}
       propertyPath: m_Name
-      value: Switch
+      value: Switch Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6561115635423504746, guid: 868a1b4e527eb44969007fe70ea8886f,
         type: 3}

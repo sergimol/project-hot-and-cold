@@ -125,7 +125,7 @@ PrefabInstance:
     - target: {fileID: 1398828924198477917, guid: d28af92d701c24d57830282e0537299e,
         type: 3}
       propertyPath: m_Name
-      value: Xbox
+      value: Xbox Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1398828924366355887, guid: d28af92d701c24d57830282e0537299e,
         type: 3}

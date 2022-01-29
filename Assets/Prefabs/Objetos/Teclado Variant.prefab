@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4522467334968063154, guid: 938121539cbb2498286d867c05dbcffa,
         type: 3}
       propertyPath: m_Name
-      value: Teclado
+      value: Teclado Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4522467334968063157, guid: 938121539cbb2498286d867c05dbcffa,
         type: 3}

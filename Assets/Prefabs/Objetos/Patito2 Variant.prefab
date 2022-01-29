@@ -16,7 +16,7 @@ PrefabInstance:
     - target: {fileID: 7603127053775135744, guid: 78d55513f657245e9894f1cb52297211,
         type: 3}
       propertyPath: m_Name
-      value: Patito2
+      value: Patito2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7603127053775135751, guid: 78d55513f657245e9894f1cb52297211,
         type: 3}

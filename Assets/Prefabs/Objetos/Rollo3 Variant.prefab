@@ -16,7 +16,7 @@ PrefabInstance:
     - target: {fileID: 6721944964546408673, guid: a63e14eefe5074976a27befa8401f577,
         type: 3}
       propertyPath: m_Name
-      value: Rollo3
+      value: Rollo3 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6721944964546408678, guid: a63e14eefe5074976a27befa8401f577,
         type: 3}

@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 6248386207238868996, guid: 97fff922ab5ae4ee19a977a29a291764,
         type: 3}
       propertyPath: m_Name
-      value: Sillon2
+      value: Sillon2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6248386207327733890, guid: 97fff922ab5ae4ee19a977a29a291764,
         type: 3}

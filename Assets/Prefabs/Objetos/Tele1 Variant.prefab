@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2151653033332929105, guid: 7ef09f017610046a3bd1009b03832d40,
         type: 3}
       propertyPath: m_Name
-      value: Tele1
+      value: Tele1 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2151653033332929110, guid: 7ef09f017610046a3bd1009b03832d40,
         type: 3}

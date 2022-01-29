@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 4831244856308195445, guid: c3da924fec5e04b409816f4140797dff,
         type: 3}
       propertyPath: m_Name
-      value: Tele3
+      value: Tele3 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4831244856489343219, guid: c3da924fec5e04b409816f4140797dff,
         type: 3}

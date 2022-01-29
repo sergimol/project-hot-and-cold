@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 8233772385241391993, guid: baca4dddda6d2491fade2f95f4921213,
         type: 3}
       propertyPath: m_Name
-      value: Vaso2
+      value: Vaso2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8233772385241391998, guid: baca4dddda6d2491fade2f95f4921213,
         type: 3}

@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 6053949494723104021, guid: 7c3296b76519c47a7b2fee24258665e4,
         type: 3}
       propertyPath: m_Name
-      value: Silla5
+      value: Silla5 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6053949495159410919, guid: 7c3296b76519c47a7b2fee24258665e4,
         type: 3}

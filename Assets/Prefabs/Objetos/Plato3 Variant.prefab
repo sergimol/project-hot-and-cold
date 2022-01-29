@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 3277748085258105902, guid: ed854788d8bdd4f26942e580b15b58a9,
         type: 3}
       propertyPath: m_Name
-      value: Plato3
+      value: Plato3 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3277748085372136616, guid: ed854788d8bdd4f26942e580b15b58a9,
         type: 3}

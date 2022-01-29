@@ -88,10 +88,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 2.344
       objectReference: {fileID: 0}
+    - target: {fileID: 8960957367101008473, guid: e12466e61e0f941a69b481ef6f7eecaa,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8960957367101008474, guid: e12466e61e0f941a69b481ef6f7eecaa,
         type: 3}
       propertyPath: m_Name
-      value: Armario1
+      value: Armario1 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8960957368802558027, guid: e12466e61e0f941a69b481ef6f7eecaa,
         type: 3}

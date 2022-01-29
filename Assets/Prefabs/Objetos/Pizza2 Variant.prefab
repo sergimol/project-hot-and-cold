@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2722486963526478826, guid: 09698dd21f826409bbeda9bfc140cf86,
         type: 3}
       propertyPath: m_Name
-      value: Pizza2
+      value: Pizza2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2722486963526478829, guid: 09698dd21f826409bbeda9bfc140cf86,
         type: 3}

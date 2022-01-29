@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 588805696695632566, guid: a27dd7e03a56145d29b14be2d4e269d6,
         type: 3}
       propertyPath: m_Name
-      value: Sofa2
+      value: Sofa2 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a27dd7e03a56145d29b14be2d4e269d6, type: 3}

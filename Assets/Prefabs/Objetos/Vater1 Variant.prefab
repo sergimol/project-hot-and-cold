@@ -151,7 +151,7 @@ PrefabInstance:
     - target: {fileID: 152965089898664692, guid: f19d703050c264cf9bb7569be3ffb8de,
         type: 3}
       propertyPath: m_Name
-      value: Vater1
+      value: Vater1 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f19d703050c264cf9bb7569be3ffb8de, type: 3}

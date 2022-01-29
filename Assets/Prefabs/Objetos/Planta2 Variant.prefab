@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 8718848298458002627, guid: 376362d6cdff649f0a717933f3663dee,
         type: 3}
       propertyPath: m_Name
-      value: Planta2
+      value: Planta2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8718848298458002628, guid: 376362d6cdff649f0a717933f3663dee,
         type: 3}

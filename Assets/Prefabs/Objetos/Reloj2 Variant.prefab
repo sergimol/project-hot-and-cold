@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 7587831202807811067, guid: 86ff929e243454a27bcd8e671a7b9edf,
         type: 3}
       propertyPath: m_Name
-      value: Reloj2
+      value: Reloj2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7587831202807811068, guid: 86ff929e243454a27bcd8e671a7b9edf,
         type: 3}

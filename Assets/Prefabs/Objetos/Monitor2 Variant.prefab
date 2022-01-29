@@ -85,7 +85,7 @@ PrefabInstance:
     - target: {fileID: 692036316183326845, guid: 3ddd39dea4a2e48929352b6850d723d2,
         type: 3}
       propertyPath: m_Name
-      value: Monitor2
+      value: Monitor2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 692036316272191739, guid: 3ddd39dea4a2e48929352b6850d723d2,
         type: 3}

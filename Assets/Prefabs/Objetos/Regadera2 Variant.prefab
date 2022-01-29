@@ -16,7 +16,7 @@ PrefabInstance:
     - target: {fileID: 851342405879897403, guid: 5600e95e8bbea45c7b2a6f74de6aad99,
         type: 3}
       propertyPath: m_Name
-      value: Regadera2
+      value: Regadera2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 851342405879897404, guid: 5600e95e8bbea45c7b2a6f74de6aad99,
         type: 3}

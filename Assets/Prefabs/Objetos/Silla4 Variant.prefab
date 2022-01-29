@@ -91,7 +91,7 @@ PrefabInstance:
     - target: {fileID: 204275230211021605, guid: 8a033bcea89f1470b9ce96d5b8edcebd,
         type: 3}
       propertyPath: m_Name
-      value: Silla4
+      value: Silla4 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a033bcea89f1470b9ce96d5b8edcebd, type: 3}

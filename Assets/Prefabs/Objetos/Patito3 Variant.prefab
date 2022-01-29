@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 1290160185759757630, guid: efc9d4776964a47daaa48db8847aedff,
         type: 3}
       propertyPath: m_Name
-      value: Patito3
+      value: Patito3 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efc9d4776964a47daaa48db8847aedff, type: 3}

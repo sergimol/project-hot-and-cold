@@ -126,7 +126,7 @@ PrefabInstance:
     - target: {fileID: 9088352699819692631, guid: 9b82782eda4054f15b51aadf1fa382cc,
         type: 3}
       propertyPath: m_Name
-      value: Piano
+      value: Piano Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b82782eda4054f15b51aadf1fa382cc, type: 3}

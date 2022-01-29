@@ -16,7 +16,7 @@ PrefabInstance:
     - target: {fileID: 420881725103745889, guid: ff61f5861d759440f8d49d6ef49040bc,
         type: 3}
       propertyPath: m_Name
-      value: Osito4
+      value: Osito4 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 420881725103745894, guid: ff61f5861d759440f8d49d6ef49040bc,
         type: 3}
