@@ -1,6 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System;
 using UnityEngine;
+
+[Serializable]
+public class infocarta
+{
+    public bool active;
+    public int puntos;
+    public string descripcion;
+
+    public infocarta (bool activa, int puntaje, string info){
+        active = activa;
+        puntos = puntaje;
+        descripcion = info;
+    }
+    public infocarta(){}
+}
 
 public class Baraja : MonoBehaviour
 {
@@ -20,11 +37,6 @@ public class Baraja : MonoBehaviour
         }
     }
 
-    private struct infocarta
-    {
-        public int puntos;
-        public string descripcion;
-    }
     //template de las cartas
     public GameObject carta;
     private GameObject cartaFacil, cartaDificil;
@@ -35,6 +47,29 @@ public class Baraja : MonoBehaviour
     List<infocarta> faciles, dificiles;
     Stack<infocarta>cartasFaciles, cartasDificiles;
 
+    string path = ""; //pos pa ir probando
+    string persistentPath = ""; //el que ahi que poner en releasse o no funciona //TODO
+
+
+    //metódo para setear las direcciones de guardado
+    private void setpaths(){
+        path = Application.dataPath + Path.AltDirectorySeparatorChar;
+        persistentPath = Application.persistentDataPath + Path.AltDirectorySeparatorChar;
+    }
+
+    //creamos informacion para saber donde leñes esta nada personal
+    private void crearData(){
+        string savepath = path + "cartasFaciles.json";
+
+        //string json = JsonUtility.ToJson(faciles[0]);
+        //Debug.Log(json);
+
+        //StreamWriter writer = new StreamWriter(savepath);
+        //writer.Write(json);
+
+        FileHandler.SaveToJSON<infocarta>(faciles, "cartasFaciles.json");
+
+    }
 
     //baraja tood el cotarro
     private void Barajar()
@@ -203,6 +238,10 @@ public class Baraja : MonoBehaviour
         Debug.Log("la primera carta de las faciles es" + cartasFaciles.Peek().descripcion);
 
         Debug.Log("la primera carta de las faciles es" + cartasDificiles.Peek().descripcion);
+
+
+        setpaths();
+        crearData();
 
     }
 
