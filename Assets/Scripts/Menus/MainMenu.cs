@@ -15,8 +15,8 @@ public class MainMenu : MonoBehaviour
 
     public void Play() // Para la música del menú y carga la primera escena
     {
-        Cursor.visible = false;
-        SceneManager.LoadScene("Sergio");
+        Debug.Log("HideObjectScene" + GameManager.instance.getId());
+        SceneManager.LoadScene("HideObjectScene"+GameManager.instance.getId());
     }
 
     public void Quit() // Cierra el juego

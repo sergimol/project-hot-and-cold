@@ -1030,11 +1030,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2102477448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20e5712875ae8574cb09377854bd991e, type: 3}
+  m_Script: {fileID: 11500000, guid: 20174586cebeffd41977b51405f86f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerText: {fileID: 605853483}
-  startTime: 3000
   telon: {fileID: 1862813189}
 --- !u!4 &2102477450
 Transform:
