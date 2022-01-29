@@ -43,5 +43,6 @@ public class Timer : MonoBehaviour
     public void closeTelon()
     {
         startTime = 0;
+        Debug.Log("Se cierra");
     }
 }

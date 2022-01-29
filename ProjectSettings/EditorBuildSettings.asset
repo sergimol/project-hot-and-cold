@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/HideObjectScene.unity
     guid: 76751a0a74ef91c41bea7f2a3f2e0237
   - enabled: 1
+    path: Assets/Scenes/CardScene.unity
+    guid: a9958297fc094a542b65c61e406f5b62
+  - enabled: 1
     path: Assets/Scenes/Sergio 1.unity
     guid: 180af9b41e657b94c8871a16df0309f3
   - enabled: 1
