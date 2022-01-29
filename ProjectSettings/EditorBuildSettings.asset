@@ -8,7 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 1341a85c67f07d4479136c6e12b143e8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Sergio.unity
     guid: 08d8aa8e7b10a3b4bad65c6c935ffbda
+  - enabled: 1
+    path: Assets/Scenes/Sergio 1.unity
+    guid: 180af9b41e657b94c8871a16df0309f3
+  - enabled: 1
+    path: Assets/Scenes/Sergio 2.unity
+    guid: 31a294446b4a4f7489b1217617d56c43
   m_configObjects: {}
