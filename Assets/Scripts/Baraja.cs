@@ -44,7 +44,7 @@ public class Baraja : MonoBehaviour
     //una lista con todas las cartas faciles o dificiles que pueden haber
     //pila de cartas faciles que pueden sallir durante la partida
     //pila de cartas dificiles que pueden salir durante la partida
-    List<infocarta> faciles, dificiles;
+    List<infocarta> faciles, dificiles, facilesDefault, facilesCustom, dificilesDefault, dificilesCustom;
     Stack<infocarta>cartasFaciles, cartasDificiles;
 
     infocarta cartaSeleccion;
@@ -76,6 +76,8 @@ public class Baraja : MonoBehaviour
     //baraja tood el cotarro
     private void Barajar()
     {
+
+
         BarajarFaciles();
         BarajarDificiles();
         //copiar las cartas a las que van a aparecerr durante el juego
@@ -88,7 +90,7 @@ public class Baraja : MonoBehaviour
         Shuffle(faciles);
 
         for (int i = 0; i < faciles.Count; i++){
-            if (faciles[i].active)
+            //if (faciles[i].active)
                 cartasFaciles.Push(faciles[i]);
         }
         Debug.Log("se barajaron las faciles");
@@ -97,7 +99,7 @@ public class Baraja : MonoBehaviour
         Shuffle(dificiles); 
         for (int i = 0; i < dificiles.Count; i++)
         {
-            if (dificiles[i].active)
+            //if (dificiles[i].active)
                 cartasDificiles.Push(dificiles[i]);
         }
         Debug.Log("SE ABRAJARON ALS DIFICILES");
@@ -138,16 +140,16 @@ public class Baraja : MonoBehaviour
     }
 
 
-    public infocarta giveCartaFacil()
+    public infocarta GiveCartaFacil()
     {
         return cartasFaciles.Peek();
     }
-    public infocarta giveCartaDificil()
+    public infocarta GiveCartaDificil()
     {
         return cartasDificiles.Peek();
     }
 
-    public infocarta giveSeleccion()
+    public infocarta GiveSeleccion()
     {
         return cartaSeleccion;
     }
@@ -158,6 +160,71 @@ public class Baraja : MonoBehaviour
 
     }
 
+    //actualiza los Json de guardado de las cartas custom, ejemplo, se desactivaron unas cartas //todo
+    public void ActualizarCustomSave(){
+
+        FileHandler.SaveToJSON<infocarta>(facilesCustom, "cartasFacilesCustom.json");
+        FileHandler.SaveToJSON<infocarta>(dificilesCustom, "cartasDificilesCustom.json");
+    }
+
+    //elimian una carta del mazo permanentemente segun la posicion en el indice //todo
+    public void EliminarCarta(int pos, bool facil)
+    {
+        if (facil)
+        {
+            facilesCustom.RemoveAt(pos);
+        }
+        else
+        {
+            dificilesCustom.RemoveAt(pos);
+        }
+    }
+
+        //añadde una carta a los amzos Custom y guarda la información
+        public void GuardarCarta(infocarta carta, bool facil)
+    {
+        if (facil)
+        {
+            facilesCustom.Add(carta);
+        }
+        else{
+            dificilesCustom.Add(carta);
+        }
+        //seguramente es mas sencillo y seguro que esot solo ocurra una vez en vez de con cada carta, //TODO ejemplo al salir del menu de ccrear crear o descativar cartas custom
+        ActualizarCustomSave();
+    }
+
+    //pone el mazo con todas las cartas activas que se van a utilizar durante esta partida
+    public void amontonar(){
+        //limpiar las listas para evitar repeticiones
+
+        dificiles.Clear();
+        faciles.Clear();
+
+
+
+        for (int i = 0; i < dificilesDefault.Count; i++)
+        {
+            if (dificilesDefault[i].active)
+            dificiles.Add(dificilesDefault[i]);
+        }
+        for (int i = 0; i < dificilesCustom.Count; i++)
+        {
+            if (dificilesCustom[i].active)
+            dificiles.Add(dificilesCustom[i]);
+        }
+
+        for (int i = 0; i < facilesDefault.Count; i++)
+        {
+            if (facilesDefault[i].active)
+            faciles.Add(facilesDefault[i]);
+        }
+        for (int i = 0; i < facilesCustom.Count; i++)
+        {
+            if (facilesCustom[i].active)
+            faciles.Add(dificilesCustom[i]);
+        }
+    }
 
 
     //This method returns the game object that was clicked using Raycast 2D
@@ -193,53 +260,40 @@ public class Baraja : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        setpaths();
+
+
+
         faciles = new List<infocarta>();
-        dificiles = new List<infocarta>();
+        dificiles = new List<infocarta>(); 
+        facilesDefault = new List<infocarta>();
+        dificilesDefault = new List<infocarta>(); 
+        facilesCustom = new List<infocarta>();
+        dificilesCustom = new List<infocarta>();
         cartasFaciles = new Stack<infocarta>();
         cartasDificiles = new Stack<infocarta>();
 
-
-        //  1 ---> cuando empiza necesito leer las cartas que estan activas de algun lado
-        // de momento ni puta idea asi que me voya  inventar 3 caartas de cada tipo para dar un poco variedad
-        //yo que se imaginenese el txt mas bonico del mundo
-
-        //las estoy poniendo aqui a piñonazo, me estoy imaginando el formato obviamente susceptible a cambios
-
-        faciles = FileHandler.ReadListFromJSON<infocarta>("cartasFaciles.json");
-        faciles.AddRange(FileHandler.ReadListFromJSON<infocarta>("cartasFacilesCustom.json"));
-        dificiles = FileHandler.ReadListFromJSON<infocarta>("cartasDificiles.json");
-        dificiles.AddRange(FileHandler.ReadListFromJSON<infocarta>("cartasDificilesCustom.json"));
+ 
+        facilesDefault = FileHandler.ReadListFromJSON<infocarta>("cartasFaciles.json");
+        facilesCustom = (FileHandler.ReadListFromJSON<infocarta>("cartasFacilesCustom.json"));
+        dificilesDefault = FileHandler.ReadListFromJSON<infocarta>("cartasDificiles.json");
+        dificilesCustom = (FileHandler.ReadListFromJSON<infocarta>("cartasDificilesCustom.json"));
 
 
 
 
-        // 2 ---> las cartas pueden ser de dos tipos, onomatopeya o gestos, facil o dificil
 
-        // 3 ---> las cartas pueden estar activas o desactivadas
-        //SI ESTAN DESACCTIVADAS NUNCA SE METEN ES INFORMACION DE LEER!
-
-        // 4 ---> idem con la custom
-
-
-        //scramble la baraja como lo hacemos
-        //funcion que baraja todas las carta leidas
+        //amontonar solo una vez cuando queramso volver a crear el mazo, ejemplo, hemos añadido u/y desactivado cartas
+        amontonar();
         Barajar();
 
 
-        //copiar las cartas a las que se van a mostrar, la pila
-        //al final de leer debera de aparecer primera carta de todas de la carta de frio caliente
-
-
-
-        //mostrar dos cartas
-        //cartaFacil =  //cartasFaciles.Peek();
 
         Debug.Log("la primera carta de las faciles es" + cartasFaciles.Peek().descripcion);
 
         Debug.Log("la primera carta de las faciles es" + cartasDificiles.Peek().descripcion);
 
 
-        setpaths();
         //crearData();
 
     }
@@ -247,25 +301,7 @@ public class Baraja : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //comprobar si elige la opcion facil o dificil
-        //no tengo ni idea de seleecion de esto con mando lo ahre solo apra raton luego me checkean
-
-        //si se esta usando raton, si no pos se selecciona con izquierda o derecha en el mando, o de igual modo con las teclas en teclado
-        //a lo mejor no queremos usar el raton ni pa pipas
-        //mouseHovering();
-
-        //confirmar eleccion
-        //click, o espacio
-
-
-        //actualizar la pila de las cartas que ya han salido
-        //si se vacia volver a barajar
-
-
-        //devolverr la eleccion
-
-
-
+     
         //debug
         if (Input.GetKeyUp("k"))
         {
