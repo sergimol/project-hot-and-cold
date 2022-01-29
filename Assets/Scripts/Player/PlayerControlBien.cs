@@ -21,7 +21,6 @@ public class PlayerControlBien : MonoBehaviour
     SpriteRenderer renderer;
 
     Vector2 direccion;
-    Animator[] anim;
     Rigidbody2D rb;
     GameObject closest;
     
@@ -39,12 +38,19 @@ public class PlayerControlBien : MonoBehaviour
     float startTime;
     Vector3 originalPos;
     float shakeAmount = 0.1f;
+
+
+    SpriteRenderer sprite;
+    Animator anim;
+
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         closest = null;
         //anim[0] player //anim[1] sword
-        anim = GetComponentsInChildren<Animator>();
+        anim = GetComponentInChildren<Animator>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
         Cursor.visible = false;
     }
 
@@ -64,6 +70,9 @@ public class PlayerControlBien : MonoBehaviour
         }
         else // TECLADO Y RATÓN
         {
+            //anim.SetBool("moving", true);
+            bool move = true;
+
             if (Input.GetKey("w")) direcciony = new Vector2(0, 1);
             else if (Input.GetKey("s")) direcciony = new Vector2(0, -1);
             else direcciony = new Vector2(0, 0);
@@ -79,6 +88,13 @@ public class PlayerControlBien : MonoBehaviour
 
             direccion = direccionx + direcciony;
             direccion.Normalize();
+
+            //Para la animacion
+            if (direccion.x == 0 && direccion.y == 0)
+                move = false;
+
+            if (move)
+                anim.SetBool("moving", true);
         }
         //anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
         //anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
@@ -140,6 +156,18 @@ public class PlayerControlBien : MonoBehaviour
         }else{
             rb.drag = maxDrag;
         }
+
+
+
+        //ANIMACION 
+        if(rb.velocity.x < 1 && rb.velocity.x > -1 && rb.velocity.y < 1 && rb.velocity.y > -1)
+            anim.SetBool("moving", false);
+
+        if (rb.velocity.x > 0)
+            sprite.flipX = true;
+        else
+            sprite.flipX = false;
+
 
         //rb.velocity = direccion*speed;
     }
