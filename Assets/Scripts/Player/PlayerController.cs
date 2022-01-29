@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     Animator[] anim;
     Rigidbody2D rb;
     GameObject closest;
+    bool stunned;
 
     void Awake()
     {
@@ -37,9 +38,15 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonUp("Fire1") && closest)
             {
                 if (closest.GetComponent<ObjectProperties>().searchingThis)
-                    Debug.Log("Ganaste :)");
+                {
+                    GameManager.instance.addPoints();
+                    gameObject.GetComponent<CameraZoom>().enabled = true;
+                }
                 else
-                    Debug.Log("No ganaste");
+                {
+                    Debug.Log("Stun");
+                    gameObject.GetComponent<Stun>().stun();
+                }
             }
         }
         else // TECLADO Y RATÓN

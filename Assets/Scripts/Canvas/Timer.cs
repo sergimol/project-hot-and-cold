@@ -4,9 +4,12 @@ using System;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] Text timerText;
-    [SerializeField] float startTime;
-    [SerializeField] Telon telon;
+    [SerializeField] 
+    Text timerText;
+    [SerializeField] 
+    float startTime;
+    [SerializeField] 
+    Telon telon;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +21,7 @@ public class Timer : MonoBehaviour
     {
         if (startTime > 1)
         {
-
+            //Si ha perdido
             startTime -= Time.deltaTime;
 
             string seconds = Math.Truncate((startTime % 60)).ToString();
@@ -30,5 +33,16 @@ public class Timer : MonoBehaviour
             telon.ini = false;
             telon.reposition();
         }
+    }
+
+    void resetTimer(int seconds)
+    {
+        startTime = seconds;
+    }
+
+    public void closeTelon()
+    {
+        startTime = 0;
+        Debug.Log("Se cierra");
     }
 }
