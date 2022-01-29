@@ -84,6 +84,9 @@ public class PlayerController : MonoBehaviour
 	
 	private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!other.GetComponent<ObjectProperties>())
+            return;
+
         // Comprueba si el nuevo objeto está más cerca
         if (!closest || (Vector2.Distance(other.transform.position, rb.transform.position) < Vector2.Distance(closest.transform.position, rb.transform.position)))
         {
@@ -96,11 +99,14 @@ public class PlayerController : MonoBehaviour
     
     private void OnTriggerStay2D(Collider2D other)
     {
+        if (!other.GetComponent<ObjectProperties>())
+            return;
+
         GameObject g = other.gameObject;
         // Comprueba si el nuevo objeto está más cerca
         if (closest != g || (Vector2.Distance(other.transform.position, rb.transform.position) < Vector2.Distance(closest.transform.position, rb.transform.position)))
         {
-            if (closest)
+            if (closest != null)
                 closest.GetComponentInChildren<Glow>().enabled = false;
             closest = g;
             closest.GetComponentInChildren<Glow>().enabled = true;
@@ -109,6 +115,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (!other.GetComponent<ObjectProperties>())
+            return;
+
         if (closest == other.gameObject)
         {
             closest.GetComponentInChildren<Glow>().enabled = false;
