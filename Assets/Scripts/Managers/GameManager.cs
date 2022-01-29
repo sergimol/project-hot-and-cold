@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviour
                  SFXVolSlider = 0.2f,
                  musicVolSlider = 0.2f;
     public bool fullScreenToggle = true,
-               gameIsPaused;
+               gameIsPaused,
+                easyMode;
 
     private int[] sceneNumbers = new int[2] { 1, 2 };
     private int actualScene;
