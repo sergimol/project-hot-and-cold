@@ -163,7 +163,7 @@ public class Baraja : MonoBehaviour
         return cartaSeleccion;
     }
 
-    public void setSelección(bool esfacil)
+    public void setSeleccion(bool esfacil)
     {
         cartaSeleccion = esfacil ? cartasFaciles.Peek() : cartasDificiles.Peek();
         nextCard();

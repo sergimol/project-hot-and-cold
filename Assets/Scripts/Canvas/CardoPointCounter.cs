@@ -37,7 +37,7 @@ public class CardoPointCounter : MonoBehaviour
         {
             startTime -= Time.deltaTime;
         }
-        else if (startTime > 0.7f)
+        else
         {
             startTime -= Time.deltaTime;
             card1.position = Vector3.Lerp(card1.position, new Vector3(card1.position.x, origCard1 + 750, card1.position.z), lerpTime);

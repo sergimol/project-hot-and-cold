@@ -62,4 +62,10 @@ public class CardDealer : MonoBehaviour
         }
 
     }
+
+    public void setSeleccionBaraja(bool esfacil)
+    {
+        Baraja.instance.setSeleccion(esfacil);
+    }
+
 }
