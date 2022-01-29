@@ -4,8 +4,22 @@ using UnityEngine;
 
 public class Glow : MonoBehaviour
 {
-    private void Update()
+    Animator anim;
+
+    private void Awake()
     {
-        Debug.Log("danlles estoy brillando");
+        anim = GetComponent<Animator>();
+    }
+
+    private void OnEnable()
+    {
+        anim.enabled = true;
+    }
+
+    private void OnDisable()
+    {
+        //uwu
+        transform.localScale = new Vector3(1, 1, 1);
+        anim.enabled = false;
     }
 }

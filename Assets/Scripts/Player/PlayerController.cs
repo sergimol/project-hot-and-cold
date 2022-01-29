@@ -79,19 +79,23 @@ public class PlayerController : MonoBehaviour
         // Comprueba si el nuevo objeto está más cerca
         if (!closest || (Vector2.Distance(other.transform.position, rb.transform.position) < Vector2.Distance(closest.transform.position, rb.transform.position)))
         {
+            if(closest)
+                closest.GetComponentInChildren<Glow>().enabled = false;
             closest = other.gameObject;
-            closest.GetComponent<Glow>().enabled = true;
+            closest.GetComponentInChildren<Glow>().enabled = true;
         }
     }
-
+    
     private void OnTriggerStay2D(Collider2D other)
     {
         GameObject g = other.gameObject;
         // Comprueba si el nuevo objeto está más cerca
         if (closest != g || (Vector2.Distance(other.transform.position, rb.transform.position) < Vector2.Distance(closest.transform.position, rb.transform.position)))
         {
+            if (closest)
+                closest.GetComponentInChildren<Glow>().enabled = false;
             closest = g;
-            closest.GetComponent<Glow>().enabled = true;
+            closest.GetComponentInChildren<Glow>().enabled = true;
         }
     }
 
@@ -99,7 +103,7 @@ public class PlayerController : MonoBehaviour
     {
         if (closest == other.gameObject)
         {
-            closest.GetComponent<Glow>().enabled = false;
+            closest.GetComponentInChildren<Glow>().enabled = false;
             Debug.Log("danlles ya no brillo");
             closest = null;
         }
