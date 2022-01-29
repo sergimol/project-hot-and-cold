@@ -58,7 +58,7 @@ public class Timer : MonoBehaviour
                     telon.ini = false;
                     telon.reposition();
                 }
-            
+            }
         }
     }
 
