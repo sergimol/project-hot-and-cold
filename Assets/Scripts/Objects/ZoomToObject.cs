@@ -43,6 +43,6 @@ public class ZoomToObject : MonoBehaviour
             if (cam.orthographicSize <= originalSize + 0.1)
                 timer.closeTelon();
         }
-        //
+        
     }
 }

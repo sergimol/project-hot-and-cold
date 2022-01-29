@@ -14,7 +14,7 @@ TagManager:
   - 
   - 
   - Tilemap
-  - 
+  - UI2
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Cartas
+    uniqueID: 2343999915
     locked: 0
