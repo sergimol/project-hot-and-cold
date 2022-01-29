@@ -13,6 +13,9 @@ public class Timer : MonoBehaviour
     [SerializeField]
     Telon telon;
 
+    [SerializeField]
+    bool scoreScene = false;
+
     private float startTimer;
     bool activated = false;
 
@@ -31,7 +34,7 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!easyMode)
+        if (!easyMode || scoreScene)
         {
             if (startTimer > 0)
             {

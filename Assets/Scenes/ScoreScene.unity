@@ -1084,6 +1084,7 @@ MonoBehaviour:
   timerText: {fileID: 605853483}
   startTime: 4
   telon: {fileID: 1862813189}
+  scoreScene: 1
 --- !u!4 &2102477450
 Transform:
   m_ObjectHideFlags: 0
