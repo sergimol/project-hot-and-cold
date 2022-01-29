@@ -11,12 +11,13 @@ public class infocarta
     public int puntos;
     public string descripcion;
 
-    public infocarta (bool activa, int puntaje, string info){
+    public infocarta(bool activa, int puntaje, string info)
+    {
         active = activa;
         puntos = puntaje;
         descripcion = info;
     }
-    public infocarta(){}
+    public infocarta() { }
 }
 
 public class Baraja : MonoBehaviour
@@ -45,7 +46,7 @@ public class Baraja : MonoBehaviour
     //pila de cartas faciles que pueden sallir durante la partida
     //pila de cartas dificiles que pueden salir durante la partida
     List<infocarta> faciles, dificiles, facilesDefault, facilesCustom, dificilesDefault, dificilesCustom;
-    Stack<infocarta>cartasFaciles, cartasDificiles;
+    Stack<infocarta> cartasFaciles, cartasDificiles;
 
     infocarta cartaSeleccion;
 
@@ -54,13 +55,15 @@ public class Baraja : MonoBehaviour
 
 
     //metódo para setear las direcciones de guardado
-    private void setpaths(){
+    private void setpaths()
+    {
         path = Application.dataPath + Path.AltDirectorySeparatorChar;
         persistentPath = Application.persistentDataPath + Path.AltDirectorySeparatorChar;
     }
 
     //creamos informacion para saber donde leñes esta nada personal
-    private void crearData(){
+    private void crearData()
+    {
         string savepath = path + "cartasDificiles.json";
 
         //string json = JsonUtility.ToJson(faciles[0]);
@@ -85,22 +88,25 @@ public class Baraja : MonoBehaviour
         Debug.Log("se barajaron todas las cartas");
     }
 
-    private void BarajarFaciles(){
+    private void BarajarFaciles()
+    {
 
         Shuffle(faciles);
 
-        for (int i = 0; i < faciles.Count; i++){
+        for (int i = 0; i < faciles.Count; i++)
+        {
             //if (faciles[i].active)
-                cartasFaciles.Push(faciles[i]);
+            cartasFaciles.Push(faciles[i]);
         }
         Debug.Log("se barajaron las faciles");
     }
-    private void BarajarDificiles(){
-        Shuffle(dificiles); 
+    private void BarajarDificiles()
+    {
+        Shuffle(dificiles);
         for (int i = 0; i < dificiles.Count; i++)
         {
             //if (dificiles[i].active)
-                cartasDificiles.Push(dificiles[i]);
+            cartasDificiles.Push(dificiles[i]);
         }
         Debug.Log("SE ABRAJARON ALS DIFICILES");
     }
@@ -119,16 +125,19 @@ public class Baraja : MonoBehaviour
     }
 
 
-    private void nextCard(){
+    private void nextCard()
+    {
         //saca las dos cartas y muestra las dos siguientes, si las pials estan vacias las rellena
         cartasFaciles.Pop();
         cartasDificiles.Pop();
 
-        if (cartasDificiles.Count == 0){
+        if (cartasDificiles.Count == 0)
+        {
             //esta vacio
             BarajarDificiles();
         }
-        if (cartasFaciles.Count == 0){
+        if (cartasFaciles.Count == 0)
+        {
             BarajarFaciles();
         }
 
@@ -154,14 +163,16 @@ public class Baraja : MonoBehaviour
         return cartaSeleccion;
     }
 
-    public void setSelección(bool esfacil){
+    public void setSelección(bool esfacil)
+    {
         cartaSeleccion = esfacil ? cartasFaciles.Peek() : cartasDificiles.Peek();
         nextCard();
-
+        AudioManager.instance.Play(AudioManager.ESounds.botonInicio);
     }
 
     //actualiza los Json de guardado de las cartas custom, ejemplo, se desactivaron unas cartas //todo
-    public void ActualizarCustomSave(){
+    public void ActualizarCustomSave()
+    {
 
         FileHandler.SaveToJSON<infocarta>(facilesCustom, "cartasFacilesCustom.json");
         FileHandler.SaveToJSON<infocarta>(dificilesCustom, "cartasDificilesCustom.json");
@@ -180,14 +191,15 @@ public class Baraja : MonoBehaviour
         }
     }
 
-        //añadde una carta a los amzos Custom y guarda la información
-        public void GuardarCarta(infocarta carta, bool facil)
+    //añadde una carta a los amzos Custom y guarda la información
+    public void GuardarCarta(infocarta carta, bool facil)
     {
         if (facil)
         {
             facilesCustom.Add(carta);
         }
-        else{
+        else
+        {
             dificilesCustom.Add(carta);
         }
         //seguramente es mas sencillo y seguro que esot solo ocurra una vez en vez de con cada carta, //TODO ejemplo al salir del menu de ccrear crear o descativar cartas custom
@@ -195,7 +207,8 @@ public class Baraja : MonoBehaviour
     }
 
     //pone el mazo con todas las cartas activas que se van a utilizar durante esta partida
-    public void amontonar(){
+    public void amontonar()
+    {
         //limpiar las listas para evitar repeticiones
 
         dificiles.Clear();
@@ -206,23 +219,23 @@ public class Baraja : MonoBehaviour
         for (int i = 0; i < dificilesDefault.Count; i++)
         {
             if (dificilesDefault[i].active)
-            dificiles.Add(dificilesDefault[i]);
+                dificiles.Add(dificilesDefault[i]);
         }
         for (int i = 0; i < dificilesCustom.Count; i++)
         {
             if (dificilesCustom[i].active)
-            dificiles.Add(dificilesCustom[i]);
+                dificiles.Add(dificilesCustom[i]);
         }
 
         for (int i = 0; i < facilesDefault.Count; i++)
         {
             if (facilesDefault[i].active)
-            faciles.Add(facilesDefault[i]);
+                faciles.Add(facilesDefault[i]);
         }
         for (int i = 0; i < facilesCustom.Count; i++)
         {
             if (facilesCustom[i].active)
-            faciles.Add(dificilesCustom[i]);
+                faciles.Add(dificilesCustom[i]);
         }
     }
 
@@ -265,15 +278,15 @@ public class Baraja : MonoBehaviour
 
 
         faciles = new List<infocarta>();
-        dificiles = new List<infocarta>(); 
+        dificiles = new List<infocarta>();
         facilesDefault = new List<infocarta>();
-        dificilesDefault = new List<infocarta>(); 
+        dificilesDefault = new List<infocarta>();
         facilesCustom = new List<infocarta>();
         dificilesCustom = new List<infocarta>();
         cartasFaciles = new Stack<infocarta>();
         cartasDificiles = new Stack<infocarta>();
 
- 
+
         facilesDefault = FileHandler.ReadListFromJSON<infocarta>("cartasFaciles.json");
         facilesCustom = (FileHandler.ReadListFromJSON<infocarta>("cartasFacilesCustom.json"));
         dificilesDefault = FileHandler.ReadListFromJSON<infocarta>("cartasDificiles.json");
@@ -301,7 +314,7 @@ public class Baraja : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+
         //debug
         if (Input.GetKeyUp("k"))
         {

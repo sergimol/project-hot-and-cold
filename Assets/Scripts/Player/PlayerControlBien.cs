@@ -60,11 +60,6 @@ public class PlayerControlBien : MonoBehaviour
                     GameManager.instance.addPoints();
                     gameObject.GetComponent<CameraZoom>().enabled = true;
                 }
-                else
-                {
-                    Debug.Log("Stun");
-                    gameObject.GetComponent<Stun>().stun();
-                }
             }
         }
         else // TECLADO Y RATÓN

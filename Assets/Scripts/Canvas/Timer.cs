@@ -4,18 +4,27 @@ using System;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] 
+    [SerializeField]
     Text timerText;
-    [SerializeField] 
+
+    [SerializeField]
     float startTime;
-    [SerializeField] 
+
+    [SerializeField]
     Telon telon;
+
+    private float startTimer;
+    bool activated = false;
 
     private bool easyMode;
     // Start is called before the first frame update
+
+    Animator anim;
+
     void Start()
     {
         //startTime = Time.time;
+        anim = timerText.GetComponent<Animator>();
         easyMode = GameManager.instance.easyMode;
     }
 
@@ -24,19 +33,31 @@ public class Timer : MonoBehaviour
     {
         if (!easyMode)
         {
+            if (startTimer > 0)
+            {
+                startTimer -= Time.deltaTime;
+                if (!activated && startTimer < 0.5f)
+                {
+                    startTime -= 3;
+                    activated = true;
+                }
+            }
             if (startTime > 1)
             {
-                //Si ha perdido
-                startTime -= Time.deltaTime;
+                if (startTime > 1)
+                {
+                    //Si ha perdido
+                    startTime -= Time.deltaTime;
 
-                string seconds = Math.Truncate((startTime % 60)).ToString();
+                    string seconds = Math.Truncate((startTime % 60)).ToString();
 
-                timerText.text = seconds;
-            }
-            else if (telon.ini)
-            {
-                telon.ini = false;
-                telon.reposition();
+                    timerText.text = seconds;
+                }
+                else if (telon.ini)
+                {
+                    telon.ini = false;
+                    telon.reposition();
+                }
             }
         }
     }
@@ -55,5 +76,12 @@ public class Timer : MonoBehaviour
             telon.ini = false;
             telon.reposition();
         }
+    }
+
+    public void reduceTime()
+    {
+        startTimer = 1.0f;
+        activated = false;
+        anim.SetTrigger("GrowTusMuertos");
     }
 }
