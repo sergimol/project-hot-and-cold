@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class Glow : MonoBehaviour
 {
-    float sineAngle = 0;
+    Animator anim;
 
-    private void Update()
+    private void Awake()
     {
-        Debug.Log("danlles estoy brillando");
-        float sizeOffset = Mathf.Sin(sineAngle);
-        transform.localScale = new Vector3(1 + sizeOffset, 1 + sizeOffset, 1);
-        sineAngle += Time.deltaTime;
+        anim = GetComponent<Animator>();
+    }
+
+    private void OnEnable()
+    {
+        anim.enabled = true;
     }
 
     private void OnDisable()
     {
         //uwu
         transform.localScale = new Vector3(1, 1, 1);
+        anim.enabled = false;
     }
 }
