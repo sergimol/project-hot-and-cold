@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] float startTime;
     private int score = 0;
     private int actualCardPoints = 0;
+    public int actualObject = 0;
     public static GameManager instance;
     // En el método Awake comprueba si hay otro GameManger
     // y si no lo hay se inicializa como GameManager. En el caso
