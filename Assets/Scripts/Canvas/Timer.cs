@@ -6,6 +6,7 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] Text timerText;
     [SerializeField] float startTime;
+    [SerializeField] Telon telon;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +16,19 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        startTime -= Time.deltaTime;
+        if (startTime > 1)
+        {
 
-        string seconds = Math.Truncate((startTime % 60)).ToString();
+            startTime -= Time.deltaTime;
 
-        timerText.text = seconds;
+            string seconds = Math.Truncate((startTime % 60)).ToString();
+
+            timerText.text = seconds;
+        }
+        else if (telon.ini)
+        {
+            telon.ini = false;
+            telon.reposition();
+        }
     }
 }
