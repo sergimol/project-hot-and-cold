@@ -157,7 +157,7 @@ public class Baraja : MonoBehaviour
     public void setSelección(bool esfacil){
         cartaSeleccion = esfacil ? cartasFaciles.Peek() : cartasDificiles.Peek();
         nextCard();
-
+        AudioManager.instance.Play(AudioManager.ESounds.botonInicio);
     }
 
     //actualiza los Json de guardado de las cartas custom, ejemplo, se desactivaron unas cartas //todo

@@ -14,6 +14,7 @@ public class ModeMenu : MonoBehaviour
         GameManager.instance.easyMode = false;
         Debug.Log("HideObjectScene" + GameManager.instance.getId());
         SceneManager.LoadScene("HideObjectScene" + GameManager.instance.getId());
+        AudioManager.instance.Play(AudioManager.ESounds.botonInicio);
     }
 
     public void NoTime()
@@ -21,10 +22,12 @@ public class ModeMenu : MonoBehaviour
         GameManager.instance.easyMode = true;
         Debug.Log("HideObjectScene" + GameManager.instance.getId());
         SceneManager.LoadScene("HideObjectScene" + GameManager.instance.getId());
+        AudioManager.instance.Play(AudioManager.ESounds.botonInicio);
     }
 
     public void HighScores()
     {
+        AudioManager.instance.Play(AudioManager.ESounds.botonClick);
         Debug.Log("Aqui van las highscores");
     }
 
@@ -34,8 +37,9 @@ public class ModeMenu : MonoBehaviour
         {
             mainUI.SetActive(true);
             EventSystem.current.SetSelectedGameObject(mainFirstButton);
+            modeMenuUI.SetActive(false);
+            AudioManager.instance.Play(AudioManager.ESounds.botonClick);
         }
-        modeMenuUI.SetActive(false);
     }
 
     /*public void DeathToggle(bool death) // God mode only

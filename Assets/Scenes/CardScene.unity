@@ -363,11 +363,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 1538411135}
+    m_SelectOnRight: {fileID: 1538411135}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -566,12 +566,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTime: 30
+  rounds: 0
   actualObject: 0
   mainVolSlider: 0.2
   SFXVolSlider: 0.2
   musicVolSlider: 0.2
   fullScreenToggle: 1
   gameIsPaused: 0
+  easyMode: 0
 --- !u!4 &1241061796
 Transform:
   m_ObjectHideFlags: 0
@@ -649,7 +651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1003059246}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!1 &1538411131
@@ -741,11 +743,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 1003059250}
+    m_SelectOnRight: {fileID: 1003059250}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}

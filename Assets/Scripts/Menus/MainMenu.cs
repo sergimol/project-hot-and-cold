@@ -22,21 +22,25 @@ public class MainMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(modeFirstButton);
         mainUI.SetActive(false);
+        AudioManager.instance.Play(AudioManager.ESounds.botonClick);
     }
 
     public void Quit() // Cierra el juego
     {
+        AudioManager.instance.Play(AudioManager.ESounds.botonClick);
         Application.Quit();
     }
 
     public void Credits()
     {
         //SceneManager.LoadScene("Creditos");
+        AudioManager.instance.Play(AudioManager.ESounds.botonClick);
         Debug.Log("Aqui van los creditos");
     }
 
     public void Options() // Abre el menú de opciones
     {
+        AudioManager.instance.Play(AudioManager.ESounds.botonClick);
         optionsUI.SetActive(true);
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(optionsFirstButton);
@@ -46,6 +50,7 @@ public class MainMenu : MonoBehaviour
 
     public void Deck()
     {
+        AudioManager.instance.Play(AudioManager.ESounds.botonClick);
         Debug.Log("Aqui van las cartas");
     }
 }
