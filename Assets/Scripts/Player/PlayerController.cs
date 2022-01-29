@@ -6,17 +6,22 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    float speed = 15;
+    float originalSpeed = 120;
 
     [SerializeField]
-    float max_speed = 5;
+    float reducedSpeed = 25;
+
+    [SerializeField]
+    Timer timer;
 
     Vector2 direccion;
     Animator[] anim;
     Rigidbody2D rb;
     GameObject closest;
-    bool stunned;
-
+    bool antiSpam = false;
+    float startTime;
+    Vector3 originalPos;
+    float shakeAmount = 0.1f;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -35,18 +40,9 @@ public class PlayerController : MonoBehaviour
             direccion = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             direccion.Normalize();
 
-            if (Input.GetButtonUp("Fire1") && closest)
+            if (!antiSpam && Input.GetButtonUp("Fire1") && closest)
             {
-                if (closest.GetComponent<ObjectProperties>().searchingThis)
-                {
-                    GameManager.instance.addPoints();
-                    gameObject.GetComponent<CameraZoom>().enabled = true;
-                }
-                else
-                {
-                    Debug.Log("Stun");
-                    gameObject.GetComponent<Stun>().stun();
-                }
+                inputManagement();
             }
         }
         else // TECLADO Y RATÓN
@@ -59,41 +55,52 @@ public class PlayerController : MonoBehaviour
             else if (Input.GetKey("a")) direccionx = new Vector2(-1, 0);
             else direccionx = new Vector2(0, 0);
 
+            if (!antiSpam && Input.GetKeyDown("space") && closest)
+            {
+                inputManagement();
+            }
+
             direccion = direccionx + direcciony;
             direccion.Normalize();
+
+            //anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
+            //anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
         }
-        //anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
-        //anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
-        if(direccion.magnitude > 0){
-            rb.drag = 0.01f;
-        }else{
-            rb.drag = 4.0f;
+
+        if (antiSpam)
+        {
+            startTime -= Time.deltaTime;
+            originalPos = Camera.main.transform.position;
+            Camera.main.transform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
+            if (startTime < 0)
+            {
+                antiSpam = false;
+            }
         }
     }
-//uwu
 
+    private void inputManagement()
+    {
+        if (closest.GetComponent<ObjectProperties>().searchingThis)
+        {
+            GameManager.instance.addPoints();
+            gameObject.GetComponent<CameraZoom>().enabled = true;
+        }
+        else
+        {
+            timer.reduceTime();
+            antiSpam = true;
+            startTime = 0.5f;
+        }
+    }
     private void FixedUpdate()
     {
-        if(rb.velocity.magnitude < max_speed){
-            rb.AddForce(direccion * speed);
-        }else{
-            rb.drag = 4.0f;
-        }
-
-        //rb.velocity = direccion*speed;
+        if (antiSpam)
+            rb.AddForce(direccion * reducedSpeed);
+        else
+            rb.AddForce(direccion * originalSpeed);
     }
-
-    //Metodos usados en los PowerUps Verde y Azul para manejar la velocidad del jugador
-    public void MulSpeed(int x)
-    {
-        speed *= x;
-    }
-    public void DivSpeedReset(int x)
-    {
-        speed /= x;
-    }
-	
-	private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.GetComponent<ObjectProperties>())
             return;
@@ -101,13 +108,13 @@ public class PlayerController : MonoBehaviour
         // Comprueba si el nuevo objeto está más cerca
         if (!closest || (Vector2.Distance(other.transform.position, rb.transform.position) < Vector2.Distance(closest.transform.position, rb.transform.position)))
         {
-            if(closest)
+            if (closest)
                 closest.GetComponentInChildren<Glow>().enabled = false;
             closest = other.gameObject;
             closest.GetComponentInChildren<Glow>().enabled = true;
         }
     }
-    
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (!other.GetComponent<ObjectProperties>())
