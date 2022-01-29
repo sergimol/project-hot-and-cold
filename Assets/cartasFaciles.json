@@ -3,17 +3,42 @@
     {
       "active": true,
       "puntos": 2,
-      "descripcion": "esta es la carta facil numero 1"
+      "descripcion": "di frio frio cuando se aleje y caliente caliente al acercarse"
     },
     {
-      "active": false,
+      "active": true,
       "puntos": 4,
-      "descripcion": "esta es la carta facil numero 3"
+      "descripcion": "Imita a un animal!"
     },
     {
-      "active": false,
-      "puntos": 3,
-      "descripcion": "esta es la carta facil numero 2"
+      "active": true,
+      "puntos": 4,
+      "descripcion": "Solo onomatopeyas!"
+    },
+    {
+      "active": true,
+      "puntos": 4,
+      "descripcion": "Di colores contrarios al objeto"
+    },
+    {
+      "active": true,
+      "puntos": 4,
+      "descripcion": "SEMAFORO! Verde cuando este cerca, rojo cuando se aleje"
+    },
+    {
+      "active": true,
+      "puntos": 4,
+      "descripcion": "Pon acento gallego!"
+    },
+    {
+      "active": true,
+      "puntos": 2,
+      "descripcion": "Di nombres de objetos cercanos al objetivo"
+    },
+    {
+      "active": true,
+      "puntos": 6,
+      "descripcion": "A las seis en punto! da la direccion como las manillas de un reloj!"
     }
   ]
 }

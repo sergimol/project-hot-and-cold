@@ -1,14 +1,14 @@
 {
   "Items": [
     {
-      "active": false,
+      "active": true,
       "puntos": 6,
-      "descripcion": "esta es la carta dificil numero 1"
+      "descripcion": "levantate cuando se acerque, sientate cuando se aleje, NO HABLES!"
     },
     {
-      "active": false,
-      "puntos": 12,
-      "descripcion": "esta es la carta dificil numero 2"
+      "active": true,
+      "puntos": 5,
+      "descripcion": "Da palmadas!"
     }
   ]
 }
