@@ -15,20 +15,25 @@ public class PlayerController : MonoBehaviour
     Timer timer;
 
     Vector2 direccion;
-    Animator[] anim;
     Rigidbody2D rb;
     GameObject closest;
     bool antiSpam = false;
     float startTime;
     Vector3 originalPos;
     float shakeAmount = 0.1f;
+
+    SpriteRenderer sprite;
+    Animator anim;
+
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         closest = null;
-        //anim[0] player //anim[1] sword
-        anim = GetComponentsInChildren<Animator>();
         Cursor.visible = false;
+
+        anim = GetComponentInChildren<Animator>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
@@ -101,6 +106,8 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(direccion * reducedSpeed);
         else
             rb.AddForce(direccion * originalSpeed);
+
+            
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
