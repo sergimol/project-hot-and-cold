@@ -10,7 +10,7 @@ public class OptionsMenu : MonoBehaviour
     AudioMixer master = null; // Utilizamos el mixer para controlar el volumen
     
     [SerializeField]
-    GameObject pauseMenuUI = null, optionsMenuUI = null, pauseFirstButton = null, mainFirstButton = null; // Referencian los demás menus y que botón debería estar seleccionado al volver a ellos
+    GameObject pauseMenuUI = null, optionsMenuUI = null, pauseFirstButton = null, mainFirstButton = null, mainUI = null; // Referencian los demás menus y que botón debería estar seleccionado al volver a ellos
 
     [SerializeField]
     GameObject mainVolSlider, SFXVolSlider, musicVolSlider, fulscreenToggle;
@@ -59,7 +59,10 @@ public class OptionsMenu : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(pauseFirstButton);
         }
         else if (mainFirstButton != null)
+        {
+            mainUI.SetActive(true);
             EventSystem.current.SetSelectedGameObject(mainFirstButton);
+        }
        optionsMenuUI.SetActive(false);
     }
     
