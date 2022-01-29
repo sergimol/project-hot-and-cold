@@ -1,0 +1,14 @@
+{
+  "Items": [
+    {
+      "active": false,
+      "puntos": 6,
+      "descripcion": "esta es la carta dificil numero 1"
+    },
+    {
+      "active": false,
+      "puntos": 12,
+      "descripcion": "esta es la carta dificil numero 2"
+    }
+  ]
+}

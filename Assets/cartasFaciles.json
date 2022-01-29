@@ -1,1 +1,19 @@
-{"Items":[{"active":false,"puntos":3,"descripcion":"esta es la carta facil numero 2"},{"active":false,"puntos":4,"descripcion":"esta es la carta facil numero 3"},{"active":false,"puntos":2,"descripcion":"esta es la carta facil numero 1"}]}
+{
+  "Items": [
+    {
+      "active": true,
+      "puntos": 2,
+      "descripcion": "esta es la carta facil numero 1"
+    },
+    {
+      "active": false,
+      "puntos": 4,
+      "descripcion": "esta es la carta facil numero 3"
+    },
+    {
+      "active": false,
+      "puntos": 3,
+      "descripcion": "esta es la carta facil numero 2"
+    }
+  ]
+}
