@@ -213,7 +213,7 @@ PrefabInstance:
     - target: {fileID: 2467888844392483825, guid: 68f8db3f33e4e8d429123d36da5da264,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2467888844392483825, guid: 68f8db3f33e4e8d429123d36da5da264,
         type: 3}
@@ -224,11 +224,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FlipY
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2467888844392483825, guid: 68f8db3f33e4e8d429123d36da5da264,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1898908361
       objectReference: {fileID: 0}
     - target: {fileID: 6844194102107100754, guid: 68f8db3f33e4e8d429123d36da5da264,
         type: 3}
@@ -289,11 +284,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6844194102107100759, guid: 68f8db3f33e4e8d429123d36da5da264,
-        type: 3}
-      propertyPath: speed
-      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68f8db3f33e4e8d429123d36da5da264, type: 3}
