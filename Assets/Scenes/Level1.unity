@@ -1231,6 +1231,7 @@ MonoBehaviour:
   timerText: {fileID: 1209248969}
   startTime: 300
   telon: {fileID: 2034028034}
+  scoreScene: 0
 --- !u!4 &639959416
 Transform:
   m_ObjectHideFlags: 0
@@ -2899,7 +2900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2034028030
 MonoBehaviour:
   m_ObjectHideFlags: 0
