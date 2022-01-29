@@ -15,6 +15,8 @@ public class Timer : MonoBehaviour
 
     private float startTimer;
     bool activated = false;
+
+    private bool easyMode;
     // Start is called before the first frame update
 
     Animator anim;
@@ -23,33 +25,40 @@ public class Timer : MonoBehaviour
     {
         //startTime = Time.time;
         anim = timerText.GetComponent<Animator>();
+        easyMode = GameManager.instance.easyMode;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (startTimer > 0)
+        if (!easyMode)
         {
-            startTimer -= Time.deltaTime;
-            if (!activated && startTimer < 0.5f)
+            if (startTimer > 0)
             {
-                startTime -= 3;
-                activated = true;
+                startTimer -= Time.deltaTime;
+                if (!activated && startTimer < 0.5f)
+                {
+                    startTime -= 3;
+                    activated = true;
+                }
             }
-        }
-        if (startTime > 1)
-        {
-            //Si ha perdido
-            startTime -= Time.deltaTime;
+            if (startTime > 1)
+            {
+                if (startTime > 1)
+                {
+                    //Si ha perdido
+                    startTime -= Time.deltaTime;
 
-            string seconds = Math.Truncate((startTime % 60)).ToString();
+                    string seconds = Math.Truncate((startTime % 60)).ToString();
 
-            timerText.text = seconds;
-        }
-        else if (telon.ini)
-        {
-            telon.ini = false;
-            telon.reposition();
+                    timerText.text = seconds;
+                }
+                else if (telon.ini)
+                {
+                    telon.ini = false;
+                    telon.reposition();
+                }
+            
         }
     }
 
@@ -62,6 +71,11 @@ public class Timer : MonoBehaviour
     {
         startTime = 0;
         Debug.Log("Se cierra");
+        if (easyMode && telon.ini)
+        {
+            telon.ini = false;
+            telon.reposition();
+        }
     }
 
     public void reduceTime()

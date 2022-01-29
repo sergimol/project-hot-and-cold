@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField]
-    GameObject optionsFirstButton = null, optionsUI = null; // Referencian el menú de opciones y el botón seleccionado al abrirlo
+    GameObject optionsFirstButton = null, optionsUI = null, modeFirstButton = null, modeUI = null, mainUI = null; // Referencian el menú de opciones y el botón seleccionado al abrirlo
 
     private void Start() // Inicia la música del menú
     {
@@ -15,8 +15,13 @@ public class MainMenu : MonoBehaviour
 
     public void Play() // Para la música del menú y carga la primera escena
     {
-        Debug.Log("HideObjectScene" + GameManager.instance.getId());
-        SceneManager.LoadScene("HideObjectScene"+GameManager.instance.getId());
+        //Esto está ahora en ModeMenu
+        //Debug.Log("HideObjectScene" + GameManager.instance.getId());
+        //SceneManager.LoadScene("HideObjectScene"+GameManager.instance.getId());
+        modeUI.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(modeFirstButton);
+        mainUI.SetActive(false);
     }
 
     public void Quit() // Cierra el juego
@@ -35,6 +40,7 @@ public class MainMenu : MonoBehaviour
         optionsUI.SetActive(true);
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(optionsFirstButton);
+        mainUI.SetActive(false);
         //Debug.Log("Aqui van las opciones");
     }
 

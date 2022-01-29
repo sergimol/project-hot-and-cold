@@ -29,10 +29,10 @@ public class CardDealer : MonoBehaviour
         puntos1 = card1.gameObject.GetComponentsInChildren<Text>()[1];
         puntos2 = card2.gameObject.GetComponentsInChildren<Text>()[1];
 
-        text1.text = Baraja.instance.giveCartaFacil().descripcion;
-        text2.text = Baraja.instance.giveCartaDificil().descripcion;
-        puntos1.text = Baraja.instance.giveCartaFacil().puntos.ToString();
-        puntos2.text = Baraja.instance.giveCartaDificil().puntos.ToString();
+        text1.text = Baraja.instance.GiveCartaFacil().descripcion;
+        text2.text = Baraja.instance.GiveCartaDificil().descripcion;
+        puntos1.text = Baraja.instance.GiveCartaFacil().puntos.ToString();
+        puntos2.text = Baraja.instance.GiveCartaDificil().puntos.ToString();
 
         origCard1 = card1.position.y;
         origCard2 = card2.position.y;
