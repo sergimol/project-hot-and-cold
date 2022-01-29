@@ -47,6 +47,8 @@ public class Baraja : MonoBehaviour
     List<infocarta> faciles, dificiles;
     Stack<infocarta>cartasFaciles, cartasDificiles;
 
+    infocarta cartaSeleccion;
+
     string path = ""; //pos pa ir probando
     string persistentPath = ""; //el que ahi que poner en releasse o no funciona //TODO
 
@@ -59,7 +61,7 @@ public class Baraja : MonoBehaviour
 
     //creamos informacion para saber donde leñes esta nada personal
     private void crearData(){
-        string savepath = path + "cartasFaciles.json";
+        string savepath = path + "cartasDificiles.json";
 
         //string json = JsonUtility.ToJson(faciles[0]);
         //Debug.Log(json);
@@ -67,7 +69,7 @@ public class Baraja : MonoBehaviour
         //StreamWriter writer = new StreamWriter(savepath);
         //writer.Write(json);
 
-        FileHandler.SaveToJSON<infocarta>(faciles, "cartasFaciles.json");
+        FileHandler.SaveToJSON<infocarta>(dificiles, "cartasDificiles.json");
 
     }
 
@@ -84,12 +86,20 @@ public class Baraja : MonoBehaviour
     private void BarajarFaciles(){
 
         Shuffle(faciles);
-        cartasFaciles = new Stack<infocarta>(faciles);
+
+        for (int i = 0; i < faciles.Count; i++){
+            if (faciles[i].active)
+                cartasFaciles.Push(faciles[i]);
+        }
         Debug.Log("se barajaron las faciles");
     }
     private void BarajarDificiles(){
-        Shuffle(dificiles);
-        cartasDificiles = new Stack<infocarta>(dificiles);
+        Shuffle(dificiles); 
+        for (int i = 0; i < dificiles.Count; i++)
+        {
+            if (dificiles[i].active)
+                cartasDificiles.Push(dificiles[i]);
+        }
         Debug.Log("SE ABRAJARON ALS DIFICILES");
     }
 
@@ -123,9 +133,31 @@ public class Baraja : MonoBehaviour
 
         Debug.Log("la primera carta de las faciles es" + cartasFaciles.Peek().descripcion);
 
-        Debug.Log("la primera carta de las faciles es" + cartasDificiles.Peek().descripcion);//se e dice cuales son las dos siguientes
+        Debug.Log("la primera carta de las dificiles es" + cartasDificiles.Peek().descripcion);//se e dice cuales son las dos siguientes
 
     }
+
+
+    public infocarta giveCartaFacil()
+    {
+        return cartasFaciles.Peek();
+    }
+    public infocarta giveCartaDificil()
+    {
+        return cartasDificiles.Peek();
+    }
+
+    public infocarta giveSeleccion()
+    {
+        return cartaSeleccion;
+    }
+
+    public void setSelección(bool esfacil){
+        cartaSeleccion = esfacil ? cartasFaciles.Peek() : cartasDificiles.Peek();
+        nextCard();
+
+    }
+
 
 
     //This method returns the game object that was clicked using Raycast 2D
@@ -172,44 +204,11 @@ public class Baraja : MonoBehaviour
         //yo que se imaginenese el txt mas bonico del mundo
 
         //las estoy poniendo aqui a piñonazo, me estoy imaginando el formato obviamente susceptible a cambios
-        
-        infocarta provisional;
-        provisional = new infocarta();
-        provisional.puntos = 2;
-        provisional.descripcion = "esta es la carta facil numero 1";
 
-        //push la carta
-        faciles.Add(provisional);
-
-        provisional = new infocarta();
-        provisional.puntos = 3;
-        provisional.descripcion = "esta es la carta facil numero 2";
-
-        //push la carta
-        faciles.Add(provisional);
-
-        provisional = new infocarta();
-        provisional.puntos = 4;
-        provisional.descripcion = "esta es la carta facil numero 3";
-
-        //Add la carta
-        faciles.Add(provisional);
-
-
-        //ahora las dificiles
-        provisional = new infocarta();
-        provisional.puntos = 6;
-        provisional.descripcion = "esta es la carta dificil numero 1";
-
-        //Add la carta
-        dificiles.Add(provisional);
-
-        provisional = new infocarta();
-        provisional.puntos = 12;
-        provisional.descripcion = "esta es la carta dificil numero 2";
-
-        //Add la carta
-        dificiles.Add(provisional);
+        faciles = FileHandler.ReadListFromJSON<infocarta>("cartasFaciles.json");
+        faciles.AddRange(FileHandler.ReadListFromJSON<infocarta>("cartasFacilesCustom.json"));
+        dificiles = FileHandler.ReadListFromJSON<infocarta>("cartasDificiles.json");
+        dificiles.AddRange(FileHandler.ReadListFromJSON<infocarta>("cartasDificilesCustom.json"));
 
 
 
@@ -241,7 +240,7 @@ public class Baraja : MonoBehaviour
 
 
         setpaths();
-        crearData();
+        //crearData();
 
     }
 

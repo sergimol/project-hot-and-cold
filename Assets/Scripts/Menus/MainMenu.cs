@@ -32,10 +32,10 @@ public class MainMenu : MonoBehaviour
 
     public void Options() // Abre el menú de opciones
     {
-        //optionsUI.SetActive(true);
-        //EventSystem.current.SetSelectedGameObject(null);
-        //EventSystem.current.SetSelectedGameObject(optionsFirstButton);
-        Debug.Log("Aqui van las opciones");
+        optionsUI.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(optionsFirstButton);
+        //Debug.Log("Aqui van las opciones");
     }
 
     public void Deck()

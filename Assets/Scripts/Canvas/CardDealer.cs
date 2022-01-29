@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardDealer : MonoBehaviour
 {
     [SerializeField]
     Transform card1, card2;
+    [SerializeField]
+    Text text1, text2, puntos1, puntos2;
+
 
     float origCard1, origCard2;
 
@@ -20,8 +24,19 @@ public class CardDealer : MonoBehaviour
         card1 = gameObject.transform.GetChild(2);
         card2 = gameObject.transform.GetChild(3);
 
+        text1 = card1.gameObject.GetComponentInChildren<Text>();
+        text2 = card2.gameObject.GetComponentInChildren<Text>();
+        puntos1 = card1.gameObject.GetComponentsInChildren<Text>()[1];
+        puntos2 = card2.gameObject.GetComponentsInChildren<Text>()[1];
+
+        text1.text = Baraja.instance.giveCartaFacil().descripcion;
+        text2.text = Baraja.instance.giveCartaDificil().descripcion;
+        puntos1.text = Baraja.instance.giveCartaFacil().puntos.ToString();
+        puntos2.text = Baraja.instance.giveCartaDificil().puntos.ToString();
+
         origCard1 = card1.position.y;
         origCard2 = card2.position.y;
+
     }
 
     // Update is called once per frame
