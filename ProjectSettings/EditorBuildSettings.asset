@@ -12,18 +12,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Sergio.unity
     guid: 08d8aa8e7b10a3b4bad65c6c935ffbda
   - enabled: 1
-    path: Assets/Scenes/HideObjectScene.unity
+    path: Assets/Scenes/HideObjectScene1.unity
     guid: 76751a0a74ef91c41bea7f2a3f2e0237
   - enabled: 1
     path: Assets/Scenes/CardScene.unity
     guid: a9958297fc094a542b65c61e406f5b62
   - enabled: 1
-    path: Assets/Scenes/Sergio 1.unity
+    path: Assets/Scenes/Level1.unity
     guid: 180af9b41e657b94c8871a16df0309f3
+  - enabled: 1
+    path: Assets/Scenes/HideObjectScene2.unity
+    guid: 5b592996fdad1a84cac2717ee5d34d5c
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 31a294446b4a4f7489b1217617d56c43
   - enabled: 1
     path: Assets/Scenes/ScoreScene.unity
     guid: 075480bb4888d5d45b3bf7101eafa11c
   - enabled: 1
-    path: Assets/Scenes/Sergio 2.unity
-    guid: 31a294446b4a4f7489b1217617d56c43
+    path: Assets/Scenes/FinalScene.unity
+    guid: a2996959818680648b908152cf215db5
   m_configObjects: {}
