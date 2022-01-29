@@ -47,6 +47,8 @@ public class Baraja : MonoBehaviour
     List<infocarta> faciles, dificiles;
     Stack<infocarta>cartasFaciles, cartasDificiles;
 
+    infocarta cartaSeleccion;
+
     string path = ""; //pos pa ir probando
     string persistentPath = ""; //el que ahi que poner en releasse o no funciona //TODO
 
@@ -134,6 +136,28 @@ public class Baraja : MonoBehaviour
         Debug.Log("la primera carta de las dificiles es" + cartasDificiles.Peek().descripcion);//se e dice cuales son las dos siguientes
 
     }
+
+
+    public infocarta giveCartaFacil()
+    {
+        return cartasFaciles.Peek();
+    }
+    public infocarta giveCartaDificil()
+    {
+        return cartasDificiles.Peek();
+    }
+
+    public infocarta giveSeleccion()
+    {
+        return cartaSeleccion;
+    }
+
+    public void setSelección(bool esfacil){
+        cartaSeleccion = esfacil ? cartasFaciles.Peek() : cartasDificiles.Peek();
+        nextCard();
+
+    }
+
 
 
     //This method returns the game object that was clicked using Raycast 2D
