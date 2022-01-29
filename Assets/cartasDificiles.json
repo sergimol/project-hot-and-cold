@@ -7,8 +7,53 @@
     },
     {
       "active": true,
-      "puntos": 5,
+      "puntos": 3,
       "descripcion": "Da palmadas!"
+    },
+    {
+      "active": true,
+      "puntos": 6,
+      "descripcion": "Alejate de tu amigo si esta lejos y acercate si esta cerca"
+    },
+    {
+      "active": true,
+      "puntos": 10,
+      "descripcion": "Señala solo con tus ojos donde tiene que ir"
+    },
+    {
+      "active": true,
+      "puntos": 5,
+      "descripcion": "inclinate a la derecha si esta cerca, a la izquierda si se aleja"
+    },
+    {
+      "active": true,
+      "puntos": 5,
+      "descripcion": "levantate de la silla, da vueltas segun se acerque"
+    },
+    {
+      "active": true,
+      "puntos": 5,
+      "descripcion": "ponte muy triste si se esta acercando"
+    },
+    {
+      "active": true,
+      "puntos": 8,
+      "descripcion": "Actua como un controlador aereo, el de los palitos"
+    },
+    {
+      "active": true,
+      "puntos": 5,
+      "descripcion": "Finge ser un gatito"
+    },
+    {
+      "active": true,
+      "puntos": 4,
+      "descripcion": "ponte de morritos"
+    },
+    {
+      "active": true,
+      "puntos": 5,
+      "descripcion": "a camara lenta!"
     }
   ]
 }
