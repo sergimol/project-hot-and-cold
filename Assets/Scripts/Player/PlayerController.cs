@@ -36,8 +36,10 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetButtonUp("Fire1") && closest)
             {
-                closest.SetActive(false);
-                closest = null;
+                if (closest.GetComponent<ObjectProperties>().searchingThis)
+                    Debug.Log("Ganaste :)");
+                else
+                    Debug.Log("No ganaste");
             }
         }
         else // TECLADO Y RATÓN
@@ -110,7 +112,6 @@ public class PlayerController : MonoBehaviour
         if (closest == other.gameObject)
         {
             closest.GetComponentInChildren<Glow>().enabled = false;
-            Debug.Log("danlles ya no brillo");
             closest = null;
         }
     }
