@@ -15,6 +15,7 @@ public class ModeMenu : MonoBehaviour
         Debug.Log("HideObjectScene" + GameManager.instance.getId());
         SceneManager.LoadScene("HideObjectScene" + GameManager.instance.getId());
         AudioManager.instance.Play(AudioManager.ESounds.botonInicio);
+        GameManager.instance.nextSceneName = "CardScene";
     }
 
     public void NoTime()
@@ -23,6 +24,7 @@ public class ModeMenu : MonoBehaviour
         Debug.Log("HideObjectScene" + GameManager.instance.getId());
         SceneManager.LoadScene("HideObjectScene" + GameManager.instance.getId());
         AudioManager.instance.Play(AudioManager.ESounds.botonInicio);
+        GameManager.instance.nextSceneName = "CardScene";
     }
 
     public void HighScores()
