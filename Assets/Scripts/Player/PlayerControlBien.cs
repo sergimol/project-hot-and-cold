@@ -88,13 +88,19 @@ public class PlayerControlBien : MonoBehaviour
 
             direccion = direccionx + direcciony;
             direccion.Normalize();
-
+            
             //Para la animacion
             if (direccion.x == 0 && direccion.y == 0)
                 move = false;
 
             if (move)
+            {
                 anim.SetBool("moving", true);
+                AudioManager.instance.Play(AudioManager.ESounds.footsteps);
+            }
+            else
+                AudioManager.instance.Stop(AudioManager.ESounds.footsteps);
+
         }
         //anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
         //anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
