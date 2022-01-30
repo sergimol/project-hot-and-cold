@@ -120,6 +120,46 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &565721821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2732764861987478518, guid: 4ce1eb63111210c41afaa895f188ad08,
+    type: 3}
+  m_PrefabInstance: {fileID: 2732764861340357005}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &565721823
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565721821}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 6b9b0c84c2761dc4aab1f0d40e02456c, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &565721825
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565721821}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8ce085b070a6b9c4190b7418368b4080, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &605853481
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +291,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTime: 30
-  rounds: 0
   actualObject: 0
   mainVolSlider: 0.2
   SFXVolSlider: 0.2
@@ -351,7 +390,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2732764861340357005}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 565721821}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -638,12 +677,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e5b219685c82434695a962f65a11247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card1: {fileID: 0}
-  card2: {fileID: 0}
-  text1: {fileID: 0}
-  text2: {fileID: 0}
-  puntos1: {fileID: 0}
-  puntos2: {fileID: 0}
   lerpTime: 0.1
 --- !u!1 &1904120914
 GameObject:
@@ -852,6 +885,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1862813193}
     m_Modifications:
+    - target: {fileID: 1175215664668894226, guid: 1b9b00144f7611446a49bf348a7a524f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1175215665919938670, guid: 1b9b00144f7611446a49bf348a7a524f,
         type: 3}
       propertyPath: m_Name
@@ -920,17 +958,17 @@ PrefabInstance:
     - target: {fileID: 1175215665919938671, guid: 1b9b00144f7611446a49bf348a7a524f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -750
+      value: -900
       objectReference: {fileID: 0}
     - target: {fileID: 1175215665919938671, guid: 1b9b00144f7611446a49bf348a7a524f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 150
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1175215665919938671, guid: 1b9b00144f7611446a49bf348a7a524f,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1175215665919938671, guid: 1b9b00144f7611446a49bf348a7a524f,
         type: 3}
@@ -982,6 +1020,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1862813194}
+    - target: {fileID: 2420941939807306497, guid: 1b9b00144f7611446a49bf348a7a524f,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8025065264322604873, guid: 1b9b00144f7611446a49bf348a7a524f,
+        type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: 56e8b0aa40053114ebd8d21f568ee672, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b9b00144f7611446a49bf348a7a524f, type: 3}
 --- !u!1001 &2562780812463655590
@@ -1123,17 +1171,17 @@ PrefabInstance:
     - target: {fileID: 2732764861987478513, guid: 4ce1eb63111210c41afaa895f188ad08,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -750
+      value: -900
       objectReference: {fileID: 0}
     - target: {fileID: 2732764861987478513, guid: 4ce1eb63111210c41afaa895f188ad08,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 150
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 2732764861987478513, guid: 4ce1eb63111210c41afaa895f188ad08,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 2732764861987478513, guid: 4ce1eb63111210c41afaa895f188ad08,
         type: 3}
@@ -1189,6 +1237,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CartitaGesto
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732764862910862056, guid: 4ce1eb63111210c41afaa895f188ad08,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ce1eb63111210c41afaa895f188ad08, type: 3}

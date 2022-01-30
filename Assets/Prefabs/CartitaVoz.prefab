@@ -314,6 +314,8 @@ GameObject:
   - component: {fileID: 1175215665919938672}
   - component: {fileID: 1175215665919938674}
   - component: {fileID: 6844402249438236194}
+  - component: {fileID: 8025065264322604873}
+  - component: {fileID: 2420941939807306497}
   m_Layer: 5
   m_Name: CartitaVoz
   m_TagString: Untagged
@@ -342,7 +344,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -280, y: -750}
-  m_SizeDelta: {x: 150, y: 200}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1175215665919938673
 CanvasRenderer:
@@ -370,7 +372,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cf3e48f79acaa214daecf842bd1110f9, type: 3}
+  m_Sprite: {fileID: -4469193496344720658, guid: 06698a8f70550774e99e0d5a45d940ff,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -457,6 +460,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9ddd81d634e9c41b5d5716fe176a12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!111 &8025065264322604873
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175215665919938670}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 56e8b0aa40053114ebd8d21f568ee672, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &2420941939807306497
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175215665919938670}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb3b9e78a38b8984f856bab8708df8d8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1193209597698934202
 GameObject:
   m_ObjectHideFlags: 0

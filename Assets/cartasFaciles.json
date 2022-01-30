@@ -20,19 +20,19 @@
     },
     {
       "active": true,
-      "puntos": 4,
+      "puntos": 3,
       "descripcion": "Di colores contrarios al objeto",
 	  "descubierta": false
     },
     {
       "active": true,
-      "puntos": 4,
+      "puntos": 3,
       "descripcion": "SEMAFORO! Verde cuando este cerca, rojo cuando se aleje",
 	  "descubierta": false
     },
     {
       "active": true,
-      "puntos": 4,
+      "puntos": 3,
       "descripcion": "Pon acento gallego!",
 	  "descubierta": false
     },
@@ -44,55 +44,55 @@
     },
     {
       "active": true,
-      "puntos": 6,
+      "puntos": 3,
       "descripcion": "A las seis en punto! da la direccion como las manillas de un reloj!",
 	  "descubierta": false
     },
     {
       "active": true,
-      "puntos": 5,
+      "puntos": 3,
       "descripcion": "Di la receta de unas lentejas de super puta madre",
 	  "descubierta": false
     },
     {
       "active": true,
-      "puntos": 5,
+      "puntos": 3,
       "descripcion": "solo puedes decir la letra \"A\" ",
 	  "descubierta": false
     },
     {
       "active": true,
-      "puntos": 5,
+      "puntos": 3,
       "descripcion": "Habla en Brasileño!",
 	  "descubierta": false
     },
     {
       "active": true,
-      "puntos": 5,
+      "puntos": 3,
       "descripcion": "Encara Messi! Encara Messi! Se un comentarista de futbol!",
 	  "descubierta": false
     },
     {
       "active": true,
-      "puntos": 5,
+      "puntos": 3,
       "descripcion": "Canta let it go! (Copyright disclaimer)",
 	  "descubierta": false
     },
     {
       "active": true,
-      "puntos": 5,
+      "puntos": 3,
       "descripcion": "El vecino con el taladro",
 	  "descubierta": false
     },
     {
       "active": true,
-      "puntos": 5,
+      "puntos": 3,
       "descripcion": "Grita!",
 	  "descubierta": false
     },
     {
       "active": true,
-      "puntos": 5,
+      "puntos": 3,
       "descripcion": "Riete segun se aleje",
 	  "descubierta": false
     },
@@ -104,7 +104,7 @@
     },
     {
       "active": true,
-      "puntos": 5,
+      "puntos": 3,
       "descripcion": "habla como Mickey al acercarse, como goofy al alejarse ",
 	  "descubierta": false
     },
@@ -116,7 +116,7 @@
     }, 
     {
       "active": true,
-      "puntos": 5,
+      "puntos": 3,
       "descripcion": "Beep Boop! convierte en robot habla con 0 y 1",
 	  "descubierta": false
     }
