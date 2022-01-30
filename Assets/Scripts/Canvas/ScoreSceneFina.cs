@@ -41,7 +41,7 @@ public class ScoreSceneFina : MonoBehaviour
         }
         else
         {
-            points.position = Vector3.Lerp(points.position, new Vector3(points.position.x, origCard1 + 2.8f * gameObject.GetComponent<RectTransform>().rect.height / 4, points.position.z), lerpTime);
+            points.position = Vector3.Lerp(points.position, new Vector3(points.position.x, origCard1 + gameObject.GetComponent<RectTransform>().rect.height / 2, points.position.z), lerpTime);
         }
     }
 }

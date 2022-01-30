@@ -43,6 +43,7 @@ public class Baraja : MonoBehaviour
 
     infocarta cartaSeleccion;
 
+
     string path = ""; //pos pa ir probando
     string persistentPath = ""; //el que ahi que poner en releasse o no funciona //TODO
 
@@ -65,10 +66,13 @@ public class Baraja : MonoBehaviour
             cartasFaciles = new Stack<infocarta>();
             cartasDificiles = new Stack<infocarta>();
 
+            //Debug.Log(persistentPath);
 
             facilesDefault = FileHandler.ReadListFromJSON<infocarta>("cartasFaciles.json");
             dificilesDefault = FileHandler.ReadListFromJSON<infocarta>("cartasDificiles.json");
 
+            if (facilesDefault.Count == 0)
+                crearCartas();
 
         }
         else
@@ -77,6 +81,78 @@ public class Baraja : MonoBehaviour
         }
 
 
+
+    }
+
+    private infocarta creadnoCarta(int p, string d)
+    {
+        infocarta aux = new infocarta();
+
+        aux.active = true;
+        aux.puntos = p;
+        aux.descripcion = d;
+        aux.descubierta = false;
+
+        return aux;
+    }
+
+    private void crearCartas()
+    {
+
+
+        dificilesDefault.Add(creadnoCarta(3,
+            "¡Levantate cuando se acerque, sientate cuando se aleje, NO HABLES!"));
+        dificilesDefault.Add(creadnoCarta(1, "¡Da palmadas, mas rapido cuanto mas cerca esta!"));
+        dificilesDefault.Add(creadnoCarta(2, "Alejate de tu amigo si esta lejos y acercate si esta cerca"));
+        dificilesDefault.Add(creadnoCarta(3, "Indica solo con tus ojos donde tiene que ir"));
+        dificilesDefault.Add(creadnoCarta(2, "Inclinate a la derecha si esta cerca, a la izquierda si se aleja"));
+        dificilesDefault.Add(creadnoCarta(2, "Actua como un controlador aereo, el de los palitos"));
+        dificilesDefault.Add(creadnoCarta(3, "Aguanta la respiracion"));
+        dificilesDefault.Add(creadnoCarta(1, "Frota algo!"));
+        dificilesDefault.Add(creadnoCarta(1, "Te estas quedando dormido"));
+        dificilesDefault.Add(creadnoCarta(2, "Haz cosquillas"));
+        dificilesDefault.Add(creadnoCarta(1, "Si se acerca muevete inquieto en la silla"));
+        dificilesDefault.Add(creadnoCarta(2, "Cuanto mas cerca mirale mas fijamente, mas intenso!"));
+        dificilesDefault.Add(creadnoCarta(3, "Ponte muy triste"));
+
+
+        //las faciles
+
+        facilesDefault.Add(creadnoCarta(1, "Di frio frio cuando se aleje y caliente caliente al acercarse"));
+        facilesDefault.Add(creadnoCarta(2, "Imita a un animal cuando se acerque y otro cuando se aleje!"));
+        facilesDefault.Add(creadnoCarta(2, "Solo onomatopeyas!"));
+        facilesDefault.Add(creadnoCarta(3, "Di colores contrarios al objeto"));
+        facilesDefault.Add(creadnoCarta(1, "SEMAFORO! Verde cuando este cerca, rojo cuando se aleje"));
+        facilesDefault.Add(creadnoCarta(1, "Pon acento gallego!"));
+        facilesDefault.Add(creadnoCarta(2, "Di nombres de objetos cercanos al objetivo"));
+        facilesDefault.Add(creadnoCarta(3, "A las seis en punto! da la direccion como las manillas de un reloj!"));
+
+        facilesDefault.Add(creadnoCarta(3, "Di la receta de unas lentejas de super puta madre"));
+        facilesDefault.Add(creadnoCarta(3, "solo puedes decir la letra \"A\" "));
+
+        facilesDefault.Add(creadnoCarta(1, "Habla en Brasileiro!"));
+        facilesDefault.Add(creadnoCarta(1, "Encara Messi! Encara Messi! Se un comentarista de futbol!"));
+
+        facilesDefault.Add(creadnoCarta(2, "Canta let it go! (Copyright disclaimer)"));
+        facilesDefault.Add(creadnoCarta(2, "Canta algo del conejo malo! (Copyright disclaimer)"));
+        facilesDefault.Add(creadnoCarta(2, "El vecino con el taladro"));
+        facilesDefault.Add(creadnoCarta(1, "Grita!"));
+        facilesDefault.Add(creadnoCarta(3, "Riete segun se aleje"));
+        facilesDefault.Add(creadnoCarta(3, "Di frutas al alejarse, di postres al acercarse"));
+        facilesDefault.Add(creadnoCarta(2, "habla como Mickey al acercarse, como goofy al alejarse"));
+        facilesDefault.Add(creadnoCarta(2, "habla como el pato Donald"));
+        facilesDefault.Add(creadnoCarta(1, "Habla lento"));
+        facilesDefault.Add(creadnoCarta(2, "Beep Boop! convierte en robot habla con 0 y 1"));
+
+        facilesDefault.Add(creadnoCarta(3, "Lanza piropos"));
+        facilesDefault.Add(creadnoCarta(2, "Silba, si no sabes pos te las arreglas"));
+        facilesDefault.Add(creadnoCarta(3, "Finge que te has olvidado"));
+        facilesDefault.Add(creadnoCarta(3, "insulta, no temas por tu amistad"));
+        facilesDefault.Add(creadnoCarta(2, "Tirate pedos"));
+        facilesDefault.Add(creadnoCarta(3, "Barras, Barras, Rapea"));
+
+
+        ActualizarSave();
 
     }
 
@@ -90,7 +166,7 @@ public class Baraja : MonoBehaviour
     //creamos informacion para saber donde leñes esta nada personal
     private void crearData()
     {
-        string savepath = path + "cartasDificiles.json";
+        string savepath = persistentPath + "cartasDificiles.json";
 
         //string json = JsonUtility.ToJson(faciles[0]);
         //Debug.Log(json);
