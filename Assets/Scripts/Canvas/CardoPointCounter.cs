@@ -5,13 +5,12 @@ using UnityEngine.UI;
 
 public class CardoPointCounter : MonoBehaviour
 {
-    [SerializeField]
-    Transform card1;
+    Transform point0, textJug;
     [SerializeField]
     Text text1, puntos1;
 
 
-    float origCard1, origCard2;
+    float origCard1, origText;
 
     [SerializeField]
     float lerpTime;
@@ -20,15 +19,19 @@ public class CardoPointCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        card1 = gameObject.transform.GetChild(4);
+        int points = GameManager.instance.actualCardPoints;
+        GameManager.instance.actualCardPoints = 0;
+        point0 = gameObject.transform.GetChild(5-points);
+        textJug = gameObject.transform.GetChild(6);
 
-        text1 = card1.gameObject.GetComponentInChildren<Text>();
-        puntos1 = card1.gameObject.GetComponentsInChildren<Text>()[1];
+        text1 = point0.gameObject.GetComponentInChildren<Text>();
+        puntos1 = point0.gameObject.GetComponentsInChildren<Text>()[1];
 
         text1.text = Baraja.instance.GiveSeleccion().descripcion;
         puntos1.text = Baraja.instance.GiveSeleccion().puntos.ToString();
 
-        origCard1 = card1.position.y;
+        origCard1 = point0.position.y;
+        origText = textJug.position.y;
     }
 
     void Update()
@@ -37,10 +40,14 @@ public class CardoPointCounter : MonoBehaviour
         {
             startTime -= Time.deltaTime;
         }
-        else
+        else if (startTime > 0)
         {
             startTime -= Time.deltaTime;
-            card1.position = Vector3.Lerp(card1.position, new Vector3(card1.position.x, origCard1 + 750, card1.position.z), lerpTime);
+            point0.position = Vector3.Lerp(point0.position, new Vector3(point0.position.x, origCard1 + 550, point0.position.z), lerpTime);
+        }
+        else
+        {
+            textJug.position = Vector3.Lerp(textJug.position, new Vector3(textJug.position.x, origText + 950, textJug.position.z), lerpTime);
         }
     }
 }

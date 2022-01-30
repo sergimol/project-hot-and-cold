@@ -14,12 +14,13 @@ public class Timer : MonoBehaviour
     Telon telon;
 
     [SerializeField]
-    bool scoreScene = false;
+    bool scoreScene = false, levelScene = false;
 
     private float startTimer;
     bool activated = false;
 
-    private bool easyMode;
+    private bool easyMode, ganas = false;
+
     // Start is called before the first frame update
 
     Animator anim;
@@ -57,6 +58,9 @@ public class Timer : MonoBehaviour
             }
             else if (telon.ini)
             {
+                if (!ganas && levelScene)
+                    GameManager.instance.actualCardPoints = 0;
+
                 telon.ini = false;
                 telon.reposition();
             }
@@ -71,6 +75,7 @@ public class Timer : MonoBehaviour
 
     public void closeTelon()
     {
+        ganas = true;
         startTime = 0;
         Debug.Log("Se cierra");
         if (easyMode && telon.ini)

@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     int rounds = 5;
     public static GameManager instance;
     private int score = 0;
-    private int actualCardPoints = 0;
+    public int actualCardPoints = 0;
     public int actualObject = 0;
     public float mainVolSlider = 0.2f,
                  SFXVolSlider = 0.2f,

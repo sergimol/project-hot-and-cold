@@ -890,6 +890,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1175215665682166229, guid: 1b9b00144f7611446a49bf348a7a524f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1175215665919938670, guid: 1b9b00144f7611446a49bf348a7a524f,
         type: 3}
       propertyPath: m_Name
@@ -1000,6 +1005,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1175215665919938672, guid: 1b9b00144f7611446a49bf348a7a524f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2406175089346268577, guid: 21c1c71aa62581648b5d725f35afc8b8,
+        type: 3}
     - target: {fileID: 1175215665919938674, guid: 1b9b00144f7611446a49bf348a7a524f,
         type: 3}
       propertyPath: m_Navigation.m_SelectOnLeft
@@ -1108,6 +1119,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1862813193}
     m_Modifications:
+    - target: {fileID: 2732764861366372322, guid: 4ce1eb63111210c41afaa895f188ad08,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732764861987478512, guid: 4ce1eb63111210c41afaa895f188ad08,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7848624844105311929, guid: d2b783cd58af04044b0d263787c913ba,
+        type: 3}
     - target: {fileID: 2732764861987478513, guid: 4ce1eb63111210c41afaa895f188ad08,
         type: 3}
       propertyPath: m_LocalPosition.x

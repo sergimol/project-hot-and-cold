@@ -196,6 +196,7 @@ public class Baraja : MonoBehaviour
     public void setSeleccion(bool esfacil)
     {
         cartaSeleccion = esfacil ? cartasFaciles.Peek() : cartasDificiles.Peek();
+        GameManager.instance.actualCardPoints = esfacil ? cartasFaciles.Peek().puntos : cartasDificiles.Peek().puntos;
         nextCard();
         AudioManager.instance.Play(AudioManager.ESounds.botonInicio);
     }
