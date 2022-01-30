@@ -6,11 +6,13 @@ using UnityEngine.UI;
 
 public class CardDealer : MonoBehaviour
 {
-    [SerializeField]
     Transform card1, card2;
-    [SerializeField]
     Text text1, text2, puntos1, puntos2;
 
+    //[SerializeField]
+    //Sprite[] redIm = new Sprite[3];
+    //[SerializeField]
+    //Sprite[] blueIm = new Sprite[3];
 
     float origCard1, origCard2;
 
@@ -37,6 +39,10 @@ public class CardDealer : MonoBehaviour
         origCard1 = card1.position.y;
         origCard2 = card2.position.y;
 
+        //card1.GetComponent<Image>().sprite = redIm[Int32.Parse(puntos1.text) - 1];
+        //card2.GetComponent<Image>().sprite = blueIm[Int32.Parse(puntos2.text) - 1];
+
+        //Debug.Log(card1.GetComponent<Image>().sprite);
     }
 
     // Update is called once per frame
@@ -49,16 +55,23 @@ public class CardDealer : MonoBehaviour
 
             string seconds = Math.Truncate((startTime % 60)).ToString();
         }
-        else if(startTime > 0.7f)
+        else if (startTime > 0.7f)
         {
             startTime -= Time.deltaTime;
-            card1.position = Vector3.Lerp(card1.position, new Vector3(card1.position.x, origCard1 + 750, card1.position.z), lerpTime);
-            
+            card1.position = Vector3.Lerp(card1.position, new Vector3(card1.position.x, origCard1 + 900, card1.position.z), lerpTime);
+
         }
         else
         {
-            card1.position = Vector3.Lerp(card1.position, new Vector3(card1.position.x, origCard1 + 750, card1.position.z), lerpTime);
-            card2.position = Vector3.Lerp(card2.position, new Vector3(card2.position.x, origCard2 + 750, card2.position.z), lerpTime);
+            card1.position = Vector3.Lerp(card1.position, new Vector3(card1.position.x, origCard1 + 900, card1.position.z), lerpTime);
+            card2.position = Vector3.Lerp(card2.position, new Vector3(card2.position.x, origCard2 + 900, card2.position.z), lerpTime);
+
+            if (card2.position.y >= origCard2 + 899.9)
+            {
+                Debug.Log("cartas");
+                card1.GetComponent<Animator>().SetInteger("Points", Int32.Parse(puntos1.text));
+                card2.GetComponent<Animator>().SetInteger("Points", Int32.Parse(puntos2.text));
+            }
         }
 
     }
