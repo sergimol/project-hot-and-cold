@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         nextScene();
-        nextSceneName = "CardScene";
+        nextSceneName = "Menu";
     }
 
     public void ChangeScene()
@@ -49,6 +49,9 @@ public class GameManager : MonoBehaviour
         string aux = nextSceneName;
         switch (nextSceneName)
         {
+            case "Intro":
+                nextSceneName = "Menu";
+                break;
             case "HideObjectScene":
                 nextSceneName = "CardScene";
                 break;
