@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] float startTime;
-    [SerializeField] int rounds;
+    int rounds = 5;
     public static GameManager instance;
     private int score = 0;
     private int actualCardPoints = 0;
@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
                gameIsPaused,
                 easyMode;
 
-    private int[] sceneNumbers = new int[2] { 1, 2 };
+    private int[] sceneNumbers = new int[5] { 1, 2, 3, 4, 5 };
     private int actualScene;
     private int possibleNum;
     private System.Random rnd = new System.Random();
