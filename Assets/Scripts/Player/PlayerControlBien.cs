@@ -58,36 +58,36 @@ public class PlayerControlBien : MonoBehaviour
     {
         Vector2 direccionx;
         Vector2 direcciony;
-        if (Input.GetJoystickNames().Length > 0) // MANDO
-        {
+        //if (Input.GetJoystickNames().Length > 0) // MANDO
+        //{
             direccion = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             direccion.Normalize();
 
-            if (!antiSpam && Input.GetButtonUp("Fire1") && closest)
-            {
-                inputManagement();
-            }
-        }
-        else // TECLADO Y RATÓN
-        {
+            //if (!antiSpam && Input.GetButtonUp("Fire1") && closest)
+            //{
+            //    inputManagement();
+            //}
+        //}
+        //else // TECLADO Y RATÓN
+        //{
             //anim.SetBool("moving", true);
             bool move = true;
 
-            if (Input.GetKey("w")) direcciony = new Vector2(0, 1);
-            else if (Input.GetKey("s")) direcciony = new Vector2(0, -1);
-            else direcciony = new Vector2(0, 0);
+            //if (Input.GetKey("w")) direcciony = new Vector2(0, 1);
+            //else if (Input.GetKey("s")) direcciony = new Vector2(0, -1);
+            //else direcciony = new Vector2(0, 0);
 
-            if (Input.GetKey("d")) direccionx = new Vector2(1, 0);
-            else if (Input.GetKey("a")) direccionx = new Vector2(-1, 0);
-            else direccionx = new Vector2(0, 0);
+            //if (Input.GetKey("d")) direccionx = new Vector2(1, 0);
+            //else if (Input.GetKey("a")) direccionx = new Vector2(-1, 0);
+            //else direccionx = new Vector2(0, 0);
 
-            if (!antiSpam && Input.GetKeyDown("space") && closest)
+            if (!antiSpam && (Input.GetKeyDown("space") || Input.GetButtonUp("Fire1")) && closest)
             {
                 inputManagement();
             }
 
-            direccion = direccionx + direcciony;
-            direccion.Normalize();
+            //direccion = direccionx + direcciony;
+            //direccion.Normalize();
             
             //Para la animacion
             if (direccion.x == 0 && direccion.y == 0)
@@ -101,7 +101,7 @@ public class PlayerControlBien : MonoBehaviour
             else
                 AudioManager.instance.Stop(AudioManager.ESounds.footsteps);
 
-        }
+        //}
         //anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
         //anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
         if(direccion.magnitude > 0){

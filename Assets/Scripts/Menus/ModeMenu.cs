@@ -38,7 +38,7 @@ public class ModeMenu : MonoBehaviour
         if (mainFirstButton != null)
         {
             mainUI.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(mainFirstButton);
+            //EventSystem.current.SetSelectedGameObject(mainFirstButton);
             modeMenuUI.SetActive(false);
             AudioManager.instance.Play(AudioManager.ESounds.botonClick);
         }

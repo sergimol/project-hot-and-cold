@@ -20,8 +20,8 @@ public class MainMenu : MonoBehaviour
         //Debug.Log("HideObjectScene" + GameManager.instance.getId());
         //SceneManager.LoadScene("HideObjectScene"+GameManager.instance.getId());
         modeUI.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(modeFirstButton);
+        //EventSystem.current.SetSelectedGameObject(null);
+        //EventSystem.current.SetSelectedGameObject(modeFirstButton);
         mainUI.SetActive(false);
         AudioManager.instance.Play(AudioManager.ESounds.botonClick);
     }
@@ -43,8 +43,8 @@ public class MainMenu : MonoBehaviour
     {
         AudioManager.instance.Play(AudioManager.ESounds.botonClick);
         optionsUI.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(optionsFirstButton);
+        //EventSystem.current.SetSelectedGameObject(null);
+        //EventSystem.current.SetSelectedGameObject(optionsFirstButton);
         mainUI.SetActive(false);
         //Debug.Log("Aqui van las opciones");
     }
@@ -54,8 +54,8 @@ public class MainMenu : MonoBehaviour
         AudioManager.instance.Play(AudioManager.ESounds.botonClick);
 
         deckPanel.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(content.GetComponentInChildren<Transform>().gameObject); //todo
+        //EventSystem.current.SetSelectedGameObject(null);
+        //EventSystem.current.SetSelectedGameObject(content.GetComponentInChildren<Transform>().gameObject); //todo
         mainUI.SetActive(false);
 
 
