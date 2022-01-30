@@ -4792,7 +4792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1209248969}
-  startTime: 30
+  startTime: 45
   telon: {fileID: 2034028034}
   scoreScene: 0
   levelScene: 1
