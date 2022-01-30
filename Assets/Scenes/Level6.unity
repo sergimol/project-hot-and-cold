@@ -4496,33 +4496,33 @@ Transform:
   - {fileID: 898312854}
   - {fileID: 1977722391}
   - {fileID: 967608572}
+  - {fileID: 403698229}
   - {fileID: 1907582253}
-  - {fileID: 1727137353}
   - {fileID: 606760853}
+  - {fileID: 1727137353}
+  - {fileID: 739900632}
   - {fileID: 762445258}
   - {fileID: 793286764}
   - {fileID: 1244140319}
   - {fileID: 894730783}
   - {fileID: 1537752676}
+  - {fileID: 119102301}
   - {fileID: 1969303430}
+  - {fileID: 628519280}
   - {fileID: 581791331}
   - {fileID: 1048990010}
-  - {fileID: 497590410}
-  - {fileID: 1206859553}
-  - {fileID: 119102301}
-  - {fileID: 628519280}
-  - {fileID: 1954801400}
-  - {fileID: 795718694}
-  - {fileID: 107489719}
-  - {fileID: 797992166}
-  - {fileID: 739900632}
   - {fileID: 847615605}
-  - {fileID: 403698229}
+  - {fileID: 1206859553}
+  - {fileID: 497590410}
   - {fileID: 1706715463}
   - {fileID: 1055499515}
   - {fileID: 322935068}
   - {fileID: 169190715}
   - {fileID: 1986414142}
+  - {fileID: 1954801400}
+  - {fileID: 795718694}
+  - {fileID: 107489719}
+  - {fileID: 797992166}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5006,7 +5006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1209248969}
-  startTime: 30
+  startTime: 45
   telon: {fileID: 2034028034}
   scoreScene: 0
   levelScene: 1
