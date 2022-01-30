@@ -70,7 +70,10 @@ public class GameManager : MonoBehaviour
                     nextSceneName = "HideObjectScene";
                 }
                 else
+                {
                     nextSceneName = "FinalScene";
+                    Baraja.instance.ActualizarSave();
+                }
                 break;
         }
         if (aux == "HideObjectScene" || aux == "Level")

@@ -2,45 +2,81 @@
   "Items": [
     {
       "active": true,
-      "puntos": 1,
+      "puntos": 3,
       "descripcion": "¡Levantate cuando se acerque, siéntate cuando se aleje, NO HABLES!",
-	  "descubierta": false
+      "descubierta": false
+    },
+    {
+      "active": true,
+      "puntos": 1,
+      "descripcion": "¡Da palmadas, más rápido cuanto más cerca esté!",
+      "descubierta": false
     },
     {
       "active": true,
       "puntos": 2,
-      "descripcion": "¡Da palmadas, más rápido cuanto más cerca esté!",
-	  "descubierta": false
-    },
-    {
-      "active": true,
-      "puntos": 3,
       "descripcion": "Alejate de tu amigo si esta lejos y acercate si esta cerca",
-	  "descubierta": false
+      "descubierta": false
     },
     {
       "active": true,
       "puntos": 3,
       "descripcion": "Señala solo con tus ojos donde tiene que ir",
-	  "descubierta": false
+      "descubierta": false
     },
     {
       "active": true,
       "puntos": 2,
       "descripcion": "Inclinate a la derecha si esta cerca, a la izquierda si se aleja",
-	  "descubierta": false
+      "descubierta": false
     },
     {
       "active": true,
       "puntos": 2,
       "descripcion": "Actua como un controlador aereo, el de los palitos",
-	  "descubierta": false
+      "descubierta": false
     },
     {
       "active": true,
       "puntos": 3,
-      "descripcion": "A camara lenta!",
-	  "descubierta": false
+      "descripcion": "Aguanta la respiracion",
+      "descubierta": false
+    },
+    {
+      "active": true,
+      "puntos": 1,
+      "descripcion": "Frota algo!",
+      "descubierta": false
+    },
+    {
+      "active": true,
+      "puntos": 1,
+      "descripcion": "Que te entre mucho sueño",
+      "descubierta": false
+    },
+    {
+      "active": true,
+      "puntos": 2,
+      "descripcion": "Haz cosquillas",
+      "descubierta": false
+    },
+    {
+      "active": true,
+      "puntos": 1,
+      "descripcion": "Si se acerca muevete inquieto en la silla",
+      "descubierta": false
+    },
+    {
+      "active": true,
+      "puntos": 2,
+      "descripcion": "Cuanto mas cerca mirale mas fijamente, mas intenso!",
+      "descubierta": false
+    },
+    {
+      "active": true,
+      "puntos": 3,
+      "descripcion": "Ponte muy triste",
+      "descubierta": false
     }
   ]
 }

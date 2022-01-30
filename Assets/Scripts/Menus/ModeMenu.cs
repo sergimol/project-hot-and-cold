@@ -25,6 +25,7 @@ public class ModeMenu : MonoBehaviour
         SceneManager.LoadScene("HideObjectScene" + GameManager.instance.getId());
         AudioManager.instance.Play(AudioManager.ESounds.botonInicio);
         GameManager.instance.nextSceneName = "CardScene";
+        Baraja.instance.ActualizarSave();
     }
 
     public void HighScores()
@@ -38,7 +39,7 @@ public class ModeMenu : MonoBehaviour
         if (mainFirstButton != null)
         {
             mainUI.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(mainFirstButton);
+            //EventSystem.current.SetSelectedGameObject(mainFirstButton);
             modeMenuUI.SetActive(false);
             AudioManager.instance.Play(AudioManager.ESounds.botonClick);
         }

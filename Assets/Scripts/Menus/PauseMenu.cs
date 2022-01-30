@@ -46,16 +46,16 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0;
         GameManager.instance.gameIsPaused = true;
         Cursor.visible = true;
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+        //EventSystem.current.SetSelectedGameObject(null);
+        //EventSystem.current.SetSelectedGameObject(pauseFirstButton);
     }
 
     public void Options() // Abre el menú de opciones
     {
         pauseMenuUI.SetActive(false);
         optionsMenuUI.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(optionsFirstButton);
+        //EventSystem.current.SetSelectedGameObject(null);
+        //EventSystem.current.SetSelectedGameObject(optionsFirstButton);
         AudioManager.instance.Play(AudioManager.ESounds.botonClick);
     }
 
