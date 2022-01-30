@@ -24,7 +24,8 @@ public class GameManager : MonoBehaviour
     private int actualScene;
     private int possibleNum;
     private System.Random rnd = new System.Random();
-    private string nextSceneName;
+    [NonSerialized]
+    public string nextSceneName;
     // En el método Awake comprueba si hay otro GameManger
     // y si no lo hay se inicializa como GameManager. En el caso
     // que hubiera otro se autodestruye
@@ -41,7 +42,7 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         nextScene();
-        nextSceneName = "CardScene";
+        nextSceneName = "Menu";
     }
 
     public void ChangeScene()
@@ -49,6 +50,9 @@ public class GameManager : MonoBehaviour
         string aux = nextSceneName;
         switch (nextSceneName)
         {
+            case "Intro":
+                nextSceneName = "Menu";
+                break;
             case "HideObjectScene":
                 nextSceneName = "CardScene";
                 break;
