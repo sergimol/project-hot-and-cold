@@ -15,5 +15,6 @@ public class CardToggler : MonoBehaviour
     public void Toggle(bool active)
     {
         Baraja.instance.DesativarCarta(active, pos, facil, custom);
+        AudioManager.instance.Play(AudioManager.ESounds.botonClick);
     }
 }
