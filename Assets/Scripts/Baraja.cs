@@ -123,7 +123,6 @@ public class Baraja : MonoBehaviour
             //if (faciles[i].active)
             cartasFaciles.Push(faciles[i]);
         }
-        Debug.Log("se barajaron las faciles");
     }
     private void BarajarDificiles()
     {
@@ -133,7 +132,6 @@ public class Baraja : MonoBehaviour
             //if (dificiles[i].active)
             cartasDificiles.Push(dificiles[i]);
         }
-        Debug.Log("SE ABRAJARON ALS DIFICILES");
     }
 
     private void Shuffle(List<infocarta> cards)
@@ -170,11 +168,6 @@ public class Baraja : MonoBehaviour
         {
             BarajarFaciles();
         }
-
-
-        Debug.Log("la primera carta de las faciles es" + cartasFaciles.Peek().descripcion);
-
-        Debug.Log("la primera carta de las dificiles es" + cartasDificiles.Peek().descripcion);//se e dice cuales son las dos siguientes
 
     }
 
@@ -319,13 +312,17 @@ public class Baraja : MonoBehaviour
             if (dificilesDefault[i].active)
                 dificiles.Add(dificilesDefault[i]);
         }
-        
+
+        if (dificiles.Count == 0)
+            dificiles.Add(dificilesDefault[0]);
 
         for (int i = 0; i < facilesDefault.Count; i++)
         {
             if (facilesDefault[i].active)
                 faciles.Add(facilesDefault[i]);
         }
+        if (faciles.Count == 0)
+            faciles.Add(facilesDefault[0]);
        
     }
 

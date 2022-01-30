@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] float startTime;
     int rounds = 6;
     public static GameManager instance;
-    private int score = 0;
+    public int score = 0;
     public int actualCardPoints = 0;
     public int actualObject = 0;
     public float mainVolSlider = 0.2f,
