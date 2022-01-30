@@ -24,11 +24,11 @@ public class CardoPointCounter : MonoBehaviour
         point0 = gameObject.transform.GetChild(5-points);
         textJug = gameObject.transform.GetChild(6);
 
-        text1 = point0.gameObject.GetComponentInChildren<Text>();
-        puntos1 = point0.gameObject.GetComponentsInChildren<Text>()[1];
+        //text1 = point0.gameObject.GetComponentInChildren<Text>();
+        //puntos1 = point0.gameObject.GetComponentsInChildren<Text>()[1];
 
-        text1.text = Baraja.instance.GiveSeleccion().descripcion;
-        puntos1.text = Baraja.instance.GiveSeleccion().puntos.ToString();
+        //text1.text = Baraja.instance.GiveSeleccion().descripcion;
+        //puntos1.text = Baraja.instance.GiveSeleccion().puntos.ToString();
 
         origCard1 = point0.position.y;
         origText = textJug.position.y;
@@ -43,11 +43,11 @@ public class CardoPointCounter : MonoBehaviour
         else if (startTime > 0)
         {
             startTime -= Time.deltaTime;
-            point0.position = Vector3.Lerp(point0.position, new Vector3(point0.position.x, origCard1 + 550, point0.position.z), lerpTime);
+            point0.position = Vector3.Lerp(point0.position, new Vector3(point0.position.x, origCard1 + 900, point0.position.z), lerpTime);
         }
         else
         {
-            textJug.position = Vector3.Lerp(textJug.position, new Vector3(textJug.position.x, origText + 950, textJug.position.z), lerpTime);
+            textJug.position = Vector3.Lerp(textJug.position, new Vector3(textJug.position.x, origText - 275, textJug.position.z), lerpTime);
         }
     }
 }

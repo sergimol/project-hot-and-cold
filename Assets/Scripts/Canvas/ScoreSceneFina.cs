@@ -16,6 +16,7 @@ public class ScoreSceneFina : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = true;
         int pointsFin = GameManager.instance.score;
         GameManager.instance.score = 0;
         points = gameObject.transform.GetChild(3);

@@ -16,9 +16,9 @@ public class Shake : MonoBehaviour
 
     [SerializeField]
     float offset = 0.5f;
-    
+
     float t = 0.0f;
-    void Start()
+    void OnEnable()
     {
         rectTransform = GetComponent<RectTransform>();
     }
@@ -29,7 +29,7 @@ public class Shake : MonoBehaviour
         float y = rectTransform.rotation.y, z = rectTransform.rotation.z;
         rectTransform.rotation = Quaternion.Euler(0, (Mathf.Lerp(minY, maxY, t)), (Mathf.Lerp(minZ, maxZ, t)));
 
-        t += offset* Time.deltaTime;
+        t += offset * Time.deltaTime;
 
         if (t > 1.0f)
         {
@@ -47,11 +47,13 @@ public class Shake : MonoBehaviour
 
     public void makeBigger()
     {
-        rectTransform.localScale = new Vector3(2.2f, 2.2f, 1.0f);
+        if (rectTransform != null)
+            rectTransform.localScale = new Vector3(2.2f, 2.2f, 1.0f);
     }
 
     public void makeSmaller()
     {
-        rectTransform.localScale = new Vector3(2f, 2f, 1.0f);
+        if (rectTransform != null)
+            rectTransform.localScale = new Vector3(2f, 2f, 1.0f);
     }
 }
