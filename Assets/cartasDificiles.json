@@ -2,38 +2,45 @@
   "Items": [
     {
       "active": true,
-      "puntos": 3,
-      "descripcion": "¡Levantate cuando se acerque, siéntate cuando se aleje, NO HABLES!"
-    },
-    {
-      "active": true,
       "puntos": 1,
-      "descripcion": "¡Da palmadas, más rápido cuanto más cerca esté!"
-    },
-    {
-      "active": true,
-      "puntos": 3,
-      "descripcion": "Alejate de tu amigo si esta lejos y acercate si esta cerca"
-    },
-    {
-      "active": true,
-      "puntos": 3,
-      "descripcion": "Señala solo con tus ojos donde tiene que ir"
+      "descripcion": "¡Levantate cuando se acerque, siéntate cuando se aleje, NO HABLES!",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 2,
-      "descripcion": "Inclinate a la derecha si esta cerca, a la izquierda si se aleja"
-    },
-    {
-      "active": true,
-      "puntos": 2,
-      "descripcion": "Actua como un controlador aereo, el de los palitos"
+      "descripcion": "¡Da palmadas, más rápido cuanto más cerca esté!",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 3,
-      "descripcion": "A camara lenta!"
+      "descripcion": "Alejate de tu amigo si esta lejos y acercate si esta cerca",
+	  "descubierta": false
+    },
+    {
+      "active": true,
+      "puntos": 3,
+      "descripcion": "Señala solo con tus ojos donde tiene que ir",
+	  "descubierta": false
+    },
+    {
+      "active": true,
+      "puntos": 2,
+      "descripcion": "Inclinate a la derecha si esta cerca, a la izquierda si se aleja",
+	  "descubierta": false
+    },
+    {
+      "active": true,
+      "puntos": 2,
+      "descripcion": "Actua como un controlador aereo, el de los palitos",
+	  "descubierta": false
+    },
+    {
+      "active": true,
+      "puntos": 3,
+      "descripcion": "A camara lenta!",
+	  "descubierta": false
     }
   ]
 }

@@ -47,3 +47,13 @@ MonoBehaviour:
     type: 3}
   cartaGesto: {fileID: 2732764861987478518, guid: 4ce1eb63111210c41afaa895f188ad08,
     type: 3}
+  cartaMenu: {fileID: 2732764861987478518, guid: 64064769103e0fe429404090ee05be37,
+    type: 3}
+  voz1: {fileID: -4469193496344720658, guid: 06698a8f70550774e99e0d5a45d940ff, type: 3}
+  voz2: {fileID: 5108802853320777112, guid: 9fc651f6b7851604482b930043a32d0e, type: 3}
+  voz3: {fileID: 6452423789331278625, guid: e4af4d4b97b7ace4699a0eab5f1966ad, type: 3}
+  gestos1: {fileID: -230564768647572869, guid: 9e21e8a93f52bc24390a7977b3f1ba74, type: 3}
+  gestos2: {fileID: -2963159280557522612, guid: cde1ebafd673b39499fc44dc27f41d11,
+    type: 3}
+  gestos3: {fileID: -1985585272600696157, guid: ca2ab41692e14f54790c0a29a74b74bd,
+    type: 3}
