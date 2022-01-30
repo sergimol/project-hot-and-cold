@@ -2,58 +2,38 @@
   "Items": [
     {
       "active": true,
-      "puntos": 6,
-      "descripcion": "levantate cuando se acerque, sientate cuando se aleje, NO HABLES!"
+      "puntos": 3,
+      "descripcion": "¡Levantate cuando se acerque, siéntate cuando se aleje, NO HABLES!"
+    },
+    {
+      "active": true,
+      "puntos": 1,
+      "descripcion": "¡Da palmadas, más rápido cuanto más cerca esté!"
     },
     {
       "active": true,
       "puntos": 3,
-      "descripcion": "Da palmadas!"
-    },
-    {
-      "active": true,
-      "puntos": 6,
       "descripcion": "Alejate de tu amigo si esta lejos y acercate si esta cerca"
     },
     {
       "active": true,
-      "puntos": 10,
+      "puntos": 3,
       "descripcion": "Señala solo con tus ojos donde tiene que ir"
     },
     {
       "active": true,
-      "puntos": 5,
-      "descripcion": "inclinate a la derecha si esta cerca, a la izquierda si se aleja"
+      "puntos": 2,
+      "descripcion": "Inclinate a la derecha si esta cerca, a la izquierda si se aleja"
     },
     {
       "active": true,
-      "puntos": 5,
-      "descripcion": "levantate de la silla, da vueltas segun se acerque"
-    },
-    {
-      "active": true,
-      "puntos": 5,
-      "descripcion": "ponte muy triste si se esta acercando"
-    },
-    {
-      "active": true,
-      "puntos": 8,
+      "puntos": 2,
       "descripcion": "Actua como un controlador aereo, el de los palitos"
     },
     {
       "active": true,
-      "puntos": 5,
-      "descripcion": "Finge ser un gatito"
-    },
-    {
-      "active": true,
-      "puntos": 4,
-      "descripcion": "ponte de morritos"
-    },
-    {
-      "active": true,
-      "puntos": 5,
-      "descripcion": "a camara lenta!"
+      "puntos": 3,
+      "descripcion": "A camara lenta!"
     }
   ]
 }

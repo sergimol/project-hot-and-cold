@@ -2,17 +2,17 @@
   "Items": [
     {
       "active": true,
+      "puntos": 1,
+      "descripcion": "Di frio frio cuando se aleje y caliente caliente al acercarse"
+    },
+    {
+      "active": true,
       "puntos": 2,
-      "descripcion": "di frio frio cuando se aleje y caliente caliente al acercarse"
+      "descripcion": "Imita a un animal cuando se acerque y otro cuando se aleje!"
     },
     {
       "active": true,
-      "puntos": 4,
-      "descripcion": "Imita a un animal!"
-    },
-    {
-      "active": true,
-      "puntos": 4,
+      "puntos": 3,
       "descripcion": "Solo onomatopeyas!"
     },
     {
