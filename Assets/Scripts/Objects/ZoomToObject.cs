@@ -24,7 +24,7 @@ public class ZoomToObject : MonoBehaviour
     {
         cam = Camera.main;
         objectPos = gameObject.transform.GetChild(gameObject.GetComponent<ItemSelector>().getObjectId());
-        originalSize = cam.orthographicSize - 3.5f;
+        originalSize = cam.orthographicSize - 11f;
         outSize = cam.orthographicSize + 2;
         //originalPos = cam.transform.position;
     }
