@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 2732764861987478512}
   - component: {fileID: 2732764861987478514}
   - component: {fileID: 1384992802615250264}
+  - component: {fileID: 4921041329340911688}
   m_Layer: 5
   m_Name: CartitaGesto
   m_TagString: Untagged
@@ -342,7 +343,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2732764861987478512}
   m_OnClick:
     m_PersistentCalls:
@@ -381,6 +382,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9ddd81d634e9c41b5d5716fe176a12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4921041329340911688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2732764861987478518}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180a5332b3304544cabec7f100005581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minY: -5
+  maxY: 5
+  minZ: -5
+  maxZ: 5
 --- !u!1 &2732764862910862062
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,8 +432,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.5, y: -37.899998}
-  m_SizeDelta: {x: 155, y: 124.2}
+  m_AnchoredPosition: {x: 2.5, y: -32.4}
+  m_SizeDelta: {x: 155, y: 165.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2732764862910862059
 CanvasRenderer:

@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         nextScene();
-        nextSceneName = "Menu";
+        nextSceneName = "Tutorial";
     }
 
     public void ChangeScene()
@@ -51,6 +51,9 @@ public class GameManager : MonoBehaviour
         switch (nextSceneName)
         {
             case "Intro":
+                nextSceneName = "Tutorial";
+                break;
+            case "Tutorial":
                 nextSceneName = "Menu";
                 break;
             case "HideObjectScene":
@@ -74,6 +77,9 @@ public class GameManager : MonoBehaviour
                     nextSceneName = "FinalScene";
                     Baraja.instance.ActualizarSave();
                 }
+                break;
+            case "FinalScene":
+                nextSceneName = "Menu";
                 break;
         }
         if (aux == "HideObjectScene" || aux == "Level")
