@@ -47,6 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Tilemap2
+    uniqueID: 2729560465
+    locked: 0
   - name: Cartas
     uniqueID: 2343999915
     locked: 0

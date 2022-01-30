@@ -91,7 +91,6 @@ GameObject:
   - component: {fileID: 358981879372147474}
   - component: {fileID: 4737487187582603506}
   - component: {fileID: 8148949867532294257}
-  - component: {fileID: 8415347876920084709}
   - component: {fileID: 535331632513718468}
   - component: {fileID: 3415966608505399649}
   m_Layer: 0
@@ -130,7 +129,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.008979797, y: -5.3878927}
+  m_Offset: {x: -0.008979797, y: 0.21756744}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -141,7 +140,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 34.158127, y: 11.136599}
+  m_Size: {x: 34.158127, y: 19.073051}
   m_EdgeRadius: 0
 --- !u!50 &8148949867532294257
 Rigidbody2D:
@@ -164,19 +163,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8415347876920084709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4368128526715700238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cab2203242a16294ba30c6199ba367b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  searchingThis: 0
 --- !u!231 &535331632513718468
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -204,7 +190,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4368128526715700238}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -336,7 +322,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 0114b74e9ca414883b114c8664e752bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
