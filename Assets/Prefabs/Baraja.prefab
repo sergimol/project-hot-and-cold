@@ -43,4 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8443ad5ca63b544b2b65ba7155a23a45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carta: {fileID: 0}
+  cartaVoz: {fileID: 1175215665919938670, guid: 1b9b00144f7611446a49bf348a7a524f,
+    type: 3}
+  cartaGesto: {fileID: 2732764861987478518, guid: 4ce1eb63111210c41afaa895f188ad08,
+    type: 3}
