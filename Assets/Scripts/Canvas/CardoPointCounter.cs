@@ -43,11 +43,11 @@ public class CardoPointCounter : MonoBehaviour
         else if (startTime > 0)
         {
             startTime -= Time.deltaTime;
-            point0.position = Vector3.Lerp(point0.position, new Vector3(point0.position.x, origCard1 + 900, point0.position.z), lerpTime);
+            point0.position = Vector3.Lerp(point0.position, new Vector3(point0.position.x, origCard1 + 3.35f * gameObject.GetComponent<RectTransform>().rect.height / 4, point0.position.z), lerpTime);
         }
         else
         {
-            textJug.position = Vector3.Lerp(textJug.position, new Vector3(textJug.position.x, origText - 275, textJug.position.z), lerpTime);
+            textJug.position = Vector3.Lerp(textJug.position, new Vector3(textJug.position.x, origText - gameObject.GetComponent<RectTransform>().rect.height / 4, textJug.position.z), lerpTime);
         }
     }
 }

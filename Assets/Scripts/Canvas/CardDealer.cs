@@ -74,13 +74,13 @@ public class CardDealer : MonoBehaviour
         else if (startTime > 0.7f)
         {
             startTime -= Time.deltaTime;
-            card1.position = Vector3.Lerp(card1.position, new Vector3(card1.position.x, origCard1 + 3.2f * gameObject.GetComponent<RectTransform>().sizeDelta.y / 4, card1.position.z), lerpTime);
+            card1.position = Vector3.Lerp(card1.position, new Vector3(card1.position.x, origCard1 + 3.2f * gameObject.GetComponent<RectTransform>().rect.height / 4, card1.position.z), lerpTime);
 
         }
         else if (!endAnimation)
         {
-            card1.position = Vector3.Lerp(card1.position, new Vector3(card1.position.x, origCard1 + 3.2f * gameObject.GetComponent<RectTransform>().sizeDelta.y / 4, card1.position.z), lerpTime);
-            card2.position = Vector3.Lerp(card2.position, new Vector3(card2.position.x, origCard2 + 3.2f * gameObject.GetComponent<RectTransform>().sizeDelta.y / 4, card2.position.z), lerpTime);
+            card1.position = Vector3.Lerp(card1.position, new Vector3(card1.position.x, origCard1 + 3.2f * gameObject.GetComponent<RectTransform>().rect.height / 4, card1.position.z), lerpTime);
+            card2.position = Vector3.Lerp(card2.position, new Vector3(card2.position.x, origCard2 + 3.2f * gameObject.GetComponent<RectTransform>().rect.height / 4, card2.position.z), lerpTime);
 
             if (card2.position.y >= origCard2 + 3.2f * gameObject.GetComponent<RectTransform>().sizeDelta.y / 4 - 0.1)
             {
