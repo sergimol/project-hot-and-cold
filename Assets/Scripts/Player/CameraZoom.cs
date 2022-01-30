@@ -22,6 +22,9 @@ public class CameraZoom : MonoBehaviour
     {
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, originalSize, zoomSpeed * Time.deltaTime);
         if(cam.orthographicSize <= originalSize +0.1)
+        {
             timer.closeTelon();
+            AudioManager.instance.Play(AudioManager.ESounds.telon);
+        }
     }
 }

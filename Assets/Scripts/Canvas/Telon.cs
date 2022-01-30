@@ -14,6 +14,7 @@ public class Telon : MonoBehaviour
         originalPosLeft = tLeft.position.x;
         originalPosRight = tRight.position.x;
         objectRectTransform = gameObject.GetComponent<RectTransform>();
+        AudioManager.instance.Play(AudioManager.ESounds.telon);
     }
 
     // Update is called once per frame
