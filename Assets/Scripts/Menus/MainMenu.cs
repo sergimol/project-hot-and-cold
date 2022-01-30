@@ -6,11 +6,12 @@ using UnityEngine.EventSystems;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField]
-    GameObject optionsFirstButton = null, optionsUI = null, modeFirstButton = null, modeUI = null, mainUI = null; // Referencian el menú de opciones y el botón seleccionado al abrirlo
+    GameObject optionsFirstButton = null, optionsUI = null, modeFirstButton = null, modeUI = null, mainUI = null, deckPanel = null, content = null; // Referencian el menú de opciones y el botón seleccionado al abrirlo
 
     private void Start() // Inicia la música del menú
     {
         //AudioManager.instance.Play(AudioManager.ESounds.Menu);
+
     }
 
     public void Play() // Para la música del menú y carga la primera escena
@@ -51,6 +52,13 @@ public class MainMenu : MonoBehaviour
     public void Deck()
     {
         AudioManager.instance.Play(AudioManager.ESounds.botonClick);
+
+        deckPanel.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(content.GetComponentInChildren<Transform>().gameObject); //todo
+        mainUI.SetActive(false);
+
+
         Debug.Log("Aqui van las cartas");
     }
 }
