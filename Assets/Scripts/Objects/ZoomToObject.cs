@@ -38,10 +38,14 @@ public class ZoomToObject : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.Play(AudioManager.ESounds.anuncioEscondite);
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, originalSize, zoomSpeed * Time.deltaTime);
             cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3(objectPos.position.x, objectPos.position.y, cam.transform.position.z), lerpTime);
             if (cam.orthographicSize <= originalSize + 0.01)
+            {
                 timer.closeTelon();
+                AudioManager.instance.Play(AudioManager.ESounds.telon);
+            }
         }
         
     }
