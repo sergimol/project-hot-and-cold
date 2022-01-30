@@ -11,12 +11,14 @@ public class infocarta
     public bool active;
     public int puntos;
     public string descripcion;
+    public bool descubierta;
 
-    public infocarta(bool activa, int puntaje, string info)
+    public infocarta(bool activa, int puntaje, string info, bool dec)
     {
         active = activa;
         puntos = puntaje;
         descripcion = info;
+        descubierta = dec;
     }
     public infocarta() { }
 }
@@ -29,12 +31,14 @@ public class Baraja : MonoBehaviour
  
     //template de las cartas
     [SerializeField]
-    private GameObject cartaVoz, cartaGesto;
+    private GameObject cartaVoz, cartaGesto, cartaMenu;
+    [SerializeField]
+    private Sprite voz1, voz2, voz3, gestos1, gestos2, gestos3;
     private bool seleccionFacil = false, seleccionDificil = false;
     //una lista con todas las cartas faciles o dificiles que pueden haber
     //pila de cartas faciles que pueden sallir durante la partida
     //pila de cartas dificiles que pueden salir durante la partida
-    List<infocarta> faciles, dificiles, facilesDefault, facilesCustom, dificilesDefault, dificilesCustom;
+    List<infocarta> faciles, dificiles, facilesDefault, dificilesDefault;
     Stack<infocarta> cartasFaciles, cartasDificiles;
 
     infocarta cartaSeleccion;
@@ -58,16 +62,12 @@ public class Baraja : MonoBehaviour
             dificiles = new List<infocarta>();
             facilesDefault = new List<infocarta>();
             dificilesDefault = new List<infocarta>();
-            facilesCustom = new List<infocarta>();
-            dificilesCustom = new List<infocarta>();
             cartasFaciles = new Stack<infocarta>();
             cartasDificiles = new Stack<infocarta>();
 
 
             facilesDefault = FileHandler.ReadListFromJSON<infocarta>("cartasFaciles.json");
-            facilesCustom = (FileHandler.ReadListFromJSON<infocarta>("cartasFacilesCustom.json"));
             dificilesDefault = FileHandler.ReadListFromJSON<infocarta>("cartasDificiles.json");
-            dificilesCustom = (FileHandler.ReadListFromJSON<infocarta>("cartasDificilesCustom.json"));
 
 
         }
@@ -97,8 +97,8 @@ public class Baraja : MonoBehaviour
 
         //StreamWriter writer = new StreamWriter(savepath);
         //writer.Write(json);
-
-        FileHandler.SaveToJSON<infocarta>(dificiles, "cartasDificiles.json");
+        
+        //FileHandler.SaveToJSON<infocarta>(dificiles, "cartasDificiles.json");
 
     }
 
@@ -111,7 +111,6 @@ public class Baraja : MonoBehaviour
         BarajarDificiles();
         //copiar las cartas a las que van a aparecerr durante el juego
         //chimpóm
-        Debug.Log("se barajaron todas las cartas");
     }
 
     private void BarajarFaciles()
@@ -154,8 +153,13 @@ public class Baraja : MonoBehaviour
     private void nextCard()
     {
         //saca las dos cartas y muestra las dos siguientes, si las pials estan vacias las rellena
-        cartasFaciles.Pop();
-        cartasDificiles.Pop();
+        infocarta auxFacil, auxDificil;
+        auxFacil = cartasFaciles.Pop();
+        auxDificil = cartasDificiles.Pop();
+
+        //buscarlo en lcartasFacilesas default y decir que han sido descubiertas
+        dificilesDefault[dificilesDefault.IndexOf(auxDificil)].descubierta = true;
+        facilesDefault[facilesDefault.IndexOf(auxFacil)].descubierta = true;
 
         if (cartasDificiles.Count == 0)
         {
@@ -197,57 +201,34 @@ public class Baraja : MonoBehaviour
     }
 
     //actualiza los Json de guardado de las cartas custom, ejemplo, se desactivaron unas cartas //todo
-    public void ActualizarCustomSave()
+    public void ActualizarSave()
     {
-
-        FileHandler.SaveToJSON<infocarta>(facilesCustom, "cartasFacilesCustom.json");
-        FileHandler.SaveToJSON<infocarta>(dificilesCustom, "cartasDificilesCustom.json");
+        FileHandler.SaveToJSON<infocarta>(facilesDefault, "cartasFaciles.json");
+        FileHandler.SaveToJSON<infocarta>(dificilesDefault, "cartasDificiles.json");
     }
     public void DesativarCarta(bool activar, int pos, bool facil, bool custom)
     {
         if (facil)
         {
             if (custom)
-                facilesCustom[pos].active = activar;
+            {
+
+            }
+                //facilesCustom[pos].active = activar;
             else
                 faciles[pos].active = activar;
         }
         else
         {
             if (custom)
-                dificilesCustom[pos].active = activar;
+            {
+
+            }
+                //dificilesCustom[pos].active = activar;
             else
                 dificiles[pos].active = activar;
         }
     }
-    //elimian una carta del mazo permanentemente segun la posicion en el indice //todo
-    public void EliminarCarta(int pos, bool facil)
-    {
-        if (facil)
-        {
-            facilesCustom.RemoveAt(pos);
-        }
-        else
-        {
-            dificilesCustom.RemoveAt(pos);
-        }
-    }
-
-    //añadde una carta a los amzos Custom y guarda la información
-    public void GuardarCarta(infocarta carta, bool facil)
-    {
-        if (facil)
-        {
-            facilesCustom.Add(carta);
-        }
-        else
-        {
-            dificilesCustom.Add(carta);
-        }
-        //seguramente es mas sencillo y seguro que esot solo ocurra una vez en vez de con cada carta, //TODO ejemplo al salir del menu de ccrear crear o descativar cartas custom
-        ActualizarCustomSave();
-    }
-
 
     //añade todas las cartas al panel
     public void startPanel(GameObject panel)
@@ -255,57 +236,69 @@ public class Baraja : MonoBehaviour
         for (int i = 0; i < facilesDefault.Count; i++)
         {
             //if (facilesDefault[i].active)
-            GameObject go = Instantiate(cartaVoz, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+            GameObject go = Instantiate(cartaMenu, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
             go.transform.SetParent(panel.transform, false);// = panel.transform;
                                                            //go.transform.parent = panel.transform;
-            go.GetComponentInChildren<Text>().text = facilesDefault[i].descripcion;
-            go.GetComponentsInChildren<Text>()[1].text = facilesDefault[i].puntos.ToString();
-            GameObject toggle;// = go.GetComponentsInChildren<Transform>()[1].gameObject;
-            toggle = go.transform.GetChild(2).gameObject;
-            toggle.active = true;
-            toggle.GetComponent<Toggle>().isOn = facilesDefault[i].active;
+            if (facilesDefault[i].descubierta)
+            {
+                GameObject text;
+                text = go.transform.GetChild(0).gameObject;
+                text.active = true;
+                text.GetComponent<Text>().text = facilesDefault[i].descripcion;
+                GameObject toggle;// = go.GetComponentsInChildren<Transform>()[1].gameObject;
+                toggle = go.transform.GetChild(1).gameObject;
+                toggle.active = true;
+                toggle.GetComponent<Toggle>().isOn = facilesDefault[i].active;
 
-            go.GetComponent<CardToggler>().setValues(i, true, false);
+                go.GetComponent<CardToggler>().setValues(i, true, false);
+                switch (facilesDefault[i].puntos)
+                {
+                    case 1:
+                        go.GetComponent<Image>().sprite = voz1;
+                        break;
+                    case 2:
+                        go.GetComponent<Image>().sprite = voz2;
+                        break;
+                    case 3:
+                        go.GetComponent<Image>().sprite = voz3;
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
         for (int i = 0; i < dificilesDefault.Count; i++)
         {
-            GameObject go = Instantiate(cartaGesto, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+            GameObject go = Instantiate(cartaMenu, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
             go.transform.SetParent(panel.transform, false);// = panel.transform;
-            go.gameObject.GetComponentInChildren<Text>().text = dificilesDefault[i].descripcion;
-            go.gameObject.GetComponentsInChildren<Text>()[1].text = dificilesDefault[i].puntos.ToString();
-            GameObject toggle;// = go.GetComponentsInChildren<Transform>()[1].gameObject;
-            toggle = go.transform.GetChild(2).gameObject;
-            toggle.active = true;
-            toggle.GetComponent<Toggle>().isOn = dificilesDefault[i].active;
-            go.GetComponent<CardToggler>().setValues(i, false, false);
+            if (dificilesDefault[i].descubierta)
+            {
+                GameObject text;
+                text = go.transform.GetChild(0).gameObject;
+                text.active = true;
+                text.GetComponent<Text>().text = dificilesDefault[i].descripcion;
+                GameObject toggle;// = go.GetComponentsInChildren<Transform>()[1].gameObject;
+                toggle = go.transform.GetChild(1).gameObject;
+                toggle.active = true;
+                toggle.GetComponent<Toggle>().isOn = dificilesDefault[i].active;
+                go.GetComponent<CardToggler>().setValues(i, false, false);
+                switch (dificilesDefault[i].puntos)
+                {
+                    case 1:
+                        go.GetComponent<Image>().sprite = gestos1;
+                        break;
+                    case 2:
+                        go.GetComponent<Image>().sprite = gestos2;
+                        break;
+                    case 3:
+                        go.GetComponent<Image>().sprite = gestos3;
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
-        for (int i = 0; i < facilesCustom.Count; i++)
-        {
-            //if (facilesCustom[i].active)
-            GameObject go = Instantiate(cartaVoz, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-            go.transform.SetParent(panel.transform, false);// = panel.transform; go.transform.parent = panel.transform;
-            go.gameObject.GetComponentInChildren<Text>().text = facilesCustom[i].descripcion;
-            go.gameObject.GetComponentsInChildren<Text>()[1].text = facilesCustom[i].puntos.ToString();
-
-
-
-
-            go.GetComponent<CardToggler>().setValues(i, true, true);
-        }
-        for (int i = 0; i < dificilesCustom.Count; i++)
-        {
-            //if (dificilesCustom[i].active) go.transform.SetParent(panel.transform, false);// = panel.transform;
-            GameObject go = Instantiate(cartaGesto, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-            go.transform.SetParent(panel.transform, false);// = panel.transform;go.transform.parent = panel.transform;
-            go.gameObject.GetComponentInChildren<Text>().text = dificilesCustom[i].descripcion;
-            go.gameObject.GetComponentsInChildren<Text>()[1].text = dificilesCustom[i].puntos.ToString();
-
-
-
-
-            go.GetComponent<CardToggler>().setValues(i, false, true);
-        }
-
+       
     }
 
 
@@ -325,54 +318,15 @@ public class Baraja : MonoBehaviour
             if (dificilesDefault[i].active)
                 dificiles.Add(dificilesDefault[i]);
         }
-        for (int i = 0; i < dificilesCustom.Count; i++)
-        {
-            if (dificilesCustom[i].active)
-                dificiles.Add(dificilesCustom[i]);
-        }
+        
 
         for (int i = 0; i < facilesDefault.Count; i++)
         {
             if (facilesDefault[i].active)
                 faciles.Add(facilesDefault[i]);
         }
-        for (int i = 0; i < facilesCustom.Count; i++)
-        {
-            if (facilesCustom[i].active)
-                faciles.Add(dificilesCustom[i]);
-        }
+       
     }
-
-
-    //This method returns the game object that was clicked using Raycast 2D
-    private void mouseHovering()
-    {
-        //Converting $$anonymous$$ouse Pos to 2D (vector2) World Pos
-        Vector2 rayPos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
-        RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
-
-        //if (hit)
-        //{
-        //    Debug.Log(hit.transform.name);
-        //    if (hit.transform.gameObject.name == cartaFacil.name)
-        //    {
-        //        Debug.Log("estoy en la carta facil");
-        //        seleccionFacil = true;
-        //        seleccionDificil = false;
-        //    }
-        //    else if (hit.transform.gameObject.name == cartaDificil.name)
-        //    {
-        //        Debug.Log("estoy en la carta dificil");
-        //        seleccionDificil = true;
-        //        seleccionFacil = false;
-        //    }
-        //    else
-        //    {
-        //        seleccionFacil = seleccionDificil = false;
-        //    }
-        //}
-    }
-
 
     // Start is called before the first frame update
     void Start()
@@ -380,12 +334,6 @@ public class Baraja : MonoBehaviour
         //amontonar solo una vez cuando queramso volver a crear el mazo, ejemplo, hemos añadido u/y desactivado cartas //todo
         amontonar();
         Barajar();
-
-
-
-        Debug.Log("la primera carta de las faciles es" + cartasFaciles.Peek().descripcion);
-
-        Debug.Log("la primera carta de las faciles es" + cartasDificiles.Peek().descripcion);
 
 
         //crearData();

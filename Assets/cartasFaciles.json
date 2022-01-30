@@ -3,102 +3,122 @@
     {
       "active": true,
       "puntos": 1,
-      "descripcion": "Di frio frio cuando se aleje y caliente caliente al acercarse"
+      "descripcion": "Di frio frio cuando se aleje y caliente caliente al acercarse",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 2,
-      "descripcion": "Imita a un animal cuando se acerque y otro cuando se aleje!"
+      "descripcion": "Imita a un animal cuando se acerque y otro cuando se aleje!",
+	  "descubierta": false
     },
     {
       "active": true,
-      "puntos": ,
-      "descripcion": "Solo onomatopeyas!"
-    },
-    {
-      "active": true,
-      "puntos": 4,
-      "descripcion": "Di colores contrarios al objeto"
-    },
-    {
-      "active": true,
-      "puntos": 4,
-      "descripcion": "SEMAFORO! Verde cuando este cerca, rojo cuando se aleje"
+      "puntos": 3,
+      "descripcion": "Solo onomatopeyas!",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 4,
-      "descripcion": "Pon acento gallego!"
+      "descripcion": "Di colores contrarios al objeto",
+	  "descubierta": false
+    },
+    {
+      "active": true,
+      "puntos": 4,
+      "descripcion": "SEMAFORO! Verde cuando este cerca, rojo cuando se aleje",
+	  "descubierta": false
+    },
+    {
+      "active": true,
+      "puntos": 4,
+      "descripcion": "Pon acento gallego!",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 2,
-      "descripcion": "Di nombres de objetos cercanos al objetivo"
+      "descripcion": "Di nombres de objetos cercanos al objetivo",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 6,
-      "descripcion": "A las seis en punto! da la direccion como las manillas de un reloj!"
+      "descripcion": "A las seis en punto! da la direccion como las manillas de un reloj!",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 5,
-      "descripcion": "Di la receta de unas lentejas de super puta madre"
+      "descripcion": "Di la receta de unas lentejas de super puta madre",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 5,
-      "descripcion": "solo puedes decir la letra \"A\" "
+      "descripcion": "solo puedes decir la letra \"A\" ",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 5,
-      "descripcion": "Habla en Brasileño!"
+      "descripcion": "Habla en Brasileño!",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 5,
-      "descripcion": "Encara Messi! Encara Messi! Se un comentarista de futbol!"
+      "descripcion": "Encara Messi! Encara Messi! Se un comentarista de futbol!",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 5,
-      "descripcion": "Canta let it go! (Copyright disclaimer)"
+      "descripcion": "Canta let it go! (Copyright disclaimer)",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 5,
-      "descripcion": "El vecino con el taladro"
+      "descripcion": "El vecino con el taladro",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 5,
-      "descripcion": "Grita!"
+      "descripcion": "Grita!",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 5,
-      "descripcion": "Riete segun se aleje"
+      "descripcion": "Riete segun se aleje",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 3,
-      "descripcion": "Di frutas al alejarse, di postres al acercarse"
+      "descripcion": "Di frutas al alejarse, di postres al acercarse",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 5,
-      "descripcion": "habla como Mickey al acercarse, como goofy al alejarse "
+      "descripcion": "habla como Mickey al acercarse, como goofy al alejarse ",
+	  "descubierta": false
     },
     {
       "active": true,
       "puntos": 3,
-      "descripcion": "Habla lento"
+      "descripcion": "Habla lento",
+	  "descubierta": false
     }, 
     {
       "active": true,
       "puntos": 5,
-      "descripcion": "Beep Boop! convierte en robot habla con 0 y 1"
+      "descripcion": "Beep Boop! convierte en robot habla con 0 y 1",
+	  "descubierta": false
     }
   ]
 }
