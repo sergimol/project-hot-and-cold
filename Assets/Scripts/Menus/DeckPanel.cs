@@ -16,7 +16,7 @@ public class DeckPanel : MonoBehaviour
    public void Back()
     {
         mainUI.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(mainFirstButton);
+        //EventSystem.current.SetSelectedGameObject(mainFirstButton);
         panelUI.SetActive(false);
         AudioManager.instance.Play(AudioManager.ESounds.botonClick);
     }

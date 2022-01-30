@@ -59,13 +59,13 @@ public class OptionsMenu : MonoBehaviour
         if (pauseMenuUI != null)
         {
             pauseMenuUI.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(pauseFirstButton);
+            //EventSystem.current.SetSelectedGameObject(null);
+            //EventSystem.current.SetSelectedGameObject(pauseFirstButton);
         }
         else if (mainFirstButton != null)
         {
             mainUI.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(mainFirstButton);
+            //EventSystem.current.SetSelectedGameObject(mainFirstButton);
         }
         optionsMenuUI.SetActive(false);
         AudioManager.instance.Play(AudioManager.ESounds.botonClick);
