@@ -81,7 +81,7 @@ PrefabInstance:
     - target: {fileID: 9098118128029226038, guid: 234aedb3485194642afd65b5609493b8,
         type: 3}
       propertyPath: m_Name
-      value: "Ba\xF1era2 Variant"
+      value: "Ba\xF1era2 Variant Variant"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 234aedb3485194642afd65b5609493b8, type: 3}
