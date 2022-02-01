@@ -87,9 +87,15 @@ public class GameManager : MonoBehaviour
         //startTime = 30;
         SceneManager.LoadScene(aux);
 
-        Debug.Log(nextSceneName);
+        //Debug.Log(nextSceneName);
     }
 
+    public void goToCreditsScene()
+    {
+        nextSceneName = "Menu";
+        Debug.Log("satan");
+        SceneManager.LoadScene("Creditos");
+    }
     public void addPoints()
     {
         score += actualCardPoints;
