@@ -8,7 +8,7 @@ public class CameraZoom : MonoBehaviour
     [SerializeField]
     Timer timer;
 
-    [SerializeField] 
+    [SerializeField]
     float zoomSpeed = 1;
 
     float originalSize;
@@ -21,7 +21,10 @@ public class CameraZoom : MonoBehaviour
     void Update()
     {
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, originalSize, zoomSpeed * Time.deltaTime);
-        if(cam.orthographicSize <= originalSize +0.1)
+
+        if (!timer.ganas)
+            timer.ganas = true;
+        if (cam.orthographicSize <= originalSize + 0.1)
         {
             timer.closeTelon();
             AudioManager.instance.Play(AudioManager.ESounds.telon);

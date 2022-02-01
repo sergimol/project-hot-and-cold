@@ -86,6 +86,8 @@ public class GameManager : MonoBehaviour
             aux += actualScene;
         //startTime = 30;
         SceneManager.LoadScene(aux);
+
+        Debug.Log(nextSceneName);
     }
 
     public void addPoints()

@@ -102,6 +102,8 @@ public class CardDealer : MonoBehaviour
 
     public void setSeleccionBaraja(bool esfacil)
     {
+        card1.GetComponent<Button>().enabled = false;
+        card2.GetComponent<Button>().enabled = false;
         Baraja.instance.setSeleccion(esfacil);
     }
 

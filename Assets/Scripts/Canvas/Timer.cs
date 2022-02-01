@@ -19,7 +19,8 @@ public class Timer : MonoBehaviour
     private float startTimer;
     bool activated = false;
 
-    private bool easyMode, ganas = false;
+    private bool easyMode;
+    public bool ganas = false;
 
     // Start is called before the first frame update
 
@@ -54,7 +55,8 @@ public class Timer : MonoBehaviour
 
                 string seconds = Math.Truncate((startTime % 60)).ToString();
 
-                timerText.text = seconds;
+                if (!ganas)
+                    timerText.text = seconds;
             }
             else if (telon.ini)
             {
@@ -75,9 +77,7 @@ public class Timer : MonoBehaviour
 
     public void closeTelon()
     {
-        ganas = true;
         startTime = 0;
-        Debug.Log("Se cierra");
         if (easyMode && telon.ini)
         {
             telon.ini = false;

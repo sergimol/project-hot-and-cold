@@ -37,11 +37,11 @@ public class ScoreSceneFina : MonoBehaviour
         else if (startTime > 0)
         {
             startTime -= Time.deltaTime;
-            textJug.position = Vector3.Lerp(textJug.position, new Vector3(textJug.position.x, origText - gameObject.GetComponent<RectTransform>().rect.height / 2, textJug.position.z), lerpTime);
+            textJug.position = Vector3.Lerp(textJug.position, new Vector3(textJug.position.x, origText - 1.5f * gameObject.GetComponent<RectTransform>().rect.height / 4, textJug.position.z), lerpTime);
         }
         else
         {
-            points.position = Vector3.Lerp(points.position, new Vector3(points.position.x, origCard1 + gameObject.GetComponent<RectTransform>().rect.height / 2, points.position.z), lerpTime);
+            points.position = Vector3.Lerp(points.position, new Vector3(points.position.x, origCard1 + 2.5f * gameObject.GetComponent<RectTransform>().rect.height / 4, points.position.z), lerpTime);
         }
     }
 }
