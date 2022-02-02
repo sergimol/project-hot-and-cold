@@ -426,6 +426,18 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f627320e78a02bb43b9f913c9b3a76a7, type: 3}
+--- !u!114 &308835480 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2562780812560390015, guid: f627320e78a02bb43b9f913c9b3a76a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 308835479}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8443ad5ca63b544b2b65ba7155a23a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &602340663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,18 +1374,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bfeb4f637e367d46afa5baa45e3d0d0, type: 3}
---- !u!114 &1387582664 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 570127631922203939, guid: 7bfeb4f637e367d46afa5baa45e3d0d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 1387582663}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 630e9f918e2f4a24bbadf71427532045, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1454574744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,6 +1458,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2038224518}
         m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 308835480}
+        m_MethodName: ActualizarSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2452,11 +2463,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1387582664}
+      objectReference: {fileID: 2038224515}
     - target: {fileID: 4354274768542312136, guid: e6ec381d9caf37647a3d385c48d131df,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: goToCreditsScene
+      value: Credits
       objectReference: {fileID: 0}
     - target: {fileID: 4354274768542312136, guid: e6ec381d9caf37647a3d385c48d131df,
         type: 3}

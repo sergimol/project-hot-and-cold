@@ -34,9 +34,8 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-        //SceneManager.LoadScene("Creditos");
         AudioManager.instance.Play(AudioManager.ESounds.botonClick);
-        Debug.Log("Aqui van los creditos");
+        GameManager.instance.goToCreditsScene();
     }
 
     public void Options() // Abre el menú de opciones
