@@ -45,7 +45,7 @@ public static class FileHandler {
     }
 
     private static string GetPath (string filename) {
-        return Application.dataPath + "/" + filename; //TODO    CAMBIAR EL DATAPATH AL PERSISTENT
+        return Application.persistentDataPath + "/" + filename; //TODO    CAMBIAR EL DATAPATH AL PERSISTENT
     }
 
     private static void WriteFile (string path, string content) {

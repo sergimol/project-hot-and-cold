@@ -32,7 +32,7 @@ public class Baraja : MonoBehaviour
 
     public static Baraja instance;
 
- 
+    string idioma = "Spain";
     //template de las cartas
     [SerializeField]
     private GameObject cartaVoz, cartaGesto, cartaMenu;
@@ -46,6 +46,7 @@ public class Baraja : MonoBehaviour
     Stack<infocarta> cartasFaciles, cartasDificiles;
 
     infocarta cartaSeleccion;
+
 
 
     string path = ""; //pos pa ir probando
@@ -75,12 +76,12 @@ public class Baraja : MonoBehaviour
 
             //Debug.Log(persistentPath);
 
-            facilesDefault = FileHandler.ReadListFromJSON<infocarta>("cartasFaciles.json");
-            dificilesDefault = FileHandler.ReadListFromJSON<infocarta>("cartasDificiles.json");
+            facilesDefault = FileHandler.ReadListFromJSON<infocarta>("cartasFaciles" + idioma + ".json");
+            dificilesDefault = FileHandler.ReadListFromJSON<infocarta>("cartasDificiles" + idioma + ".json");
 
 
-            facilesCustom = FileHandler.ReadListFromJSON<infocarta>("cartasFacilesCustom.json");
-            dificilesCustom = FileHandler.ReadListFromJSON<infocarta>("cartasDificilesCustom.json");
+            facilesCustom = FileHandler.ReadListFromJSON<infocarta>("cartasFacilesCustom" + idioma + ".json");
+            dificilesCustom = FileHandler.ReadListFromJSON<infocarta>("cartasDificilesCustom" + idioma + ".json");
 
             if (facilesDefault.Count == 0)
                 crearCartas();
