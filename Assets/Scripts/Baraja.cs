@@ -446,7 +446,7 @@ public class Baraja : MonoBehaviour
 
 
 
-                go.GetComponent<CardToggler>().setValues(i, true, false);
+                go.GetComponent<CardToggler>().setValues(i, true, true);
                 switch (facilesCustom[i].puntos)
                 {
                     case 1:
@@ -481,7 +481,7 @@ public class Baraja : MonoBehaviour
 
                 toggle = go.transform.GetChild(2).gameObject;
                 toggle.active = true;
-                go.GetComponent<CardToggler>().setValues(i, false, false);
+                go.GetComponent<CardToggler>().setValues(i, false, true);
                 switch (dificilesCustom[i].puntos)
                 {
                     case 1:

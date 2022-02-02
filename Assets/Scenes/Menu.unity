@@ -318,7 +318,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 192, y: 192}
-  m_Spacing: {x: 200, y: 300}
+  m_Spacing: {x: 200, y: 350}
   m_Constraint: 0
   m_ConstraintCount: 4
 --- !u!1001 &308835479
@@ -1456,8 +1456,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2038224518}
-        m_MethodName: Back
+      - m_Target: {fileID: 308835480}
+        m_MethodName: ActualizarSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1467,8 +1467,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 308835480}
-        m_MethodName: ActualizarSave
+      - m_Target: {fileID: 2038224518}
+        m_MethodName: Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
