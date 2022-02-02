@@ -22,18 +22,18 @@ public class Telon : MonoBehaviour
     {
         if (!ini)
         {
-            tLeft.position = Vector3.Lerp(tLeft.position, new Vector3(originalPosLeft + objectRectTransform.rect.width / 2, tLeft.position.y, tLeft.position.z), lerpTime);
-            tRight.position = Vector3.Lerp(tRight.position, new Vector3(originalPosRight - objectRectTransform.rect.width / 2, tRight.position.y, tRight.position.z), lerpTime);
+            tLeft.position = Vector3.Lerp(tLeft.position, new Vector3(originalPosLeft + objectRectTransform.rect.width / 2 + 10, tLeft.position.y, tLeft.position.z), lerpTime);
+            tRight.position = Vector3.Lerp(tRight.position, new Vector3(originalPosRight - objectRectTransform.rect.width / 2 - 10, tRight.position.y, tRight.position.z), lerpTime);
 
-            if (tRight.position.x <= originalPosRight - objectRectTransform.rect.width / 2 + 0.1)
+            if (tRight.position.x <= originalPosRight - objectRectTransform.rect.width / 2 - 9.9)
             {
                 GameManager.instance.ChangeScene();
             }
         }
         else
         {
-            tLeft.position = Vector3.Lerp(tLeft.position, new Vector3(originalPosLeft - objectRectTransform.rect.width / 2, tLeft.position.y, tLeft.position.z), lerpTime);
-            tRight.position = Vector3.Lerp(tRight.position, new Vector3(originalPosRight + objectRectTransform.rect.width / 2, tRight.position.y, tRight.position.z), lerpTime);
+            tLeft.position = Vector3.Lerp(tLeft.position, new Vector3(originalPosLeft - objectRectTransform.rect.width / 2 - 10, tLeft.position.y, tLeft.position.z), lerpTime);
+            tRight.position = Vector3.Lerp(tRight.position, new Vector3(originalPosRight + objectRectTransform.rect.width / 2 + 10, tRight.position.y, tRight.position.z), lerpTime);
         }
     }
 

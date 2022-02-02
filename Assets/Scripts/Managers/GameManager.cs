@@ -80,6 +80,8 @@ public class GameManager : MonoBehaviour
                 break;
             case "FinalScene":
                 nextSceneName = "Menu";
+                possibleNum = sceneNumbers.Length;
+                rounds = 6;
                 break;
         }
         if (aux == "HideObjectScene" || aux == "Level")
