@@ -17,4 +17,10 @@ public class CardToggler : MonoBehaviour
         Baraja.instance.DesativarCarta(active, pos, facil, custom);
         AudioManager.instance.Play(AudioManager.ESounds.botonClick);
     }
+    public void ToggleDelete(bool active)
+    {
+        Baraja.instance.EliminarCartaCustom(active, pos, facil);
+        AudioManager.instance.Play(AudioManager.ESounds.botonClick);
+    }
+
 }

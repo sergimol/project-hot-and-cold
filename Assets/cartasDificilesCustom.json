@@ -1,14 +1,1 @@
-{
-  "Items": [
-    {
-      "active": true,
-      "puntos": 6,
-      "descripcion": "Tienes que hablar como el juji"
-    },
-    {
-      "active": true,
-      "puntos": 12,
-      "descripcion": "eres angel conduciendo y el de alante esta dando frenazos"
-    }
-  ]
-}
+{"Items":[{"active":true,"puntos":1,"descripcion":"jaja","descubierta":false,"eliminar":false}]}
