@@ -45,6 +45,12 @@ public class GameManager : MonoBehaviour
         nextSceneName = "Tutorial";
     }
 
+    private void Start()
+    {
+        //Comienza el temon
+        AudioManager.instance.Play(AudioManager.ESounds.temon);
+    }
+
     public void ChangeScene()
     {
         string aux = nextSceneName;
@@ -52,12 +58,15 @@ public class GameManager : MonoBehaviour
         {
             case "Intro":
                 nextSceneName = "Tutorial";
+                
                 break;
             case "Tutorial":
                 nextSceneName = "Menu";
                 break;
             case "HideObjectScene":
                 nextSceneName = "CardScene";
+                //Apagamos la musica
+                AudioManager.instance.Stop(AudioManager.ESounds.temon);
                 break;
             case "CardScene":
                 Cursor.visible = true;
@@ -65,6 +74,9 @@ public class GameManager : MonoBehaviour
                 break;
             case "Level":
                 nextSceneName = "ScoreScene";
+                //Ponemos musica al empezar a jugar un nivel
+                AudioManager.instance.Play(AudioManager.ESounds.temon);
+                AudioManager.instance.resetPitch(AudioManager.ESounds.temon);
                 break;
             case "ScoreScene":
                 if (rounds > 0)
@@ -85,9 +97,13 @@ public class GameManager : MonoBehaviour
                 break;
         }
         if (aux == "HideObjectScene" || aux == "Level")
+        {
             aux += actualScene;
+        }
         //startTime = 30;
         SceneManager.LoadScene(aux);
+
+
 
         //Debug.Log(nextSceneName);
     }
@@ -137,4 +153,9 @@ public class GameManager : MonoBehaviour
 
     public int getId() { return actualScene; }
     public string getName() { return nextSceneName; }
+
+    void manageMusic()
+    {
+
+    }
 }

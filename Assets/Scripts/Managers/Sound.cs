@@ -14,6 +14,8 @@ public class Sound // Determina las características de cada clip de sonido del 
 
     public bool loop; // Si debe estar o no en bucle
 
+    //public bool speed; // velocidad de reproduccion
+
     [HideInInspector]
     public AudioSource source; // AudioSource para reproducir el clip
 }

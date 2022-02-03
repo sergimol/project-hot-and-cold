@@ -136,6 +136,10 @@ public class PlayerControlBien : MonoBehaviour
             antiSpam = true;
             startTime = 0.5f;
             AudioManager.instance.Play(AudioManager.ESounds.fallo);
+
+            //Aceleramos la musica
+            //no se si se puede hacer
+            AudioManager.instance.increasePitch(AudioManager.ESounds.temon);
         }
     }
     private void FixedUpdate()

@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     AudioMixerGroup sfx;
 
-    public enum ESounds { acierto, botonClick, botonInicio, fallo, slider, sliderMusic, sliderMaster, footsteps, anuncioEscondite, telon }; // Enum usado para acceder al array sounds
+    public enum ESounds { acierto, botonClick, botonInicio, fallo, slider, sliderMusic, sliderMaster, footsteps, anuncioEscondite, telon, temon}; // Enum usado para acceder al array sounds
 
     private void Awake()
     {
@@ -31,6 +31,7 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
             s.source.volume = s.volume;
             s.source.playOnAwake = false;
+            s.source.pitch = 1;
         }
     }
 
@@ -80,6 +81,21 @@ public class AudioManager : MonoBehaviour
             return true;
         else
             return false;
+    }
+
+    public void increasePitch(ESounds sound)
+    {
+        int i = (int)sound;
+        Sound s = sounds[i];
+        float actualPitch = s.source.pitch;
+        if (actualPitch < 2)
+            s.source.pitch = actualPitch + 0.05f;
+    }
+    public void resetPitch(ESounds sound)
+    {
+        int i = (int)sound;
+        Sound s = sounds[i];
+        s.source.pitch = 1f;
     }
 }
 

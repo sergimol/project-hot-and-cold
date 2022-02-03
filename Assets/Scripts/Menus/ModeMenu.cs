@@ -16,6 +16,8 @@ public class ModeMenu : MonoBehaviour
         SceneManager.LoadScene("HideObjectScene" + GameManager.instance.getId());
         AudioManager.instance.Play(AudioManager.ESounds.botonInicio);
         GameManager.instance.nextSceneName = "CardScene";
+
+        AudioManager.instance.Stop(AudioManager.ESounds.temon);
     }
 
     public void NoTime()
@@ -26,6 +28,8 @@ public class ModeMenu : MonoBehaviour
         AudioManager.instance.Play(AudioManager.ESounds.botonInicio);
         GameManager.instance.nextSceneName = "CardScene";
         Baraja.instance.ActualizarSave();
+
+        AudioManager.instance.Stop(AudioManager.ESounds.temon);
     }
 
     public void HighScores()

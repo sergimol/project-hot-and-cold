@@ -567,7 +567,7 @@ PrefabInstance:
     - target: {fileID: 3735885547288750500, guid: 810906c6b51376e45a68ecad1294c857,
         type: 3}
       propertyPath: sounds.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3735885547288750500, guid: 810906c6b51376e45a68ecad1294c857,
         type: 3}
@@ -797,18 +797,18 @@ PrefabInstance:
     - target: {fileID: 3735885547288750500, guid: 810906c6b51376e45a68ecad1294c857,
         type: 3}
       propertyPath: sounds.Array.data[10].name
-      value: footsteps
+      value: temon
       objectReference: {fileID: 0}
     - target: {fileID: 3735885547288750500, guid: 810906c6b51376e45a68ecad1294c857,
         type: 3}
       propertyPath: sounds.Array.data[10].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 6b99407b48181b540953b3682f0c3de8, type: 3}
+      objectReference: {fileID: 8300000, guid: 8830dd870ade6994896c6feb662d2ba4, type: 3}
     - target: {fileID: 3735885547288750500, guid: 810906c6b51376e45a68ecad1294c857,
         type: 3}
       propertyPath: sounds.Array.data[10].mixer
       value: 
-      objectReference: {fileID: -9092036313721312173, guid: a3ee00eca988bca4b94af8ac45958be1,
+      objectReference: {fileID: -4144811885614589727, guid: a3ee00eca988bca4b94af8ac45958be1,
         type: 2}
     - target: {fileID: 3735885547288750500, guid: 810906c6b51376e45a68ecad1294c857,
         type: 3}
@@ -846,6 +846,12 @@ PrefabInstance:
       propertyPath: sounds.Array.data[11].loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3735885547288750500, guid: 810906c6b51376e45a68ecad1294c857,
+        type: 3}
+      propertyPath: sfx
+      value: 
+      objectReference: {fileID: -4144811885614589727, guid: a3ee00eca988bca4b94af8ac45958be1,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810906c6b51376e45a68ecad1294c857, type: 3}
 --- !u!1 &1050498068
