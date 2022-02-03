@@ -850,7 +850,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sfx
       value: 
-      objectReference: {fileID: -4144811885614589727, guid: a3ee00eca988bca4b94af8ac45958be1,
+      objectReference: {fileID: -9092036313721312173, guid: a3ee00eca988bca4b94af8ac45958be1,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810906c6b51376e45a68ecad1294c857, type: 3}
