@@ -334,11 +334,15 @@ public class Baraja : MonoBehaviour
     {
         if (esFacil)
         {
-            facilesCustom.Add(creadnoCarta(points, descripccion));
+            infocarta car = creadnoCarta(points, descripccion);
+            car.descubierta = true;
+            facilesCustom.Add(car);
         }
         else
         {
-            dificilesCustom.Add(creadnoCarta(points, descripccion));
+            infocarta car = creadnoCarta(points, descripccion);
+            car.descubierta = true;
+            dificilesCustom.Add(car);
         }
     }
 
