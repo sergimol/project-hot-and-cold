@@ -1,0 +1,95 @@
+{
+  "Items": [
+    {
+      "active": true,
+      "puntos": 3,
+      "descripcion": "¡Levantate cuando se acerque, sientate cuando se aleje, NO HABLES!",
+      "descubierta": false,
+      "eliminar": false
+    },
+    {
+      "active": true,
+      "puntos": 1,
+      "descripcion": "¡Da palmadas, mas rapido cuanto mas cerca esta!",
+      "descubierta": false,
+      "eliminar": false
+    },
+    {
+      "active": true,
+      "puntos": 2,
+      "descripcion": "Alejate de tu amigo si esta lejos y acercate si esta cerca",
+      "descubierta": false,
+      "eliminar": false
+    },
+    {
+      "active": true,
+      "puntos": 3,
+      "descripcion": "Indica solo con tus ojos donde tiene que ir",
+      "descubierta": false,
+      "eliminar": false
+    },
+    {
+      "active": true,
+      "puntos": 2,
+      "descripcion": "Inclinate a la derecha si esta cerca, a la izquierda si se aleja",
+      "descubierta": false,
+      "eliminar": false
+    },
+    {
+      "active": true,
+      "puntos": 2,
+      "descripcion": "Actua como un controlador aereo, el de los palitos",
+      "descubierta": false,
+      "eliminar": false
+    },
+    {
+      "active": true,
+      "puntos": 3,
+      "descripcion": "Aguanta la respiracion",
+      "descubierta": false,
+      "eliminar": false
+    },
+    {
+      "active": true,
+      "puntos": 1,
+      "descripcion": "Frota algo!",
+      "descubierta": false,
+      "eliminar": false
+    },
+    {
+      "active": true,
+      "puntos": 1,
+      "descripcion": "Te estas quedando dormido",
+      "descubierta": false,
+      "eliminar": false
+    },
+    {
+      "active": true,
+      "puntos": 2,
+      "descripcion": "Haz cosquillas",
+      "descubierta": false,
+      "eliminar": false
+    },
+    {
+      "active": true,
+      "puntos": 1,
+      "descripcion": "Si se acerca muevete inquieto en la silla",
+      "descubierta": false,
+      "eliminar": false
+    },
+    {
+      "active": true,
+      "puntos": 2,
+      "descripcion": "Cuanto mas cerca mirale mas fijamente, mas intenso!",
+      "descubierta": false,
+      "eliminar": false
+    },
+    {
+      "active": true,
+      "puntos": 3,
+      "descripcion": "Ponte muy triste",
+      "descubierta": false,
+      "eliminar": false
+    }
+  ]
+}
