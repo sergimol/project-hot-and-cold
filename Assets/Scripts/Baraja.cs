@@ -288,8 +288,8 @@ public class Baraja : MonoBehaviour
     //actualiza los Json de guardado de las cartas custom, ejemplo, se desactivaron unas cartas //todo
     public void ActualizarSave()
     {
-        FileHandler.SaveToJSON<infocarta>(facilesDefault, "cartasFaciles.json");
-        FileHandler.SaveToJSON<infocarta>(dificilesDefault, "cartasDificiles.json");
+        FileHandler.SaveToJSON<infocarta>(facilesDefault, "cartasFaciles" + idioma + ".json");
+        FileHandler.SaveToJSON<infocarta>(dificilesDefault, "cartasDificiles" + idioma + ".json");
 
         //eliminar las cartas custom en caso de que esten marcadas para eliminarse
         foreach (infocarta a in facilesCustom)
@@ -303,8 +303,8 @@ public class Baraja : MonoBehaviour
                 dificilesCustom.Remove(a);
         }
 
-        FileHandler.SaveToJSON<infocarta>(facilesCustom, "cartasFacilesCustom.json");
-        FileHandler.SaveToJSON<infocarta>(dificilesCustom, "cartasDificilesCustom.json");
+        FileHandler.SaveToJSON<infocarta>(facilesCustom, "cartasFacilesCustom" + idioma + ".json");
+        FileHandler.SaveToJSON<infocarta>(dificilesCustom, "cartasDificilesCustom" + idioma + ".json");
 
 
     }
