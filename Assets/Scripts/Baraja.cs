@@ -383,13 +383,13 @@ public class Baraja : MonoBehaviour
                 switch (facilesDefault[i].puntos)
                 {
                     case 1:
-                        go.GetComponent<Image>().sprite = voz1;
+                        go.GetComponentInChildren<Image>().sprite = voz1;
                         break;
                     case 2:
-                        go.GetComponent<Image>().sprite = voz2;
+                        go.GetComponentInChildren<Image>().sprite = voz2;
                         break;
                     case 3:
-                        go.GetComponent<Image>().sprite = voz3;
+                        go.GetComponentInChildren<Image>().sprite = voz3;
                         break;
                     default:
                         break;
@@ -415,13 +415,13 @@ public class Baraja : MonoBehaviour
                 switch (dificilesDefault[i].puntos)
                 {
                     case 1:
-                        go.GetComponent<Image>().sprite = gestos1;
+                        go.GetComponentInChildren<Image>().sprite = gestos1;
                         break;
                     case 2:
-                        go.GetComponent<Image>().sprite = gestos2;
+                        go.GetComponentInChildren<Image>().sprite = gestos2;
                         break;
                     case 3:
-                        go.GetComponent<Image>().sprite = gestos3;
+                        go.GetComponentInChildren<Image>().sprite = gestos3;
                         break;
                     default:
                         break;
@@ -455,13 +455,13 @@ public class Baraja : MonoBehaviour
                 switch (facilesCustom[i].puntos)
                 {
                     case 1:
-                        go.GetComponent<Image>().sprite = voz1;
+                        go.GetComponentInChildren<Image>().sprite = voz1;
                         break;
                     case 2:
-                        go.GetComponent<Image>().sprite = voz2;
+                        go.GetComponentInChildren<Image>().sprite = voz2;
                         break;
                     case 3:
-                        go.GetComponent<Image>().sprite = voz3;
+                        go.GetComponentInChildren<Image>().sprite = voz3;
                         break;
                     default:
                         break;

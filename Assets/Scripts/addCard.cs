@@ -10,6 +10,9 @@ public class addCard : MonoBehaviour
     [SerializeField]
     Text textbox;
 
+    [SerializeField]
+    Animator textInfoAnim;
+
 
     public bool esfacil = false;
 
@@ -25,6 +28,7 @@ public class addCard : MonoBehaviour
     public void novaCarta()
     {
         Baraja.instance.addCartaCustom(esfacil, points, textbox.text);
+        textInfoAnim.SetTrigger("info");
     }
 
 
