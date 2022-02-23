@@ -10,6 +10,7 @@ public class addCard : MonoBehaviour
     [SerializeField]
     Text textbox;
 
+
     public bool esfacil = false;
 
 
@@ -25,5 +26,7 @@ public class addCard : MonoBehaviour
     {
         Baraja.instance.addCartaCustom(esfacil, points, textbox.text);
     }
+
+
 
 }
