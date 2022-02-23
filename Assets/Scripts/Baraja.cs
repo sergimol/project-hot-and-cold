@@ -292,21 +292,26 @@ public class Baraja : MonoBehaviour
         FileHandler.SaveToJSON<infocarta>(dificilesDefault, "cartasDificiles" + idioma + ".json");
 
         //eliminar las cartas custom en caso de que esten marcadas para eliminarse
-        foreach (infocarta a in facilesCustom)
+        for (int i = 0; i < facilesCustom.Count; i++)
         {
-            if (a.eliminar)
-                facilesCustom.Remove(a);
-        }
-        foreach (infocarta a in dificilesCustom)
+            if (facilesCustom[i].eliminar)
+            {
+                facilesCustom.RemoveAt(i);
+                i--;
+            }
+        } 
+        
+        for (int i = 0; i < dificilesCustom.Count; i++)
         {
-            if (a.eliminar)
-                dificilesCustom.Remove(a);
+            if (dificilesCustom[i].eliminar)
+            {
+                dificilesCustom.RemoveAt(i);
+                i--;
+            }
         }
 
         FileHandler.SaveToJSON<infocarta>(facilesCustom, "cartasFacilesCustom" + idioma + ".json");
         FileHandler.SaveToJSON<infocarta>(dificilesCustom, "cartasDificilesCustom" + idioma + ".json");
-
-
     }
     public void DesativarCarta(bool activar, int pos, bool facil, bool custom)
     {

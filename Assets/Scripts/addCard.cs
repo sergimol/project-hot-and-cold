@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class addCard : MonoBehaviour
 {
-    int points = 1;
+    int points = 0;
     [SerializeField]
     Text textbox;
 
@@ -27,10 +27,8 @@ public class addCard : MonoBehaviour
     }
     public void novaCarta()
     {
+        if (points == 0 || textbox.text == "") return;
         Baraja.instance.addCartaCustom(esfacil, points, textbox.text);
         textInfoAnim.SetTrigger("info");
     }
-
-
-
 }

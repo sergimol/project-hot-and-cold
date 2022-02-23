@@ -15,6 +15,7 @@ public class DeckPanel : MonoBehaviour
 
    public void Back()
     {
+        Baraja.instance.ActualizarSave();
         mainUI.SetActive(true);
         //EventSystem.current.SetSelectedGameObject(mainFirstButton);
         panelUI.SetActive(false);
@@ -24,8 +25,7 @@ public class DeckPanel : MonoBehaviour
         {
             GameObject.Destroy(child.gameObject);
         }
-        //volver a cargar con las cartas en caso de que se ahyan ido a la vergota
+        //volver a cargar con las cartas en caso de que se hayan ido a la vergota
         Baraja.instance.startPanel(panel);
-
     }
 }
