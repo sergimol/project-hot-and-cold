@@ -909,7 +909,6 @@ GameObject:
   - component: {fileID: 126500570}
   - component: {fileID: 126500571}
   - component: {fileID: 126500572}
-  - component: {fileID: 126500573}
   m_Layer: 5
   m_Name: puntos2
   m_TagString: Untagged
@@ -984,7 +983,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 126500573}
+      - m_Target: {fileID: 357808993}
         m_MethodName: dificulty
         m_Mode: 3
         m_Arguments:
@@ -1008,20 +1007,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed678dc7e8f119e42adc9a78f6366e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &126500573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126500569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ce8df9ae782d44fb213a85fce05124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textbox: {fileID: 163958971}
-  esfacil: 0
 --- !u!1 &150431819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,7 +1317,6 @@ GameObject:
   - component: {fileID: 239994243}
   - component: {fileID: 239994244}
   - component: {fileID: 239994245}
-  - component: {fileID: 239994246}
   m_Layer: 5
   m_Name: puntos1
   m_TagString: Untagged
@@ -1407,7 +1391,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 239994246}
+      - m_Target: {fileID: 357808993}
         m_MethodName: dificulty
         m_Mode: 3
         m_Arguments:
@@ -1431,20 +1415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed678dc7e8f119e42adc9a78f6366e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &239994246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 239994242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ce8df9ae782d44fb213a85fce05124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textbox: {fileID: 163958971}
-  esfacil: 0
 --- !u!1 &264920532
 GameObject:
   m_ObjectHideFlags: 0
@@ -3516,7 +3486,6 @@ GameObject:
   - component: {fileID: 745794795}
   - component: {fileID: 745794796}
   - component: {fileID: 745794797}
-  - component: {fileID: 745794798}
   m_Layer: 5
   m_Name: puntos1
   m_TagString: Untagged
@@ -3591,7 +3560,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 745794798}
+      - m_Target: {fileID: 357808993}
         m_MethodName: toggleFacil
         m_Mode: 6
         m_Arguments:
@@ -3615,20 +3584,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed678dc7e8f119e42adc9a78f6366e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &745794798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745794794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ce8df9ae782d44fb213a85fce05124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textbox: {fileID: 163958971}
-  esfacil: 0
 --- !u!1 &752646993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3717,7 +3672,6 @@ GameObject:
   - component: {fileID: 790404909}
   - component: {fileID: 790404910}
   - component: {fileID: 790404911}
-  - component: {fileID: 790404912}
   m_Layer: 5
   m_Name: puntos2
   m_TagString: Untagged
@@ -3792,7 +3746,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 790404912}
+      - m_Target: {fileID: 357808993}
         m_MethodName: toggleFacil
         m_Mode: 6
         m_Arguments:
@@ -3816,20 +3770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed678dc7e8f119e42adc9a78f6366e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &790404912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 790404908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ce8df9ae782d44fb213a85fce05124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textbox: {fileID: 163958971}
-  esfacil: 0
 --- !u!1 &823645844
 GameObject:
   m_ObjectHideFlags: 0
@@ -5082,7 +5022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1208039796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5497,7 +5437,6 @@ GameObject:
   - component: {fileID: 1250921582}
   - component: {fileID: 1250921583}
   - component: {fileID: 1250921584}
-  - component: {fileID: 1250921585}
   m_Layer: 5
   m_Name: puntos3
   m_TagString: Untagged
@@ -5572,7 +5511,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1250921585}
+      - m_Target: {fileID: 357808993}
         m_MethodName: dificulty
         m_Mode: 3
         m_Arguments:
@@ -5596,20 +5535,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed678dc7e8f119e42adc9a78f6366e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1250921585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1250921581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ce8df9ae782d44fb213a85fce05124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textbox: {fileID: 163958971}
-  esfacil: 0
 --- !u!1 &1257835250
 GameObject:
   m_ObjectHideFlags: 0
