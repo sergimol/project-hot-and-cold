@@ -28,6 +28,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1713246374348705750}
   m_Father: {fileID: 7795451558539056137}
@@ -61,6 +62,8 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -102,6 +105,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1088658008430819313}
   m_RootOrder: 0
@@ -134,6 +138,8 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -175,6 +181,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2732764861987478513}
   m_RootOrder: 1
@@ -207,6 +214,8 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.97181654, g: 0, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -256,6 +265,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2732764862910862057}
   - {fileID: 2732764861366372323}
@@ -292,6 +302,8 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -320,6 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 4
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -350,6 +363,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
         m_MethodName: closeTelon
         m_Mode: 1
         m_Arguments:
@@ -361,6 +375,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
         m_MethodName: setSeleccionBaraja
         m_Mode: 6
         m_Arguments:
@@ -418,6 +433,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 4921041329340911688}
+          m_TargetAssemblyTypeName: 
           m_MethodName: makeBigger
           m_Mode: 1
           m_Arguments:
@@ -433,6 +449,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 4921041329340911688}
+          m_TargetAssemblyTypeName: 
           m_MethodName: makeSmaller
           m_Mode: 1
           m_Arguments:
@@ -471,6 +488,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2732764861987478513}
   m_RootOrder: 0
@@ -503,6 +521,8 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.97181654, g: 0, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -547,6 +567,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1088658008430819313}
   - {fileID: 659672241036179875}
@@ -572,6 +593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -605,6 +627,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1384992802615250264}
+        m_TargetAssemblyTypeName: CardToggler, Assembly-CSharp
         m_MethodName: Toggle
         m_Mode: 0
         m_Arguments:
@@ -644,6 +667,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7795451558539056137}
   m_RootOrder: 1
@@ -676,6 +700,8 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0, b: 0.777627, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -721,6 +747,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4804336415974838334}
   m_RootOrder: 0
@@ -753,6 +780,8 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -769,19 +798,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ELIMINAR   void Awake()\r\n    {\r\n        if (instance == null)\r\n        {\r\n\r\n\r\n\r\n
-    \           instance = this;\r\n            DontDestroyOnLoad(this.gameObject);\r\n\r\n
-    \           faciles = new List<infocarta>();\r\n            dificiles = new List<infocarta>();\r\n
-    \           facilesDefault = new List<infocarta>();\r\n            dificilesDefault
-    = new List<infocarta>();\r\n            facilesCustom = new List<infocarta>();\r\n
-    \           dificilesCustom = new List<infocarta>();\r\n            cartasFaciles
-    = new Stack<infocarta>();\r\n            cartasDificiles = new Stack<infocarta>();\r\n\r\n\r\n
-    \           facilesDefault = FileHandler.ReadListFromJSON<infocarta>(\"cartasFaciles.json\");\r\n
-    \           facilesCustom = (FileHandler.ReadListFromJSON<infocarta>(\"cartasFacilesCustom.json\"));\r\n
-    \           dificilesDefault = FileHandler.ReadListFromJSON<infocarta>(\"cartasDificiles.json\");\r\n
-    \           dificilesCustom = (FileHandler.ReadListFromJSON<infocarta>(\"cartasDificilesCustom.json\"));\r\n\r\n\r\n
-    \       }\r\n        else\r\n        {\r\n            Destroy(this.gameObject);\r\n
-    \       }\r\n\r\n\r\n\r\n    }\r\n"
+  m_Text: "ELIMINAR   void Awake()\r\n    {\r\n        if (instance == null)\r\n       
+    {\r\n\r\n\r\n\r\n           instance = this;\r\n            DontDestroyOnLoad(this.gameObject);\r\n\r\n          
+    faciles = new List<infocarta>();\r\n            dificiles = new List<infocarta>();\r\n          
+    facilesDefault = new List<infocarta>();\r\n            dificilesDefault = new
+    List<infocarta>();\r\n            facilesCustom = new List<infocarta>();\r\n          
+    dificilesCustom = new List<infocarta>();\r\n            cartasFaciles = new Stack<infocarta>();\r\n           
+    cartasDificiles = new Stack<infocarta>();\r\n\r\n\r\n           facilesDefault
+    = FileHandler.ReadListFromJSON<infocarta>(\"cartasFaciles.json\");\r\n          
+    facilesCustom = (FileHandler.ReadListFromJSON<infocarta>(\"cartasFacilesCustom.json\"));\r\n          
+    dificilesDefault = FileHandler.ReadListFromJSON<infocarta>(\"cartasDificiles.json\");\r\n          
+    dificilesCustom = (FileHandler.ReadListFromJSON<infocarta>(\"cartasDificilesCustom.json\"));\r\n\r\n\r\n      
+    }\r\n        else\r\n        {\r\n            Destroy(this.gameObject);\r\n      
+    }\r\n\r\n\r\n\r\n    }\r\n"
 --- !u!1 &7350186833763685310
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,6 +840,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6381616169415819954}
   m_Father: {fileID: 2732764861987478513}
@@ -844,6 +874,8 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -871,6 +903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}

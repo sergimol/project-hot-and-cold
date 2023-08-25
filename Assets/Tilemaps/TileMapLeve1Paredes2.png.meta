@@ -132,7 +132,7 @@ TextureImporter:
       213: -2388526138223104136
     second: TileMapLeve1Paredes2_42
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -152,6 +152,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -161,8 +163,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -183,9 +185,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -201,6 +208,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1127,6 +1158,50 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      TileMapLeve1Paredes2_0: -639415501720410017
+      TileMapLeve1Paredes2_1: 6332355423118358379
+      TileMapLeve1Paredes2_10: 1989818492096045882
+      TileMapLeve1Paredes2_11: 2147068818272797393
+      TileMapLeve1Paredes2_12: -3372068206505841229
+      TileMapLeve1Paredes2_13: 3989890771817457995
+      TileMapLeve1Paredes2_14: -6400148654902576416
+      TileMapLeve1Paredes2_15: -6411988863019487986
+      TileMapLeve1Paredes2_16: -540282633140636788
+      TileMapLeve1Paredes2_17: 8179223002979943494
+      TileMapLeve1Paredes2_18: -8634727588371896432
+      TileMapLeve1Paredes2_19: -4256519351316513225
+      TileMapLeve1Paredes2_2: 5635421227459265495
+      TileMapLeve1Paredes2_20: 8725055196622463007
+      TileMapLeve1Paredes2_21: -8870176930885061429
+      TileMapLeve1Paredes2_22: 5504282040091101354
+      TileMapLeve1Paredes2_23: -4133049264704157675
+      TileMapLeve1Paredes2_24: -6964590438265397220
+      TileMapLeve1Paredes2_25: -8253832178558589731
+      TileMapLeve1Paredes2_26: -5649633406506624239
+      TileMapLeve1Paredes2_27: 242131949740897068
+      TileMapLeve1Paredes2_28: 792648658958659591
+      TileMapLeve1Paredes2_29: 1443461931898716333
+      TileMapLeve1Paredes2_3: 6410834497413885354
+      TileMapLeve1Paredes2_30: 7174353486097050712
+      TileMapLeve1Paredes2_31: -7090081045062270900
+      TileMapLeve1Paredes2_32: -143400298403253001
+      TileMapLeve1Paredes2_33: -3199686886505352718
+      TileMapLeve1Paredes2_34: -5160118352969795686
+      TileMapLeve1Paredes2_35: 2391427935078113280
+      TileMapLeve1Paredes2_36: 181036670349483994
+      TileMapLeve1Paredes2_37: -6101676148218770872
+      TileMapLeve1Paredes2_38: -3573487730097853344
+      TileMapLeve1Paredes2_39: -1184120501829486596
+      TileMapLeve1Paredes2_4: -3171879698167566480
+      TileMapLeve1Paredes2_40: -4738313878550097562
+      TileMapLeve1Paredes2_41: -5584661502176849577
+      TileMapLeve1Paredes2_42: -2388526138223104136
+      TileMapLeve1Paredes2_5: 9001800535557429804
+      TileMapLeve1Paredes2_6: 545554159813374109
+      TileMapLeve1Paredes2_7: 7655491310698864008
+      TileMapLeve1Paredes2_8: -7413205343497864452
+      TileMapLeve1Paredes2_9: 8593304423159434245
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
